@@ -14,8 +14,10 @@ set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_0_tri_o[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_0_tri_o[2]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_0_tri_o[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_0_tri_o[0]}]
-set_property PACKAGE_PIN N11 [get_ports diff_clock_rtl_0_clk_p]
-set_property IOSTANDARD TMDS_33 [get_ports diff_clock_rtl_0_clk_p]
 
 set_property PACKAGE_PIN N4 [get_ports reset_rtl_0]
 set_property IOSTANDARD LVCMOS33 [get_ports reset_rtl_0]
+
+
+set_property PACKAGE_PIN N11 [get_ports clk_100MHz]
+set_property IOSTANDARD LVCMOS33 [get_ports clk_100MHz]
