@@ -37,5 +37,7 @@
 int GpioOutputExample(u16 DeviceId, u32 GpioWidth);
 int GpioInputExample(u16 DeviceId, u32 *DataRead);
 
+int GpioOutputExampleTest(u16 DeviceId, u32 GpioWidth);
+
 #endif
 

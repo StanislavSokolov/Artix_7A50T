@@ -34,20 +34,32 @@
 #include "gpio_header.h"
 int main () 
 {
-   Xil_ICacheEnable();
-   Xil_DCacheEnable();
-   print("---Entering main---\n\r");
+//   Xil_ICacheEnable();
+//   Xil_DCacheEnable();
+//   print("---Entering main---\n\r");
+	u32 count = 0x00;
+	u32 count8 = 0x00;
+	GpioOutputExample(XPAR_AXI_GPIO_0_DEVICE_ID,8);
+
+	while (1) {
+		if (count < 0xFFFF) {
+			count = count + 0x01;
+		} else {
+			count = 0x0000;
+//			GpioOutputExampleTest(1, count8);
+			if (count8 < 0x0F) {
+				count8 = count8 + 0x01;
+			} else {
+				count8 = 0x00;
+			}
+//			GpioOutputExampleTest(1, count8);
+		}
+	}
 
 
-   {
-      int status;
-      
-      status = GpioOutputExample(XPAR_AXI_GPIO_0_DEVICE_ID,8);
-   }
 
-
-   print("---Exiting main---\n\r");
-   Xil_DCacheDisable();
-   Xil_ICacheDisable();
+//   print("---Exiting main---\n\r");
+//   Xil_DCacheDisable();
+//   Xil_ICacheDisable();
    return 0;
 }

@@ -246,7 +246,8 @@ proc create_root_design { parentCell } {
   # Create ports
   set clk_100MHz [ create_bd_port -dir I -type clk clk_100MHz ]
   set_property -dict [ list \
-   CONFIG.FREQ_HZ {100000000} \
+   CONFIG.CLK_DOMAIN {design_1_clk_100MHz} \
+   CONFIG.FREQ_HZ {200000000} \
  ] $clk_100MHz
   set reset_rtl_0 [ create_bd_port -dir I -type rst reset_rtl_0 ]
   set_property -dict [ list \
@@ -264,12 +265,12 @@ proc create_root_design { parentCell } {
   # Create instance: clk_wiz_1, and set properties
   set clk_wiz_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_1 ]
   set_property -dict [ list \
-   CONFIG.CLKIN1_JITTER_PS {100.0} \
+   CONFIG.CLKIN1_JITTER_PS {50.0} \
    CONFIG.CLKIN2_JITTER_PS {100.0} \
    CONFIG.CLKOUT1_DRIVES {BUFG} \
-   CONFIG.CLKOUT1_JITTER {137.681} \
-   CONFIG.CLKOUT1_PHASE_ERROR {105.461} \
-   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {100.000} \
+   CONFIG.CLKOUT1_JITTER {431.198} \
+   CONFIG.CLKOUT1_PHASE_ERROR {313.282} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {10.000} \
    CONFIG.CLKOUT2_DRIVES {BUFG} \
    CONFIG.CLKOUT3_DRIVES {BUFG} \
    CONFIG.CLKOUT4_DRIVES {BUFG} \
@@ -279,13 +280,14 @@ proc create_root_design { parentCell } {
    CONFIG.ENABLE_CLOCK_MONITOR {false} \
    CONFIG.FEEDBACK_SOURCE {FDBK_AUTO} \
    CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {9} \
-   CONFIG.MMCM_CLKIN1_PERIOD {10.000} \
-   CONFIG.MMCM_CLKIN2_PERIOD {10.000} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {9} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {41} \
+   CONFIG.MMCM_CLKIN1_PERIOD {5.000} \
+   CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {82} \
    CONFIG.MMCM_COMPENSATION {ZHOLD} \
-   CONFIG.MMCM_DIVCLK_DIVIDE {1} \
+   CONFIG.MMCM_DIVCLK_DIVIDE {10} \
    CONFIG.PRIMITIVE {PLL} \
+   CONFIG.PRIM_IN_FREQ {200.000} \
    CONFIG.PRIM_SOURCE {Global_buffer} \
    CONFIG.SECONDARY_IN_FREQ {100.000} \
    CONFIG.SECONDARY_SOURCE {Single_ended_clock_capable_pin} \

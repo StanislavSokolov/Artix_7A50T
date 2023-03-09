@@ -109,6 +109,8 @@ int GpioInputExample(u16 DeviceId, u32 *DataRead);
 
 void GpioDriverHandler(void *CallBackRef);
 
+int GpioOutputExampleTest(u16 DeviceId, u32 GpioWidth);
+
 
 /************************** Variable Definitions **************************/
 
@@ -226,6 +228,9 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 
 	 }
 
+	 XGpio_DiscreteWrite(&GpioOutput, LED_CHANNEL,
+				0x22);
+
 	 return XST_SUCCESS;
 
 }
@@ -267,6 +272,17 @@ int GpioInputExample(u16 DeviceId, u32 *DataRead)
 
 	 /* Read the state of the data so that it can be  verified */
 	 *DataRead = XGpio_DiscreteRead(&GpioInput, LED_CHANNEL);
+
+	 return XST_SUCCESS;
+
+}
+
+int GpioOutputExampleTest(u16 DeviceId, u32 GpioWidth)
+{
+
+	 /* Set the GPIO outputs to low */
+	XGpio_DiscreteWrite(&GpioOutput, LED_CHANNEL,
+					0x00);
 
 	 return XST_SUCCESS;
 
