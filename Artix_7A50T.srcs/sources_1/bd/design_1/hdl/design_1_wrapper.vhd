@@ -1,8 +1,8 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Wed Mar  8 22:38:05 2023
---Host        : Stas running 64-bit major release  (build 9200)
+--Date        : Thu Mar  9 08:12:59 2023
+--Host        : STAS-W10 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
 --Purpose     : IP block netlist
@@ -23,8 +23,8 @@ architecture STRUCTURE of design_1_wrapper is
   component design_1 is
   port (
     reset_rtl_0 : in STD_LOGIC;
-    gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    clk_100MHz : in STD_LOGIC
+    clk_100MHz : in STD_LOGIC;
+    gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component design_1;
 begin
