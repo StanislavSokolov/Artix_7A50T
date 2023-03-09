@@ -1,4 +1,4 @@
-08:17:56 **** Auto Build of project start_project_bsp ****
+14:32:38 **** Auto Build of project start_project_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_3/src"
 make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -34,5 +34,5 @@ microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly
          ^~~~~~~
 'Finished building libraries'
 
-08:18:01 Build Finished (took 4s.221ms)
+14:32:42 Build Finished (took 4s.153ms)
 

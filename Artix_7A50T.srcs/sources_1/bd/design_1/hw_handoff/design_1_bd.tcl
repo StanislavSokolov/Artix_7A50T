@@ -250,7 +250,7 @@ proc create_root_design { parentCell } {
  ] $clk_100MHz
   set reset_rtl_0 [ create_bd_port -dir I -type rst reset_rtl_0 ]
   set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_LOW} \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
  ] $reset_rtl_0
 
   # Create instance: axi_gpio_0, and set properties
