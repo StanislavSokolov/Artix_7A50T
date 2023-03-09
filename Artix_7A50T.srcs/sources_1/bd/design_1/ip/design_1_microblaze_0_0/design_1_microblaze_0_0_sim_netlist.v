@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Wed Mar  8 22:10:01 2023
+// Date        : Wed Mar  8 21:27:47 2023
 // Host        : Stas running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top design_1_microblaze_0_0 -prefix
 //               design_1_microblaze_0_0_ design_1_microblaze_0_0_sim_netlist.v
@@ -141,7 +141,7 @@ module design_1_microblaze_0_0
     M_AXI_DC_RLAST,
     M_AXI_DC_RVALID,
     M_AXI_DC_RREADY);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF M0_AXIS:S0_AXIS:M1_AXIS:S1_AXIS:M2_AXIS:S2_AXIS:M3_AXIS:S3_AXIS:M4_AXIS:S4_AXIS:M5_AXIS:S5_AXIS:M6_AXIS:S6_AXIS:M7_AXIS:S7_AXIS:M8_AXIS:S8_AXIS:M9_AXIS:S9_AXIS:M10_AXIS:S10_AXIS:M11_AXIS:S11_AXIS:M12_AXIS:S12_AXIS:M13_AXIS:S13_AXIS:M14_AXIS:S14_AXIS:M15_AXIS:S15_AXIS:DLMB:ILMB:M_AXI_DP:M_AXI_IP:M_AXI_DC:M_AXI_IC:M_ACE_DC:M_ACE_IC:MON_DLMB:MON_ILMB:MON_AXI_DP:MON_AXI_IP:MON_AXI_DC:MON_AXI_IC:MON_ACE_DC:MON_ACE_IC, ASSOCIATED_RESET Reset, FREQ_HZ 50000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input Clk;
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF M0_AXIS:S0_AXIS:M1_AXIS:S1_AXIS:M2_AXIS:S2_AXIS:M3_AXIS:S3_AXIS:M4_AXIS:S4_AXIS:M5_AXIS:S5_AXIS:M6_AXIS:S6_AXIS:M7_AXIS:S7_AXIS:M8_AXIS:S8_AXIS:M9_AXIS:S9_AXIS:M10_AXIS:S10_AXIS:M11_AXIS:S11_AXIS:M12_AXIS:S12_AXIS:M13_AXIS:S13_AXIS:M14_AXIS:S14_AXIS:M15_AXIS:S15_AXIS:DLMB:ILMB:M_AXI_DP:M_AXI_IP:M_AXI_DC:M_AXI_IC:M_ACE_DC:M_ACE_IC:MON_DLMB:MON_ILMB:MON_AXI_DP:MON_AXI_IP:MON_AXI_DC:MON_AXI_IC:MON_ACE_DC:MON_ACE_IC, ASSOCIATED_RESET Reset, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) input Clk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 RST.RESET RST" *) (* x_interface_parameter = "XIL_INTERFACENAME RST.RESET, POLARITY ACTIVE_HIGH, TYPE PROCESSOR, INSERT_VIP 0" *) input Reset;
   (* x_interface_info = "xilinx.com:interface:mbinterrupt:1.0 INTERRUPT INTERRUPT" *) (* x_interface_parameter = "XIL_INTERFACENAME INTERRUPT, SENSITIVITY LEVEL_HIGH, LOW_LATENCY 0" *) input Interrupt;
   (* x_interface_info = "xilinx.com:interface:mbinterrupt:1.0 INTERRUPT ADDRESS" *) input [0:31]Interrupt_Address;
@@ -165,7 +165,7 @@ module design_1_microblaze_0_0
   (* x_interface_info = "xilinx.com:interface:lmb:1.0 DLMB CE" *) input DCE;
   (* x_interface_info = "xilinx.com:interface:lmb:1.0 DLMB UE" *) input DUE;
   (* x_interface_info = "xilinx.com:interface:lmb:1.0 DLMB BE" *) output [0:3]Byte_Enable;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_DP AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_DP, ID_WIDTH 0, READ_WRITE_MODE READ_WRITE, SUPPORTS_NARROW_BURST 0, HAS_BURST 0, HAS_LOCK 0, DATA_WIDTH 32, ADDR_WIDTH 32, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, MAX_BURST_LENGTH 1, PROTOCOL AXI4LITE, FREQ_HZ 50000000, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output [31:0]M_AXI_DP_AWADDR;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_DP AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_DP, ID_WIDTH 0, READ_WRITE_MODE READ_WRITE, SUPPORTS_NARROW_BURST 0, HAS_BURST 0, HAS_LOCK 0, DATA_WIDTH 32, ADDR_WIDTH 32, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, MAX_BURST_LENGTH 1, PROTOCOL AXI4LITE, FREQ_HZ 100000000, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) output [31:0]M_AXI_DP_AWADDR;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_DP AWPROT" *) output [2:0]M_AXI_DP_AWPROT;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_DP AWVALID" *) output M_AXI_DP_AWVALID;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_DP AWREADY" *) input M_AXI_DP_AWREADY;
@@ -193,7 +193,7 @@ module design_1_microblaze_0_0
   (* x_interface_info = "xilinx.com:interface:mbdebug:3.0 DEBUG UPDATE" *) input Dbg_Update;
   (* x_interface_info = "xilinx.com:interface:mbdebug:3.0 DEBUG RST" *) input Debug_Rst;
   (* x_interface_info = "xilinx.com:interface:mbdebug:3.0 DEBUG DISABLE" *) input Dbg_Disable;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_IC AWID" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_IC, ID_WIDTH 0, READ_WRITE_MODE READ_ONLY, SUPPORTS_NARROW_BURST 0, HAS_BURST 1, HAS_LOCK 0, ADDR_WIDTH 32, PROTOCOL AXI4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, WUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, RUSER_BITS_PER_BYTE 0, BUSER_WIDTH 0, DATA_WIDTH 32, NUM_READ_OUTSTANDING 2, NUM_READ_THREADS 1, MAX_BURST_LENGTH 16, HAS_WSTRB 0, HAS_BRESP 0, FREQ_HZ 50000000, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_RRESP 1, NUM_WRITE_OUTSTANDING 2, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, NUM_WRITE_THREADS 1, INSERT_VIP 0" *) output [0:0]M_AXI_IC_AWID;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_IC AWID" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_IC, ID_WIDTH 0, READ_WRITE_MODE READ_ONLY, SUPPORTS_NARROW_BURST 0, HAS_BURST 1, HAS_LOCK 0, ADDR_WIDTH 32, PROTOCOL AXI4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, WUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, RUSER_BITS_PER_BYTE 0, BUSER_WIDTH 0, DATA_WIDTH 32, NUM_READ_OUTSTANDING 2, NUM_READ_THREADS 1, MAX_BURST_LENGTH 16, HAS_WSTRB 0, HAS_BRESP 0, FREQ_HZ 100000000, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_RRESP 1, NUM_WRITE_OUTSTANDING 2, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, NUM_WRITE_THREADS 1, INSERT_VIP 0" *) output [0:0]M_AXI_IC_AWID;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_IC AWADDR" *) output [31:0]M_AXI_IC_AWADDR;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_IC AWLEN" *) output [7:0]M_AXI_IC_AWLEN;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_IC AWSIZE" *) output [2:0]M_AXI_IC_AWSIZE;
@@ -230,7 +230,7 @@ module design_1_microblaze_0_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_IC RLAST" *) input M_AXI_IC_RLAST;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_IC RVALID" *) input M_AXI_IC_RVALID;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_IC RREADY" *) output M_AXI_IC_RREADY;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_DC AWID" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_DC, ID_WIDTH 0, READ_WRITE_MODE READ_WRITE, SUPPORTS_NARROW_BURST 0, HAS_BURST 1, HAS_LOCK 1, ADDR_WIDTH 32, PROTOCOL AXI4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, WUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, RUSER_BITS_PER_BYTE 0, BUSER_WIDTH 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, DATA_WIDTH 32, MAX_BURST_LENGTH 16, FREQ_HZ 50000000, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) output [0:0]M_AXI_DC_AWID;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_DC AWID" *) (* x_interface_parameter = "XIL_INTERFACENAME M_AXI_DC, ID_WIDTH 0, READ_WRITE_MODE READ_WRITE, SUPPORTS_NARROW_BURST 0, HAS_BURST 1, HAS_LOCK 1, ADDR_WIDTH 32, PROTOCOL AXI4, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, WUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, RUSER_BITS_PER_BYTE 0, BUSER_WIDTH 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 32, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, DATA_WIDTH 32, MAX_BURST_LENGTH 16, FREQ_HZ 100000000, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_1_0_clk_out1, INSERT_VIP 0" *) output [0:0]M_AXI_DC_AWID;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_DC AWADDR" *) output [31:0]M_AXI_DC_AWADDR;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_DC AWLEN" *) output [7:0]M_AXI_DC_AWLEN;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 M_AXI_DC AWSIZE" *) output [2:0]M_AXI_DC_AWSIZE;
@@ -629,7 +629,7 @@ module design_1_microblaze_0_0
   (* C_FAMILY = "artix7" *) 
   (* C_FAULT_TOLERANT = "0" *) 
   (* C_FPU_EXCEPTION = "0" *) 
-  (* C_FREQ = "50000000" *) 
+  (* C_FREQ = "100000000" *) 
   (* C_FSL_EXCEPTION = "0" *) 
   (* C_FSL_LINKS = "0" *) 
   (* C_IADDR_SIZE = "32" *) 
@@ -69900,7 +69900,7 @@ endmodule
 (* C_DEBUG_TRACE_SIZE = "8192" *) (* C_DIV_ZERO_EXCEPTION = "0" *) (* C_DYNAMIC_BUS_SIZING = "0" *) 
 (* C_D_AXI = "1" *) (* C_D_LMB = "1" *) (* C_ECC_USE_CE_EXCEPTION = "0" *) 
 (* C_EDGE_IS_POSITIVE = "1" *) (* C_ENDIANNESS = "1" *) (* C_FAMILY = "artix7" *) 
-(* C_FAULT_TOLERANT = "0" *) (* C_FPU_EXCEPTION = "0" *) (* C_FREQ = "50000000" *) 
+(* C_FAULT_TOLERANT = "0" *) (* C_FPU_EXCEPTION = "0" *) (* C_FREQ = "100000000" *) 
 (* C_FSL_EXCEPTION = "0" *) (* C_FSL_LINKS = "0" *) (* C_IADDR_SIZE = "32" *) 
 (* C_ICACHE_ALWAYS_USED = "1" *) (* C_ICACHE_BASEADDR = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* C_ICACHE_DATA_WIDTH = "0" *) 
 (* C_ICACHE_FORCE_TAG_LUTRAM = "0" *) (* C_ICACHE_HIGHADDR = "64'b0000000000000000000000000000000000111111111111111111111111111111" *) (* C_ICACHE_LINE_LEN = "16" *) 

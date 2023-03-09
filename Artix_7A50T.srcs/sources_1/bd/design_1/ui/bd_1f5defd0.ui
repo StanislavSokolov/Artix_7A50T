@@ -22,11 +22,11 @@ preplace netloc reset_rtl_0_1 1 0 2 NJ -230 590J
 preplace netloc clk_100MHz_1 1 0 1 N -100
 preplace netloc microblaze_0_debug 1 0 2 60 -40 540
 preplace netloc microblaze_0_M_AXI_DP 1 1 2 550J -270 990J
-preplace netloc microblaze_0_axi_periph_M00_AXI 1 0 4 20 -300 NJ -300 1000J 30 1310
-preplace netloc microblaze_0_ilmb_1 1 1 1 N 40
-preplace netloc axi_gpio_0_GPIO 1 1 3 600 -220 990 20 1320
 preplace netloc microblaze_0_dlmb_1 1 1 1 NJ 20
+preplace netloc axi_gpio_0_GPIO 1 1 3 600 -220 990 20 1320
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 0 4 20 -300 NJ -300 1000J 30 1310
 preplace netloc microblaze_0_M_AXI_IC 1 1 2 580 -240 NJ
+preplace netloc microblaze_0_ilmb_1 1 1 1 N 40
 preplace netloc microblaze_0_M_AXI_DC 1 1 2 570 -250 1010J
 levelinfo -pg 1 0 300 790 1160 1340
 pagesize -pg 1 -db -bbox -sgen -130 -340 1460 420
