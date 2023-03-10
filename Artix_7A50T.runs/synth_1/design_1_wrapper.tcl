@@ -18,7 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a50tftg256-3
 
 set_param project.singleFileAddWarning.threshold 0
@@ -27,7 +26,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.cache/wt [current_project]
 set_property parent.project_path D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property ip_output_repo d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.cache/ip [current_project]
@@ -56,8 +55,10 @@ set_property used_in_implementation false [get_files -all d:/GITEA/GitHub/ES/Art
 set_property used_in_implementation false [get_files -all d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0.xdc]
 set_property used_in_implementation false [get_files -all d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_1_100M_0/design_1_rst_clk_wiz_1_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_2/design_1_axi_quad_spi_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_2/design_1_axi_quad_spi_0_2.xdc]
+set_property used_in_implementation false [get_files -all d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_2/design_1_axi_quad_spi_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_2/design_1_axi_quad_spi_0_2_clocks.xdc]
 set_property used_in_implementation false [get_files -all D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_microblaze_0_0/data/mb_bootloop_le.elf]
 

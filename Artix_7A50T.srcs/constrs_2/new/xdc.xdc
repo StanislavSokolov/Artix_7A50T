@@ -22,3 +22,18 @@ set_property IOSTANDARD LVCMOS33 [get_ports clk_100MHz]
 
 set_property PACKAGE_PIN N3 [get_ports {gpio_rtl_0_tri_o[3]}]
 set_property PACKAGE_PIN N1 [get_ports {gpio_rtl_0_tri_o[4]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports spi_rtl_0_io0_io]
+
+set_property PACKAGE_PIN L12 [get_ports {spi_rtl_0_ss_io[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {spi_rtl_0_ss_io[0]}]
+set_property PACKAGE_PIN J13 [get_ports spi_rtl_0_io0_io]
+set_property PACKAGE_PIN J14 [get_ports spi_rtl_0_io1_io]
+set_property PACKAGE_PIN K15 [get_ports spi_rtl_0_io2_io]
+set_property PACKAGE_PIN K16 [get_ports spi_rtl_0_io3_io]
+set_property IOSTANDARD LVCMOS33 [get_ports spi_rtl_0_io1_io]
+set_property IOSTANDARD LVCMOS33 [get_ports spi_rtl_0_io2_io]
+set_property IOSTANDARD LVCMOS33 [get_ports spi_rtl_0_io3_io]
+
+set_property PACKAGE_PIN M15 [get_ports spi_rtl_0_sck_io]
+set_property IOSTANDARD LVCMOS33 [get_ports spi_rtl_0_sck_io]

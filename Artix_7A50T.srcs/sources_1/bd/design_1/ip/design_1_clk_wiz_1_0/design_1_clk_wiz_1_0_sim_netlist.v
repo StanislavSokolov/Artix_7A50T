@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu Mar  9 17:47:44 2023
+// Date        : Thu Mar  9 17:06:31 2023
 // Host        : STAS-W10 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_clk_wiz_1_0 -prefix
+//               design_1_clk_wiz_1_0_ design_1_clk_wiz_1_0_sim_netlist.v
 // Design      : design_1_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,7 +35,6 @@ module design_1_clk_wiz_1_0
         .reset(reset));
 endmodule
 
-(* ORIG_REF_NAME = "design_1_clk_wiz_1_0_clk_wiz" *) 
 module design_1_clk_wiz_1_0_design_1_clk_wiz_1_0_clk_wiz
    (clk_out1,
     reset,
@@ -77,11 +76,11 @@ module design_1_clk_wiz_1_0_design_1_clk_wiz_1_0_clk_wiz
   (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT(41),
+    .CLKFBOUT_MULT(17),
     .CLKFBOUT_PHASE(0.000000),
     .CLKIN1_PERIOD(5.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE(82),
+    .CLKOUT0_DIVIDE(17),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT1_DIVIDE(1),
@@ -100,7 +99,7 @@ module design_1_clk_wiz_1_0_design_1_clk_wiz_1_0_clk_wiz
     .CLKOUT5_DUTY_CYCLE(0.500000),
     .CLKOUT5_PHASE(0.000000),
     .COMPENSATION("BUF_IN"),
-    .DIVCLK_DIVIDE(10),
+    .DIVCLK_DIVIDE(4),
     .IS_CLKINSEL_INVERTED(1'b0),
     .IS_PWRDWN_INVERTED(1'b0),
     .IS_RST_INVERTED(1'b0),

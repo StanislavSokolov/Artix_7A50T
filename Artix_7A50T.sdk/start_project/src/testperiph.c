@@ -34,8 +34,8 @@
 #include "gpio_header.h"
 int main () 
 {
-//   Xil_ICacheEnable();
-//   Xil_DCacheEnable();
+   Xil_ICacheEnable();
+   Xil_DCacheEnable();
 //   print("---Entering main---\n\r");
 	u32 count = 0x00;
 	u32 count8 = 0x00;
@@ -59,7 +59,7 @@ int main ()
 
 
 //   print("---Exiting main---\n\r");
-//   Xil_DCacheDisable();
-//   Xil_ICacheDisable();
+   Xil_DCacheDisable();
+   Xil_ICacheDisable();
    return 0;
 }
