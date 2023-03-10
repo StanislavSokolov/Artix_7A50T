@@ -37,3 +37,8 @@ set_property IOSTANDARD LVCMOS33 [get_ports spi_rtl_0_io3_io]
 
 set_property PACKAGE_PIN M15 [get_ports spi_rtl_0_sck_io]
 set_property IOSTANDARD LVCMOS33 [get_ports spi_rtl_0_sck_io]
+
+set_property PACKAGE_PIN M12 [get_ports uart_rtl_0_txd]
+set_property PACKAGE_PIN N6 [get_ports uart_rtl_0_rxd]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_rtl_0_rxd]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_rtl_0_txd]

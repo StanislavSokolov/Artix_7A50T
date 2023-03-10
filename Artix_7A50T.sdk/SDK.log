@@ -3852,3 +3852,604 @@ con
 ----------------End of Script----------------
 
 18:02:48 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+09:01:52 INFO  : Registering command handlers for SDK TCF services
+09:01:52 INFO  : Launching XSCT server: xsct.bat -interactive D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\temp_xsdb_launch_script.tcl
+09:01:55 INFO  : XSCT server has started successfully.
+09:01:55 INFO  : Successfully done setting XSCT server connection channel  
+09:01:56 INFO  : Successfully done setting SDK workspace  
+09:01:56 INFO  : Processing command line option -hwspec D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf.
+09:01:56 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+09:01:58 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1678428060707,  Project:1678373550440
+09:01:58 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf.
+09:01:58 INFO  : Copied contents of D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+09:01:58 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:02:00 INFO  : 
+09:02:01 INFO  : 
+09:02:06 INFO  : Updating hardware inferred compiler options for start_project.
+09:02:06 INFO  : Clearing existing target manager status.
+09:02:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+09:02:36 INFO  : 'fpga -state' command is executed.
+09:02:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:02:36 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+09:02:36 INFO  : 'jtag frequency' command is executed.
+09:02:36 WARN  : 'microblaze_0' frequency '10000000' is less than Jtag frequency '15000000'. Debugging will not work reliably
+09:02:39 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:02:39 INFO  : Context for processor 'microblaze_0' is selected.
+09:02:39 INFO  : Processor reset is completed for 'microblaze_0'.
+09:02:39 INFO  : Context for processor 'microblaze_0' is selected.
+09:02:39 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf' is downloaded to processor 'microblaze_0'.
+09:02:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf
+----------------End of Script----------------
+
+09:02:39 INFO  : Memory regions updated for context MicroBlaze #0
+09:02:39 INFO  : Memory regions updated for context MicroBlaze #0
+09:02:39 INFO  : Context for processor 'microblaze_0' is selected.
+09:02:39 INFO  : 'con' command is executed.
+09:02:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+09:02:39 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+10:11:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1678432259643,  Project:1678428060707
+10:11:19 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+10:11:26 INFO  : Copied contents of D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+10:11:26 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:11:28 INFO  : 
+10:11:29 INFO  : 
+10:11:30 INFO  : Updating hardware inferred compiler options for start_project.
+10:11:30 INFO  : Clearing existing target manager status.
+10:11:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:11:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+10:11:48 INFO  : FPGA configured successfully with bitstream "D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper_hw_platform_0/download.bit"
+10:12:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:12:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+10:12:08 INFO  : FPGA configured successfully with bitstream "D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper_hw_platform_0/download.bit"
+10:12:13 INFO  : Disconnected from the channel tcfchan#1.
+10:12:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+10:12:14 INFO  : 'fpga -state' command is executed.
+10:12:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:12:14 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+10:12:14 INFO  : 'jtag frequency' command is executed.
+10:12:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:12:15 INFO  : Context for processor 'microblaze_0' is selected.
+10:12:15 INFO  : Processor reset is completed for 'microblaze_0'.
+10:12:15 INFO  : Context for processor 'microblaze_0' is selected.
+10:12:15 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf' is downloaded to processor 'microblaze_0'.
+10:12:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf
+----------------End of Script----------------
+
+10:12:15 INFO  : Memory regions updated for context MicroBlaze #0
+10:12:15 INFO  : Memory regions updated for context MicroBlaze #0
+10:12:15 INFO  : Context for processor 'microblaze_0' is selected.
+10:12:15 INFO  : 'con' command is executed.
+10:12:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+10:12:15 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+10:16:21 INFO  : Disconnected from the channel tcfchan#2.
+10:16:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+10:16:22 INFO  : 'fpga -state' command is executed.
+10:16:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:16:22 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+10:16:22 INFO  : 'jtag frequency' command is executed.
+10:16:22 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:16:22 INFO  : Context for processor 'microblaze_0' is selected.
+10:16:22 INFO  : Processor reset is completed for 'microblaze_0'.
+10:16:22 INFO  : Context for processor 'microblaze_0' is selected.
+10:16:22 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf' is downloaded to processor 'microblaze_0'.
+10:16:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf
+----------------End of Script----------------
+
+10:16:22 INFO  : Memory regions updated for context MicroBlaze #0
+10:16:22 INFO  : Memory regions updated for context MicroBlaze #0
+10:16:22 INFO  : Context for processor 'microblaze_0' is selected.
+10:16:22 INFO  : 'con' command is executed.
+10:16:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+10:16:22 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+10:17:37 INFO  : Disconnected from the channel tcfchan#3.
+10:17:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+10:17:38 INFO  : 'fpga -state' command is executed.
+10:17:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:17:38 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+10:17:38 INFO  : 'jtag frequency' command is executed.
+10:17:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:17:38 INFO  : Context for processor 'microblaze_0' is selected.
+10:17:38 INFO  : Processor reset is completed for 'microblaze_0'.
+10:17:38 INFO  : Context for processor 'microblaze_0' is selected.
+10:17:39 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf' is downloaded to processor 'microblaze_0'.
+10:17:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf
+----------------End of Script----------------
+
+10:17:39 INFO  : Memory regions updated for context MicroBlaze #0
+10:17:39 INFO  : Memory regions updated for context MicroBlaze #0
+10:17:39 INFO  : Context for processor 'microblaze_0' is selected.
+10:17:39 INFO  : 'con' command is executed.
+10:17:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+10:17:39 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+10:18:16 INFO  : Disconnected from the channel tcfchan#4.
+10:18:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+10:18:17 INFO  : 'fpga -state' command is executed.
+10:18:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:18:18 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+10:18:18 INFO  : 'jtag frequency' command is executed.
+10:18:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:18:18 INFO  : Context for processor 'microblaze_0' is selected.
+10:18:18 INFO  : Processor reset is completed for 'microblaze_0'.
+10:18:18 INFO  : Context for processor 'microblaze_0' is selected.
+10:18:18 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf' is downloaded to processor 'microblaze_0'.
+10:18:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf
+----------------End of Script----------------
+
+10:18:18 INFO  : Memory regions updated for context MicroBlaze #0
+10:18:18 INFO  : Memory regions updated for context MicroBlaze #0
+10:18:18 INFO  : Context for processor 'microblaze_0' is selected.
+10:18:18 INFO  : 'con' command is executed.
+10:18:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+10:18:18 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+10:38:33 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1678433898379,  Project:1678432259643
+10:38:33 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+10:38:37 INFO  : Copied contents of D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+10:38:38 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:38:39 INFO  : 
+10:38:41 INFO  : 
+10:38:42 INFO  : Updating hardware inferred compiler options for start_project.
+10:38:42 INFO  : Clearing existing target manager status.
+10:41:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:41:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+10:41:42 INFO  : FPGA configured successfully with bitstream "D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper_hw_platform_0/download.bit"
+10:42:43 INFO  : Disconnected from the channel tcfchan#5.
+10:42:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+10:42:44 INFO  : 'fpga -state' command is executed.
+10:42:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:42:44 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+10:42:44 INFO  : 'jtag frequency' command is executed.
+10:42:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:42:44 INFO  : Context for processor 'microblaze_0' is selected.
+10:42:44 INFO  : Processor reset is completed for 'microblaze_0'.
+10:42:44 INFO  : Context for processor 'microblaze_0' is selected.
+10:42:44 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf' is downloaded to processor 'microblaze_0'.
+10:42:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf
+----------------End of Script----------------
+
+10:42:44 INFO  : Memory regions updated for context MicroBlaze #0
+10:42:44 INFO  : Memory regions updated for context MicroBlaze #0
+10:42:44 INFO  : Context for processor 'microblaze_0' is selected.
+10:42:44 INFO  : 'con' command is executed.
+10:42:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+10:42:44 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+10:43:53 INFO  : Disconnected from the channel tcfchan#6.
+10:43:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+10:43:54 INFO  : 'fpga -state' command is executed.
+10:43:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:43:54 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+10:43:54 INFO  : 'jtag frequency' command is executed.
+10:43:54 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:43:54 INFO  : Context for processor 'microblaze_0' is selected.
+10:43:54 INFO  : Processor reset is completed for 'microblaze_0'.
+10:43:54 INFO  : Context for processor 'microblaze_0' is selected.
+10:43:54 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf' is downloaded to processor 'microblaze_0'.
+10:43:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf
+----------------End of Script----------------
+
+10:43:54 INFO  : Memory regions updated for context MicroBlaze #0
+10:43:54 INFO  : Memory regions updated for context MicroBlaze #0
+10:43:54 INFO  : Context for processor 'microblaze_0' is selected.
+10:43:54 INFO  : 'con' command is executed.
+10:43:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+10:43:54 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+10:59:40 INFO  : Disconnected from the channel tcfchan#7.
+10:59:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+10:59:41 INFO  : 'fpga -state' command is executed.
+10:59:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:59:41 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+10:59:41 INFO  : 'jtag frequency' command is executed.
+10:59:41 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:59:41 INFO  : Context for processor 'microblaze_0' is selected.
+10:59:41 INFO  : Processor reset is completed for 'microblaze_0'.
+10:59:41 INFO  : Context for processor 'microblaze_0' is selected.
+10:59:41 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf' is downloaded to processor 'microblaze_0'.
+10:59:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf
+----------------End of Script----------------
+
+10:59:41 INFO  : Memory regions updated for context MicroBlaze #0
+10:59:41 INFO  : Memory regions updated for context MicroBlaze #0
+10:59:41 INFO  : Context for processor 'microblaze_0' is selected.
+10:59:41 INFO  : 'con' command is executed.
+10:59:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+10:59:41 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+11:00:36 INFO  : Disconnected from the channel tcfchan#8.
+11:00:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+11:00:37 INFO  : 'fpga -state' command is executed.
+11:00:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:00:37 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+11:00:37 INFO  : 'jtag frequency' command is executed.
+11:00:37 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:00:37 INFO  : Context for processor 'microblaze_0' is selected.
+11:00:37 INFO  : Processor reset is completed for 'microblaze_0'.
+11:00:38 INFO  : Context for processor 'microblaze_0' is selected.
+11:00:38 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf' is downloaded to processor 'microblaze_0'.
+11:00:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf
+----------------End of Script----------------
+
+11:00:38 INFO  : Memory regions updated for context MicroBlaze #0
+11:00:38 INFO  : Memory regions updated for context MicroBlaze #0
+11:00:38 INFO  : Context for processor 'microblaze_0' is selected.
+11:00:38 INFO  : 'con' command is executed.
+11:00:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+11:00:38 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+11:02:22 INFO  : Disconnected from the channel tcfchan#9.
+11:02:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+11:02:24 INFO  : 'fpga -state' command is executed.
+11:02:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:02:24 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+11:02:24 INFO  : 'jtag frequency' command is executed.
+11:02:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:02:24 INFO  : Context for processor 'microblaze_0' is selected.
+11:02:24 INFO  : Processor reset is completed for 'microblaze_0'.
+11:02:24 INFO  : Context for processor 'microblaze_0' is selected.
+11:02:24 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf' is downloaded to processor 'microblaze_0'.
+11:02:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf
+----------------End of Script----------------
+
+11:02:24 INFO  : Memory regions updated for context MicroBlaze #0
+11:02:24 INFO  : Memory regions updated for context MicroBlaze #0
+11:02:24 INFO  : Context for processor 'microblaze_0' is selected.
+11:02:24 INFO  : 'con' command is executed.
+11:02:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+11:02:24 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+11:28:45 INFO  : Disconnected from the channel tcfchan#10.
+11:28:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+11:28:46 INFO  : 'fpga -state' command is executed.
+11:28:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:28:47 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+11:28:47 INFO  : 'jtag frequency' command is executed.
+11:28:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:28:47 INFO  : Context for processor 'microblaze_0' is selected.
+11:28:47 INFO  : Processor reset is completed for 'microblaze_0'.
+11:28:47 INFO  : Context for processor 'microblaze_0' is selected.
+11:28:47 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/test_uart/Debug/test_uart.elf' is downloaded to processor 'microblaze_0'.
+11:28:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/test_uart/Debug/test_uart.elf
+----------------End of Script----------------
+
+11:28:47 INFO  : Memory regions updated for context MicroBlaze #0
+11:28:47 INFO  : Memory regions updated for context MicroBlaze #0
+11:28:47 INFO  : Context for processor 'microblaze_0' is selected.
+11:28:47 INFO  : 'con' command is executed.
+11:28:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+11:28:47 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_uart.elf_on_local.tcl'
+11:29:53 INFO  : Disconnected from the channel tcfchan#11.
+11:29:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+11:29:54 INFO  : 'fpga -state' command is executed.
+11:29:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:29:55 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+11:29:55 INFO  : 'jtag frequency' command is executed.
+11:29:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:29:55 INFO  : Context for processor 'microblaze_0' is selected.
+11:29:55 INFO  : Processor reset is completed for 'microblaze_0'.
+11:29:55 INFO  : Context for processor 'microblaze_0' is selected.
+11:29:55 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/test_uart/Debug/test_uart.elf' is downloaded to processor 'microblaze_0'.
+11:29:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/test_uart/Debug/test_uart.elf
+----------------End of Script----------------
+
+11:29:55 INFO  : Memory regions updated for context MicroBlaze #0
+11:29:55 INFO  : Memory regions updated for context MicroBlaze #0
+11:29:55 INFO  : Context for processor 'microblaze_0' is selected.
+11:29:55 INFO  : 'con' command is executed.
+11:29:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+11:29:55 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_uart.elf_on_local.tcl'
+11:38:44 INFO  : Disconnected from the channel tcfchan#12.
+11:38:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+11:38:45 INFO  : 'fpga -state' command is executed.
+11:38:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:38:45 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+11:38:45 INFO  : 'jtag frequency' command is executed.
+11:38:45 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:38:45 INFO  : Context for processor 'microblaze_0' is selected.
+11:38:45 INFO  : Processor reset is completed for 'microblaze_0'.
+11:38:45 INFO  : Context for processor 'microblaze_0' is selected.
+11:38:45 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/test_uart/Debug/test_uart.elf' is downloaded to processor 'microblaze_0'.
+11:38:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/test_uart/Debug/test_uart.elf
+----------------End of Script----------------
+
+11:38:45 INFO  : Memory regions updated for context MicroBlaze #0
+11:38:45 INFO  : Memory regions updated for context MicroBlaze #0
+11:38:45 INFO  : Context for processor 'microblaze_0' is selected.
+11:38:45 INFO  : 'con' command is executed.
+11:38:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+11:38:45 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_uart.elf_on_local.tcl'
+11:42:55 INFO  : Disconnected from the channel tcfchan#13.
+11:42:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+11:42:56 INFO  : 'fpga -state' command is executed.
+11:42:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:42:56 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+11:42:56 INFO  : 'jtag frequency' command is executed.
+11:42:56 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:42:56 INFO  : Context for processor 'microblaze_0' is selected.
+11:42:56 INFO  : Processor reset is completed for 'microblaze_0'.
+11:42:56 INFO  : Context for processor 'microblaze_0' is selected.
+11:42:56 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/test_uart/Debug/test_uart.elf' is downloaded to processor 'microblaze_0'.
+11:42:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/test_uart/Debug/test_uart.elf
+----------------End of Script----------------
+
+11:42:56 INFO  : Memory regions updated for context MicroBlaze #0
+11:42:56 INFO  : Memory regions updated for context MicroBlaze #0
+11:42:57 INFO  : Context for processor 'microblaze_0' is selected.
+11:42:57 INFO  : 'con' command is executed.
+11:42:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+11:42:57 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_test_uart.elf_on_local.tcl'
+11:44:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+11:44:30 INFO  : 'fpga -state' command is executed.
+11:44:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:44:30 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+11:44:30 INFO  : 'jtag frequency' command is executed.
+11:44:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:44:30 INFO  : Context for processor 'microblaze_0' is selected.
+11:44:30 INFO  : Processor reset is completed for 'microblaze_0'.
+11:44:30 INFO  : Context for processor 'microblaze_0' is selected.
+11:44:31 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf' is downloaded to processor 'microblaze_0'.
+11:44:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/start_project/Debug/start_project.elf
+----------------End of Script----------------
+
+11:44:31 INFO  : Memory regions updated for context MicroBlaze #0
+11:44:31 INFO  : Memory regions updated for context MicroBlaze #0
+11:44:31 INFO  : Context for processor 'microblaze_0' is selected.
+11:44:31 INFO  : 'con' command is executed.
+11:44:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+11:44:31 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_start_project.elf_on_local.tcl'
+11:44:56 INFO  : Example project standalone_bsp_0_xuartlite_intr_example_1 has been created successfully.
+11:54:31 INFO  : Disconnected from the channel tcfchan#14.
+11:54:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+11:54:43 INFO  : 'fpga -state' command is executed.
+11:54:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:54:43 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+11:54:43 INFO  : 'jtag frequency' command is executed.
+11:54:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:54:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+----------------End of Script----------------
+
+11:54:43 INFO  : Memory regions updated for context MicroBlaze #0
+11:54:43 INFO  : Memory regions updated for context MicroBlaze #0
+11:54:43 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_standalone_bsp_0_xuartlite_intr_example_1.elf_on_local.tcl'
+12:13:01 WARN  : channel "tcfchan#14" closed
+12:13:01 INFO  : Disconnected from the channel tcfchan#15.
+12:13:26 INFO  : Registering command handlers for SDK TCF services
+12:13:26 INFO  : Launching XSCT server: xsct.bat -interactive D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\temp_xsdb_launch_script.tcl
+12:13:29 INFO  : XSCT server has started successfully.
+12:13:30 INFO  : Successfully done setting XSCT server connection channel  
+12:13:30 INFO  : Successfully done setting SDK workspace  
+12:13:30 INFO  : Processing command line option -hwspec D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf.
+12:13:30 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+12:30:46 INFO  : Example project standalone_bsp_0_xuartlite_selftest_example_1 has been created successfully.
+12:32:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+12:32:32 INFO  : 'fpga -state' command is executed.
+12:32:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:32:32 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+12:32:32 INFO  : 'jtag frequency' command is executed.
+12:32:32 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:32:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+----------------End of Script----------------
+
+12:32:32 INFO  : Memory regions updated for context MicroBlaze #0
+12:32:32 INFO  : Memory regions updated for context MicroBlaze #0
+12:32:32 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_standalone_bsp_0_xuartlite_intr_example_1.elf_on_local.tcl'
+12:35:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+12:35:15 INFO  : 'fpga -state' command is executed.
+12:35:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:35:15 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+12:35:15 INFO  : 'jtag frequency' command is executed.
+12:35:15 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:35:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+----------------End of Script----------------
+
+12:35:15 INFO  : Memory regions updated for context MicroBlaze #0
+12:35:15 INFO  : Memory regions updated for context MicroBlaze #0
+12:35:15 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_standalone_bsp_0_xuartlite_selftest_example_1.elf_on_local.tcl'
+12:35:39 INFO  : Disconnected from the channel tcfchan#1.
+12:35:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+12:35:44 INFO  : 'fpga -state' command is executed.
+12:35:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:35:44 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+12:35:44 INFO  : 'jtag frequency' command is executed.
+12:35:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:35:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+----------------End of Script----------------
+
+12:35:44 INFO  : Memory regions updated for context MicroBlaze #0
+12:35:44 INFO  : Memory regions updated for context MicroBlaze #0
+12:35:44 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_standalone_bsp_0_xuartlite_selftest_example_1.elf_on_local.tcl'
+12:36:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:36:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+12:36:06 INFO  : FPGA configured successfully with bitstream "D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper_hw_platform_0/download.bit"
+12:36:16 INFO  : Disconnected from the channel tcfchan#2.
+12:36:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+12:36:20 INFO  : 'fpga -state' command is executed.
+12:36:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:36:20 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+12:36:20 INFO  : 'jtag frequency' command is executed.
+12:36:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:36:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+----------------End of Script----------------
+
+12:36:20 INFO  : Memory regions updated for context MicroBlaze #0
+12:36:20 INFO  : Memory regions updated for context MicroBlaze #0
+12:36:20 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_standalone_bsp_0_xuartlite_selftest_example_1.elf_on_local.tcl'
+12:40:21 WARN  : channel "tcfchan#1" closed
+12:40:21 INFO  : Disconnected from the channel tcfchan#3.
+12:41:12 INFO  : Registering command handlers for SDK TCF services
+12:41:13 INFO  : Launching XSCT server: xsct.bat -interactive D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\temp_xsdb_launch_script.tcl
+12:41:16 INFO  : XSCT server has started successfully.
+12:41:16 INFO  : Successfully done setting XSCT server connection channel  
+12:41:16 INFO  : Successfully done setting SDK workspace  
+12:41:16 INFO  : Processing command line option -hwspec D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf.
+12:41:16 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+12:41:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+12:41:58 INFO  : 'fpga -state' command is executed.
+12:41:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:41:58 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+12:41:58 INFO  : 'jtag frequency' command is executed.
+12:41:58 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:41:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+configparams mdm-detect-bscan-mask 2
+----------------End of Script----------------
+
+12:41:58 INFO  : Memory regions updated for context MicroBlaze #0
+12:41:58 INFO  : Memory regions updated for context MicroBlaze #0
+12:41:58 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_standalone_bsp_0_xuartlite_selftest_example_1.elf_on_local.tcl'

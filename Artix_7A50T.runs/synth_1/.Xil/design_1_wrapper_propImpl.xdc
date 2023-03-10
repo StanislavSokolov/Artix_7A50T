@@ -29,3 +29,5 @@ set_property src_info {type:XDC file:1 line:32 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN K15 [get_ports spi_rtl_0_io2_io]
 set_property src_info {type:XDC file:1 line:33 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN K16 [get_ports spi_rtl_0_io3_io]
+set_property src_info {type:XDC file:1 line:38 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN M15 [get_ports spi_rtl_0_sck_io]

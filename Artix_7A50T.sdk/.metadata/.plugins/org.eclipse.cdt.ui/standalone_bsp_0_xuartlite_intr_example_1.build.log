@@ -1,0 +1,13 @@
+12:32:28 **** Incremental Build of configuration Debug for project standalone_bsp_0_xuartlite_intr_example_1 ****
+make all 
+'Building file: ../src/xuartlite_intr_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_example.o" -I../../standalone_bsp_0/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_example.d" -MT"src/xuartlite_intr_example.o" -o "src/xuartlite_intr_example.o" "../src/xuartlite_intr_example.c"
+../src/xuartlite_intr_example.c:61:10: fatal error: xintc.h: No such file or directory
+ #include "xintc.h"
+          ^~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/xuartlite_intr_example.o] Error 1
+
+12:32:28 Build Finished (took 214ms)
+

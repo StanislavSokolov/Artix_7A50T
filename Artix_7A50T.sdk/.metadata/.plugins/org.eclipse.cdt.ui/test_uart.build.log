@@ -1,0 +1,13 @@
+11:43:09 **** Incremental Build of configuration Debug for project test_uart ****
+make all 
+'Building file: ../src/test_uart.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/test_uart.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/test_uart.d" -MT"src/test_uart.o" -o "src/test_uart.o" "../src/test_uart.c"
+../src/test_uart.c:7:10: fatal error: xuartps.h: No such file or directory
+ #include "xuartps.h"
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:29: src/test_uart.o] Error 1
+
+11:43:09 Build Finished (took 212ms)
+

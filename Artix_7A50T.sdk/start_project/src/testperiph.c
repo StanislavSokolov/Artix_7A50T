@@ -36,7 +36,6 @@ int main ()
 {
    Xil_ICacheEnable();
    Xil_DCacheEnable();
-//   print("---Entering main---\n\r");
 	u32 count = 0x00;
 	u32 count8 = 0x00;
 	GpioOutputExample(XPAR_AXI_GPIO_0_DEVICE_ID,8);
@@ -58,7 +57,7 @@ int main ()
 
 
 
-//   print("---Exiting main---\n\r");
+
    Xil_DCacheDisable();
    Xil_ICacheDisable();
    return 0;
