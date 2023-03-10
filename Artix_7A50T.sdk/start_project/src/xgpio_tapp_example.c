@@ -282,7 +282,7 @@ int GpioOutputExampleTest(u16 DeviceId, u32 GpioWidth)
 
 	 /* Set the GPIO outputs to low */
 	XGpio_DiscreteWrite(&GpioOutput, LED_CHANNEL,
-					0x00);
+			GpioWidth);
 
 	 return XST_SUCCESS;
 

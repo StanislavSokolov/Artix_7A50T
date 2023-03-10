@@ -52,7 +52,7 @@ int main ()
 			} else {
 				count8 = 0x00;
 			}
-//			GpioOutputExampleTest(1, count8);
+			GpioOutputExampleTest(1, count8);
 		}
 	}
 
