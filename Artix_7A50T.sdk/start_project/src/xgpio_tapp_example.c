@@ -288,3 +288,12 @@ int GpioOutputExampleTest(u16 DeviceId, u32 GpioWidth)
 
 }
 
+int GpioInputExampleTest(u32 *DataRead)
+{
+
+	*DataRead = XGpio_DiscreteRead(&GpioInput, LED_CHANNEL);
+
+	 return XST_SUCCESS;
+
+}
+

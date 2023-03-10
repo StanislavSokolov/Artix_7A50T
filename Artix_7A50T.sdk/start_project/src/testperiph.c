@@ -38,7 +38,9 @@ int main ()
    Xil_DCacheEnable();
 	u32 count = 0x00;
 	u32 count8 = 0x00;
+	u32 DataRead = 0x00;
 	GpioOutputExample(XPAR_AXI_GPIO_0_DEVICE_ID,8);
+	GpioInputExample(XPAR_AXI_GPIO_1_DEVICE_ID, &DataRead);
 
 	while (1) {
 		if (count < 0xFFFF) {
@@ -51,7 +53,9 @@ int main ()
 			} else {
 				count8 = 0x00;
 			}
-			GpioOutputExampleTest(1, count8);
+//			GpioOutputExampleTest(1, count8);
+			GpioInputExampleTest(&DataRead);
+			GpioOutputExampleTest(1, DataRead);
 		}
 	}
 
