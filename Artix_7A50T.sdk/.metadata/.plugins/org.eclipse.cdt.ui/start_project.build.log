@@ -1,6 +1,26 @@
-18:56:48 **** Incremental Build of configuration Debug for project start_project ****
+19:19:05 **** Incremental Build of configuration Debug for project start_project ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+'Finished building: ../src/testperiph.c'
+' '
+'Building file: ../src/xgpio_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
+'Finished building: ../src/xgpio_tapp_example.c'
+' '
+'Building target: start_project.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "start_project.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: start_project.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size start_project.elf  |tee "start_project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4768	    348	   2124	   7240	   1c48	start_project.elf
+'Finished building: start_project.elf.size'
+' '
 
-18:56:49 Build Finished (took 159ms)
+19:19:06 Build Finished (took 917ms)
 

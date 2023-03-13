@@ -1,4 +1,4 @@
-18:56:40 **** Incremental Build of configuration Debug for project start_project ****
+19:19:05 **** Incremental Build of configuration Debug for project start_project ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -21,10 +21,7 @@ mb-size start_project.elf  |tee "start_project.elf.size"
    4768	    348	   2124	   7240	   1c48	start_project.elf
 'Finished building: start_project.elf.size'
 ' '
-18:56:48 **** Incremental Build of configuration Debug for project start_project ****
-make all 
-make: Nothing to be done for 'all'.
-18:56:49 **** Auto Build of project start_project_bsp ****
+19:19:07 **** Incremental Build of project start_project_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_3/src"
 make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -40,6 +37,8 @@ make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gc
 make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/xilisf_v5_13/src"
+make -C microblaze_0/libsrc/xilisf_v5_13/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
 make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling bram"
@@ -58,18 +57,79 @@ make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" 
 "Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
 make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling standalone";
-inbyte.c: In function 'inbyte':
-inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-outbyte.c: In function 'outbyte':
-outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
- void outbyte(char c) {
-              ~~~~~^
 microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
  #pragma message ("For the sleep routines, assembly instructions are used")
          ^~~~~~~
 "Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling uartlite"
+"Running Make libs in microblaze_0/libsrc/xilisf_v5_13/src"
+make -C microblaze_0/libsrc/xilisf_v5_13/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling XilIsf Library"
 'Finished building libraries'
+19:19:13 **** Incremental Build of configuration Debug for project srec_spi_bootloader ****
+make all 
+'Building file: ../src/bootloader.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bootloader.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bootloader.d" -MT"src/bootloader.o" -o "src/bootloader.o" "../src/bootloader.c"
+In file included from ../src/bootloader.c:37:
+../src/blconfig.h:32:2: warning: #warning "Please provide the correct address value for the definition FLASH_IMAGE_BASEADDR. Please give the flash offset @ which SREC application is programmed" [-Wcpp]
+ #warning "Please provide the correct address value for the definition FLASH_IMAGE_BASEADDR. Please give the flash offset @ which SREC application is programmed"
+  ^~~~~~~
+../src/bootloader.c:56:2: warning: #warning "Set your Device ID here, as defined in xparameters.h" [-Wcpp]
+ #warning "Set your Device ID here, as defined in xparameters.h"
+  ^~~~~~~
+../src/bootloader.c:135:5: warning: pointer targets in initialization of 'int8_t *' {aka 'signed char *'} from 'char *' differ in signedness [-Wpointer-sign]
+     "",
+     ^~
+../src/bootloader.c:135:5: note: (near initialization for 'errors[0]')
+../src/bootloader.c:136:5: warning: pointer targets in initialization of 'int8_t *' {aka 'signed char *'} from 'char *' differ in signedness [-Wpointer-sign]
+     "Error while copying executable image into RAM",
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/bootloader.c:136:5: note: (near initialization for 'errors[1]')
+../src/bootloader.c:137:5: warning: pointer targets in initialization of 'int8_t *' {aka 'signed char *'} from 'char *' differ in signedness [-Wpointer-sign]
+     "Error while reading an SREC line from flash",
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/bootloader.c:137:5: note: (near initialization for 'errors[2]')
+../src/bootloader.c:138:5: warning: pointer targets in initialization of 'int8_t *' {aka 'signed char *'} from 'char *' differ in signedness [-Wpointer-sign]
+     "SREC line is corrupted",
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/bootloader.c:138:5: note: (near initialization for 'errors[3]')
+../src/bootloader.c:139:5: warning: pointer targets in initialization of 'int8_t *' {aka 'signed char *'} from 'char *' differ in signedness [-Wpointer-sign]
+     "SREC has invalid checksum."
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/bootloader.c:139:5: note: (near initialization for 'errors[4]')
+../src/bootloader.c: In function 'main':
+../src/bootloader.c:202:22: warning: pointer targets in passing argument 1 of 'print' differ in signedness [-Wpointer-sign]
+         print (errors[ret]);
+                ~~~~~~^~~~~
+In file included from ../src/bootloader.c:34:
+d:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:250:6: note: expected 'const char *' but argument is of type 'int8_t *' {aka 'signed char *'}
+ void print (const char* );
+      ^~~~~
+../src/bootloader.c:205:22: warning: pointer targets in passing argument 1 of 'print' differ in signedness [-Wpointer-sign]
+         print (errors[ret]);
+                ~~~~~~^~~~~
+In file included from ../src/bootloader.c:34:
+d:\xilinx\sdk\2019.1\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:250:6: note: expected 'const char *' but argument is of type 'int8_t *' {aka 'signed char *'}
+ void print (const char* );
+      ^~~~~
+../src/bootloader.c: In function 'flash_get_srec_line':
+../src/bootloader.c:289:24: warning: assignment to 'u32' {aka 'long unsigned int'} from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
+      ReadParam.Address = flbuf++;
+                        ^
+../src/bootloader.c:328:6: warning: implicit declaration of function 'IsfWaitForFlashNotBusy' [-Wimplicit-function-declaration]
+      IsfWaitForFlashNotBusy();
+      ^~~~~~~~~~~~~~~~~~~~~~
+../src/bootloader.c:334:28: warning: assignment to 'u32' {aka 'long unsigned int'} from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
+          ReadParam.Address = flbuf++;
+                            ^
+'Finished building: ../src/bootloader.c'
+' '
+'Building target: srec_spi_bootloader.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "srec_spi_bootloader.elf"  ./src/bootloader.o ./src/platform.o ./src/srec.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: srec_spi_bootloader.elf section `.stack' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+d:/xilinx/sdk/2019.1/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/8.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 800 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:38: srec_spi_bootloader.elf] Error 1
