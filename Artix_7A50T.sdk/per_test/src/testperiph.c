@@ -46,18 +46,18 @@ int main ()
    Xil_ICacheEnable();
    Xil_DCacheEnable();
    print("---Entering main---\n\r");
-
+   int Status = 0;
 
    {
-      int status;
 
-      status = IntcSelfTestExample(XPAR_AXI_INTC_0_DEVICE_ID);
+	  Status = 10;
+      Status = IntcSelfTestExample(XPAR_AXI_INTC_0_DEVICE_ID);
 
    }
 
    {
-       int Status;
 
+	   Status = 10;
        Status = IntcInterruptSetup(&intc, XPAR_AXI_INTC_0_DEVICE_ID);
 
    }
@@ -65,43 +65,50 @@ int main ()
 
 
    {
-      int status;
+	  Status = 10;
 	 
       u32 DataRead;
       
-      status = GpioInputExample(XPAR_AXI_GPIO_1_DEVICE_ID, &DataRead);
+      Status = GpioInputExample(XPAR_AXI_GPIO_1_DEVICE_ID, &DataRead);
    }
 
 
 
    {
-      int status;
+	  Status = 10;
       
-      status = GpioOutputExample(XPAR_AXI_GPIO_0_DEVICE_ID,8);
+      Status = GpioOutputExample(XPAR_AXI_GPIO_0_DEVICE_ID,8);
    }
 
 
 
    {
-      XStatus status;
+//      XStatus status;
+	  Status = 10;
                   
-      status = SpiSelfTestExample(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
+      Status = SpiSelfTestExample(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
 
    }
 
 
 
    {
-      int status;
+	  Status = 10;
       
-      status = UartLiteSelfTestExample(XPAR_AXI_UARTLITE_0_DEVICE_ID);
+      Status = UartLiteSelfTestExample(XPAR_AXI_UARTLITE_0_DEVICE_ID);
    }
         
    {
-      int Status;
+	  Status = 10;
       Status = UartLiteIntrExample(&intc, &axi_uartlite_0_UartLite, \
                                   XPAR_AXI_UARTLITE_0_DEVICE_ID, \
                                   XPAR_AXI_INTC_0_AXI_UARTLITE_0_INTERRUPT_INTR);
+   }
+
+   Status = 100;
+
+   while (1) {
+	   Status = TestCheckTotalRecvCount();
    }
 
 

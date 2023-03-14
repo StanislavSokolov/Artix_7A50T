@@ -119,6 +119,8 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData);
 
 static void UartLiteRecvHandler(void *CallBackRef, unsigned int EventData);
 
+int TestCheckTotalRecvCount();
+
 static int UartLiteSetupIntrSystem(INTC *IntcInstancePtr,
 				XUartLite *UartLiteInstancePtr,
 				u16 UartLiteIntrId);
@@ -153,7 +155,7 @@ u8 SendBuffer[TEST_BUFFER_SIZE];
  * been sent.
  */
 static volatile int TotalSentCount;
-
+static volatile int TotalRecvCount;
 
 /******************************************************************************/
 /**
@@ -290,6 +292,7 @@ int UartLiteIntrExample(INTC *IntcInstancePtr,
 	 * locked up in this loop if the interrupts are not working correctly.
 	 */
 	while ((TotalSentCount != TEST_BUFFER_SIZE)) {
+
 	}
 
 	UartLiteDisableIntrSystem(IntcInstancePtr, UartLiteIntrId);
@@ -348,7 +351,11 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData)
 ****************************************************************************/
 static void UartLiteRecvHandler(void *CallBackRef, unsigned int EventData)
 {
+	TotalRecvCount++;
+}
 
+int TestCheckTotalRecvCount() {
+	return TotalRecvCount;
 }
 
 /****************************************************************************/
