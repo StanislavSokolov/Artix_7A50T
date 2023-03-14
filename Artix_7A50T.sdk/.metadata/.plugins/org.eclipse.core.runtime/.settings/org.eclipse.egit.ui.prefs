@@ -2,3 +2,4 @@ CompareTreeView_compare_mode=true
 default_repository_dir=D\:\\GITEA\\GitHub\\ES\\Artix_7A50T
 eclipse.preferences.version=1
 resourcehistory_show_all_branches=true
+sync_view_show_changeset_model=true
