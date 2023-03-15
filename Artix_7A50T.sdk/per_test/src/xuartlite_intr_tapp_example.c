@@ -120,6 +120,8 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData);
 static void UartLiteRecvHandler(void *CallBackRef, unsigned int EventData);
 
 int TestCheckTotalRecvCount();
+void TestFunctionXUartLite_Recv(XUartLite *UartLiteInstPtr);
+void TestCheckTotalSendCount(XUartLite *UartLiteInstPtr);
 
 static int UartLiteSetupIntrSystem(INTC *IntcInstancePtr,
 				XUartLite *UartLiteInstancePtr,
@@ -291,11 +293,11 @@ int UartLiteIntrExample(INTC *IntcInstancePtr,
 	 * Wait for the entire buffer to be transmitted,  the function may get
 	 * locked up in this loop if the interrupts are not working correctly.
 	 */
-	while ((TotalSentCount != TEST_BUFFER_SIZE)) {
+//	while ((TotalSentCount != TEST_BUFFER_SIZE)) {
+//
+//	}
 
-	}
-
-	UartLiteDisableIntrSystem(IntcInstancePtr, UartLiteIntrId);
+//	UartLiteDisableIntrSystem(IntcInstancePtr, UartLiteIntrId);
 
 	return XST_SUCCESS;
 }
@@ -326,6 +328,13 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData)
 	TotalSentCount = EventData;
 }
 
+void TestCheckTotalSendCount(XUartLite *UartLiteInstPtr) {
+	if (TotalSentCount == TEST_BUFFER_SIZE) {
+		TotalSentCount = 0;
+		XUartLite_Send(UartLiteInstPtr, SendBuffer, TEST_BUFFER_SIZE);
+	}
+}
+
 /****************************************************************************/
 /**
 *
@@ -351,11 +360,15 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData)
 ****************************************************************************/
 static void UartLiteRecvHandler(void *CallBackRef, unsigned int EventData)
 {
-	TotalRecvCount++;
+	TotalRecvCount = TotalRecvCount + 1;
 }
 
 int TestCheckTotalRecvCount() {
 	return TotalRecvCount;
+}
+
+void TestFunctionXUartLite_Recv(XUartLite *UartLiteInstPtr) {
+	XUartLite_Recv(UartLiteInstPtr, SendBuffer, TEST_BUFFER_SIZE);
 }
 
 /****************************************************************************/

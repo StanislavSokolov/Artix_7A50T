@@ -47,6 +47,7 @@ int main ()
    Xil_DCacheEnable();
    print("---Entering main---\n\r");
    int Status = 0;
+   int count = 0;
 
    {
 
@@ -108,7 +109,15 @@ int main ()
    Status = 100;
 
    while (1) {
-	   Status = TestCheckTotalRecvCount();
+	   TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
+//	   if (count < 100000) {
+//		   count++;
+//	   } else {
+//		   TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
+////		   Status = TestCheckTotalRecvCount();
+//		   count = 0;
+//		   TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
+//	   }
    }
 
 
