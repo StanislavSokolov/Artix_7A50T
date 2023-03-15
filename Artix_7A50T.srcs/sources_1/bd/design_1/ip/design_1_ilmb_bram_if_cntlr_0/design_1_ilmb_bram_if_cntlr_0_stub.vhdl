@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Mon Mar 13 18:21:50 2023
+-- Date        : Tue Mar 14 09:13:11 2023
 -- Host        : STAS-W10 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_ilmb_bram_if_cntlr_0 -prefix
---               design_1_ilmb_bram_if_cntlr_0_ design_1_ilmb_bram_if_cntlr_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_ilmb_bram_if_cntlr_0/design_1_ilmb_bram_if_cntlr_0_stub.vhdl
 -- Design      : design_1_ilmb_bram_if_cntlr_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a50tftg256-3

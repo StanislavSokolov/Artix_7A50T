@@ -3,16 +3,11 @@
 	<section name="ShowViewDialog">
 		<item value="288" key="DIALOG_WIDTH"/>
 		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
-		<item value="org.eclipse.ui.views.ProgressView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
+		<item value="org.eclipse.team.ui.GenericHistoryView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
 		<item value="422" key="DIALOG_HEIGHT"/>
 		<item value="824" key="DIALOG_X_ORIGIN"/>
 		<item value="247" key="DIALOG_Y_ORIGIN"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="C/C++"/>
-			<item value="C/C++ Packs"/>
-			<item value="Charts"/>
-			<item value="Connections"/>
-			<item value="General"/>
 			<item value="Git"/>
 			<item value="Team"/>
 		</list>

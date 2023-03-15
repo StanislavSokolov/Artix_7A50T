@@ -48,7 +48,7 @@ int main ()
 		} else {
 			count = 0x0000;
 //			GpioOutputExampleTest(1, count8);
-			if (count8 < 0x0F) {
+			if (count8 < 0xFF) {
 				count8 = count8 + 0x01;
 			} else {
 				count8 = 0x00;

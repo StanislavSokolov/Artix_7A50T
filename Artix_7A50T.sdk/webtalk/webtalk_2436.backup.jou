@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# 
+# Start of session at: Mon Mar 13 19:19:40 2023
+# Process ID: 2436
+# Current directory: D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/webtalk/webtalk.log
+# Journal file: D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

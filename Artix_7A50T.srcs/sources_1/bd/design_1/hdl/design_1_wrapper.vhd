@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Mon Mar 13 19:11:53 2023
+--Date        : Tue Mar 14 09:12:25 2023
 --Host        : STAS-W10 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -33,6 +33,7 @@ architecture STRUCTURE of design_1_wrapper is
   port (
     reset_rtl_0 : in STD_LOGIC;
     clk_100MHz : in STD_LOGIC;
+    gpio_rtl_1_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     spi_rtl_0_io0_i : in STD_LOGIC;
     spi_rtl_0_io0_o : out STD_LOGIC;
     spi_rtl_0_io0_t : out STD_LOGIC;
@@ -51,7 +52,6 @@ architecture STRUCTURE of design_1_wrapper is
     spi_rtl_0_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_0_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_0_ss_t : out STD_LOGIC;
-    gpio_rtl_1_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     uart_rtl_0_rxd : in STD_LOGIC;
     uart_rtl_0_txd : out STD_LOGIC

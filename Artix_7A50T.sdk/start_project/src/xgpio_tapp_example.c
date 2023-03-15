@@ -229,7 +229,7 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 	 }
 
 	 XGpio_DiscreteWrite(&GpioOutput, LED_CHANNEL,
-				0x22);
+				0x00);
 
 	 return XST_SUCCESS;
 

@@ -3,7 +3,6 @@
 	<name>start_project_bsp</name>
 	<comment>Created by SDK v2019.1</comment>
 	<projects>
-		<project>start_project</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
