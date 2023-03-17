@@ -6922,3 +6922,18 @@ con
 ----------------End of Script----------------
 
 15:57:06 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_per_test.elf_on_local.tcl'
+08:14:56 INFO  : Registering command handlers for SDK TCF services
+08:14:57 INFO  : Launching XSCT server: xsct.bat -interactive D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\temp_xsdb_launch_script.tcl
+08:15:04 INFO  : XSCT server has started successfully.
+08:15:13 INFO  : Successfully done setting XSCT server connection channel  
+08:15:13 INFO  : Successfully done setting SDK workspace  
+08:15:13 INFO  : Processing command line option -hwspec D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf.
+08:15:13 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
+08:15:16 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1679029338970,  Project:1678806311490
+08:15:16 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf.
+08:15:17 INFO  : Copied contents of D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+08:15:17 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+08:15:40 INFO  : 
+08:15:42 INFO  : Updating hardware inferred compiler options for per_test.
+08:15:42 INFO  : Updating hardware inferred compiler options for start_project.
+08:15:42 INFO  : Clearing existing target manager status.
