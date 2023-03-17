@@ -103,9 +103,13 @@
 
 /************************** Function Prototypes ****************************/
 
-int GpioOutputExample(u16 DeviceId, u32 GpioWidth);
+int GpioOutputInitialize(u16 DeviceId);
 
-int GpioInputExample(u16 DeviceId, u32 *DataRead);
+int GpioInputInitialize(u16 DeviceId);
+
+int GpioOutputWrite(u32 GpioWidth);
+
+int GpioInputRead(u32 *DataRead);
 
 void GpioDriverHandler(void *CallBackRef);
 
@@ -133,30 +137,30 @@ XGpio GpioInput;  /* The driver instance for GPIO Device configured as I/P */
 * @note		None
 *
 ******************************************************************************/
-#ifndef TESTAPP_GEN
-int main(void)
-{
-	int Status;
-	u32 InputData;
-
-	Status = GpioOutputExample(GPIO_OUTPUT_DEVICE_ID, GPIO_BITWIDTH);
-	if (Status != XST_SUCCESS) {
-		xil_printf("Gpio tapp Example Failed\r\n");
-		  return XST_FAILURE;
-	}
-
-	Status = GpioInputExample(GPIO_INPUT_DEVICE_ID, &InputData);
-	if (Status != XST_SUCCESS) {
-		xil_printf("Gpio tapp Example Failed\r\n");
-		  return XST_FAILURE;
-	}
-
-	printf("Data read from GPIO Input is  0x%x \n\r", (int)InputData);
-
-	xil_printf("Successfully ran Gpio tapp Example\r\n");
-	return XST_SUCCESS;
-}
-#endif
+//#ifndef TESTAPP_GEN
+//int main(void)
+//{
+//	int Status;
+//	u32 InputData;
+//
+//	Status = GpioOutputExample(GPIO_OUTPUT_DEVICE_ID, GPIO_BITWIDTH);
+//	if (Status != XST_SUCCESS) {
+//		xil_printf("Gpio tapp Example Failed\r\n");
+//		  return XST_FAILURE;
+//	}
+//
+//	Status = GpioInputExample(GPIO_INPUT_DEVICE_ID, &InputData);
+//	if (Status != XST_SUCCESS) {
+//		xil_printf("Gpio tapp Example Failed\r\n");
+//		  return XST_FAILURE;
+//	}
+//
+//	printf("Data read from GPIO Input is  0x%x \n\r", (int)InputData);
+//
+//	xil_printf("Successfully ran Gpio tapp Example\r\n");
+//	return XST_SUCCESS;
+//}
+//#endif
 
 
 /*****************************************************************************/
@@ -177,11 +181,8 @@ int main(void)
 * @note		None
 *
 ****************************************************************************/
-int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
+int GpioOutputInitialize(u16 DeviceId)
 {
-	volatile int Delay;
-	u32 LedBit;
-	u32 LedLoop;
 	int Status;
 
 	/*
@@ -199,38 +200,7 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 	 /* Set the GPIO outputs to low */
 	 XGpio_DiscreteWrite(&GpioOutput, LED_CHANNEL, 0x0);
 
-	 for (LedBit = 0x0; LedBit < GpioWidth; LedBit++)  {
-
-		for (LedLoop = 0; LedLoop < LED_MAX_BLINK; LedLoop++) {
-
-			/* Set the GPIO Output to High */
-			XGpio_DiscreteWrite(&GpioOutput, LED_CHANNEL,
-						1 << LedBit);
-
-#ifndef __SIM__
-			/* Wait a small amount of time so the LED is visible */
-			for (Delay = 0; Delay < LED_DELAY; Delay++);
-
-#endif
-			/* Clear the GPIO Output */
-			XGpio_DiscreteClear(&GpioOutput, LED_CHANNEL,
-						1 << LedBit);
-
-
-#ifndef __SIM__
-			/* Wait a small amount of time so the LED is visible */
-			for (Delay = 0; Delay < LED_DELAY; Delay++);
-#endif
-
-		  }
-
-	 }
-
-	 XGpio_DiscreteWrite(&GpioOutput, LED_CHANNEL,
-	 						0xFF);
-
 	 return XST_SUCCESS;
-
 }
 
 
@@ -252,7 +222,7 @@ int GpioOutputExample(u16 DeviceId, u32 GpioWidth)
 * @note	  	None.
 *
 ******************************************************************************/
-int GpioInputExample(u16 DeviceId, u32 *DataRead)
+int GpioInputInitialize(u16 DeviceId)
 {
 	 int Status;
 
@@ -268,17 +238,12 @@ int GpioInputExample(u16 DeviceId, u32 *DataRead)
 	 /* Set the direction for all signals to be inputs */
 	 XGpio_SetDataDirection(&GpioInput, LED_CHANNEL, 0xFFFFFFFF);
 
-	 /* Read the state of the data so that it can be  verified */
-	 *DataRead = XGpio_DiscreteRead(&GpioInput, LED_CHANNEL);
-
 	 return XST_SUCCESS;
 
 }
 
-int GpioOutputExampleTest(u16 DeviceId, u32 GpioWidth)
+int GpioOutputWrite(u32 GpioWidth)
 {
-
-	 /* Set the GPIO outputs to low */
 	XGpio_DiscreteWrite(&GpioOutput, LED_CHANNEL,
 			GpioWidth);
 
@@ -286,7 +251,7 @@ int GpioOutputExampleTest(u16 DeviceId, u32 GpioWidth)
 
 }
 
-int GpioInputExampleTest(u32 *DataRead)
+int GpioInputRead(u32 *DataRead)
 {
 
 	*DataRead = XGpio_DiscreteRead(&GpioInput, LED_CHANNEL);

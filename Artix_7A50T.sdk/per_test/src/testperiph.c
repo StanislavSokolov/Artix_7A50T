@@ -33,18 +33,34 @@
 #include "xintc.h"
 #include "intc_header.h"
 #include "xgpio.h"
-#include "gpio_header.h"
 #include "xspi.h"
 #include "spi_header.h"
 #include "xuartlite.h"
 #include "uartlite_header.h"
 #include "uartlite_intr_header.h"
+
+
+
+#include "initialization_functions.h"
+#include "logical_functions.h"
+
+
+
 int main () 
 {
+	Xil_ICacheEnable();
+	Xil_DCacheEnable();
+
+	int SystemDesign = 0;
+	int ProjectNumber = 0;
+
+	InitializationSystemDesignAndProject(SystemDesign, ProjectNumber);
+	InitializationInitialValues();
+
+
    static XIntc intc;
    static XUartLite axi_uartlite_0_UartLite;
-   Xil_ICacheEnable();
-   Xil_DCacheEnable();
+
 
    IntcSelfTestExample(XPAR_AXI_INTC_0_DEVICE_ID);
 
@@ -53,9 +69,6 @@ int main ()
    u32 count = 0x00;
    u32 count8 = 0x00;
    u32 DataRead = 0x00;
-   GpioInputExample(XPAR_AXI_GPIO_1_DEVICE_ID, &DataRead);
-   GpioOutputExample(XPAR_AXI_GPIO_0_DEVICE_ID,8);
-
 
    SpiSelfTestExample(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
 
@@ -67,23 +80,15 @@ int main ()
 
 
    while (1) {
-	   TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-//	   TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
-	   GpioInputExampleTest(&DataRead);
-//	   GpioOutputExampleTest(1, DataRead);
+	   GetSystemValues();
+	   SetValuesInAddressSpace();
 
-	   		if (count < 0xFFFF) {
-	   			count = count + 0x01;
-	   		} else {
-	   			count = 0x0000;
-	   			if (count8 < 0xF0) {
-	   				count8 = count8 + 0x10;
-	   			} else {
-	   				count8 = 0x00;
-	   			}
-	   			GpioOutputExampleTest(1, DataRead);
-//	   			GpioOutputExampleTest(1, count8);
-	   		}
+	   u8 Send[16];
+
+	   for (int i = 0; i< 16; i++) {
+		   Send[i] = get_array_current_status_int(i);
+	   }
+	   TestCheckTotalSendCount(&axi_uartlite_0_UartLite, &Send);
    }
 
    Xil_DCacheDisable();

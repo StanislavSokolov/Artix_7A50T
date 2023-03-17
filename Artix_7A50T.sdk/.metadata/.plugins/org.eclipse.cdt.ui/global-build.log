@@ -1,335 +1,276 @@
-10:41:30 **** Incremental Build of configuration Debug for project per_test ****
+17:12:17 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-10:41:33 **** Incremental Build of configuration Debug for project per_test ****
+17:12:22 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-10:42:50 **** Incremental Build of configuration Debug for project per_test ****
+17:14:29 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-10:43:53 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-10:47:17 **** Incremental Build of configuration Debug for project per_test ****
+17:21:03 **** Auto Build of project start_project_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_9/src"
+make -C microblaze_0/libsrc/intc_v3_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_9/src"
+make -C microblaze_0/libsrc/intc_v3_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+              ~~~~~^
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+17:21:09 **** Clean-only build of project start_project_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_3/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_9/src -s clean 
+make -C microblaze_0/libsrc/gpio_v4_4/src -s clean 
+make -C microblaze_0/libsrc/intc_v3_9/src -s clean 
+make -C microblaze_0/libsrc/spi_v4_4/src -s clean 
+make -C microblaze_0/libsrc/standalone_v7_0/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+rm -f microblaze_0/lib/libxil.a
+17:21:10 **** Clean-only build of configuration Debug for project per_test ****
+make clean 
+rm -rf  ./src/CRC_Functions.o ./src/current_system_status.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o  ./src/CRC_Functions.d ./src/current_system_status.d ./src/initializationl_functions.d ./src/logical_functions.d ./src/testperiph.d ./src/xgpio_tapp_example.d ./src/xintc_tapp_example.d ./src/xspi_selftest_example.d ./src/xuartlite_intr_tapp_example.d ./src/xuartlite_selftest_example.d  per_test.elf.size  per_test.elf
+' '
+17:21:10 **** Clean-only build of configuration Debug for project start_project ****
+make clean 
+rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d  start_project.elf.size  start_project.elf
+' '
+17:21:10 **** Build of project start_project_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/intc_v3_9/src"
+make -C microblaze_0/libsrc/intc_v3_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
+make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
+make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
+make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/intc_v3_9/src"
+make -C microblaze_0/libsrc/intc_v3_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling intc"
+"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
+make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling spi"
+"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
+make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+inbyte.c: In function 'inbyte':
+inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+outbyte.c: In function 'outbyte':
+outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
+ void outbyte(char c) {
+              ~~~~~^
+microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+17:21:16 **** Build of configuration Debug for project start_project ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+'Finished building: ../src/testperiph.c'
+' '
+'Building file: ../src/xgpio_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
+'Finished building: ../src/xgpio_tapp_example.c'
+' '
+'Building target: start_project.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "start_project.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: start_project.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size start_project.elf  |tee "start_project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   4768	    348	   2124	   7240	   1c48	start_project.elf
+'Finished building: start_project.elf.size'
+' '
+17:21:17 **** Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/CRC_Functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CRC_Functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/CRC_Functions.d" -MT"src/CRC_Functions.o" -o "src/CRC_Functions.o" "../src/CRC_Functions.c"
+../src/CRC_Functions.c:5: warning: ignoring #pragma DATA_SECTION  [-Wunknown-pragmas]
+ #pragma DATA_SECTION(crc_16_tab, ".slow_vars")
+ 
+'Finished building: ../src/CRC_Functions.c'
+' '
+'Building file: ../src/current_system_status.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/current_system_status.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/current_system_status.d" -MT"src/current_system_status.o" -o "src/current_system_status.o" "../src/current_system_status.c"
+'Finished building: ../src/current_system_status.c'
+' '
+'Building file: ../src/initializationl_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initializationl_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/initializationl_functions.d" -MT"src/initializationl_functions.o" -o "src/initializationl_functions.o" "../src/initializationl_functions.c"
+../src/initializationl_functions.c: In function 'InitializationSystemDesignAndProject':
+../src/initializationl_functions.c:15:2: warning: implicit declaration of function 'GpioOutputInitialize' [-Wimplicit-function-declaration]
+  GpioOutputInitialize(XPAR_AXI_GPIO_0_DEVICE_ID);
+  ^~~~~~~~~~~~~~~~~~~~
+../src/initializationl_functions.c:16:2: warning: implicit declaration of function 'GpioInputInitialize' [-Wimplicit-function-declaration]
+  GpioInputInitialize(XPAR_AXI_GPIO_1_DEVICE_ID);
+  ^~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/initializationl_functions.c'
+' '
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:15:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:16:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(DataRead);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c: In function 'SetValuesInAddressSpace':
+../src/logical_functions.c:21:3: warning: implicit declaration of function 'set_array_current_status_int' [-Wimplicit-function-declaration]
+   set_array_current_status_int(i, i);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
 ../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
+../src/testperiph.c:83:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
+     GetSystemValues();
+     ^~~~~~~~~~~~~~~
+../src/testperiph.c:84:5: warning: implicit declaration of function 'SetValuesInAddressSpace' [-Wimplicit-function-declaration]
+     SetValuesInAddressSpace();
      ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:71:5: warning: implicit declaration of function 'TestFunctionXUartLite_Recv'; did you mean 'XUartLite_Recv'? [-Wimplicit-function-declaration]
-     TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~
-     XUartLite_Recv
-../src/testperiph.c:54:8: warning: unused variable 'count8' [-Wunused-variable]
+../src/testperiph.c:89:16: warning: implicit declaration of function 'get_array_current_status_int' [-Wimplicit-function-declaration]
+      Send[i] = get_array_current_status_int(i);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:91:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
+     TestCheckTotalSendCount(&axi_uartlite_0_UartLite, &Send);
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:71:8: warning: unused variable 'DataRead' [-Wunused-variable]
+    u32 DataRead = 0x00;
+        ^~~~~~~~
+../src/testperiph.c:70:8: warning: unused variable 'count8' [-Wunused-variable]
     u32 count8 = 0x00;
         ^~~~~~
-../src/testperiph.c:53:8: warning: unused variable 'count' [-Wunused-variable]
+../src/testperiph.c:69:8: warning: unused variable 'count' [-Wunused-variable]
     u32 count = 0x00;
         ^~~~~
 'Finished building: ../src/testperiph.c'
 ' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12420	    392	   3588	  16400	   4010	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-10:48:10 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
+'Building file: ../src/xgpio_tapp_example.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:71:5: warning: implicit declaration of function 'TestFunctionXUartLite_Recv'; did you mean 'XUartLite_Recv'? [-Wimplicit-function-declaration]
-     TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~
-     XUartLite_Recv
-'Finished building: ../src/testperiph.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
+'Finished building: ../src/xgpio_tapp_example.c'
 ' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12492	    392	   3588	  16472	   4058	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-10:49:08 **** Auto Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
+'Building file: ../src/xintc_tapp_example.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:71:5: warning: implicit declaration of function 'TestFunctionXUartLite_Recv'; did you mean 'XUartLite_Recv'? [-Wimplicit-function-declaration]
-     TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~
-     XUartLite_Recv
-'Finished building: ../src/testperiph.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xintc_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xintc_tapp_example.d" -MT"src/xintc_tapp_example.o" -o "src/xintc_tapp_example.o" "../src/xintc_tapp_example.c"
+'Finished building: ../src/xintc_tapp_example.c'
 ' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12520	    392	   3584	  16496	   4070	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-10:49:42 **** Auto Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
+'Building file: ../src/xspi_selftest_example.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:71:5: warning: implicit declaration of function 'TestFunctionXUartLite_Recv'; did you mean 'XUartLite_Recv'? [-Wimplicit-function-declaration]
-     TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~
-     XUartLite_Recv
-'Finished building: ../src/testperiph.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xspi_selftest_example.d" -MT"src/xspi_selftest_example.o" -o "src/xspi_selftest_example.o" "../src/xspi_selftest_example.c"
+'Finished building: ../src/xspi_selftest_example.c'
 ' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12524	    392	   3588	  16504	   4078	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-10:49:49 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-10:50:53 **** Auto Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
+'Building file: ../src/xuartlite_intr_tapp_example.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:71:5: warning: implicit declaration of function 'TestFunctionXUartLite_Recv'; did you mean 'XUartLite_Recv'? [-Wimplicit-function-declaration]
-     TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~
-     XUartLite_Recv
-'Finished building: ../src/testperiph.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
+../src/xuartlite_intr_tapp_example.c:524:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+ static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/xuartlite_intr_tapp_example.c'
 ' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12540	    392	   3588	  16520	   4088	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-10:51:53 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-10:52:23 **** Auto Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
+'Building file: ../src/xuartlite_selftest_example.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:71:5: warning: implicit declaration of function 'TestFunctionXUartLite_Recv'; did you mean 'XUartLite_Recv'? [-Wimplicit-function-declaration]
-     TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~
-     XUartLite_Recv
-'Finished building: ../src/testperiph.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_selftest_example.d" -MT"src/xuartlite_selftest_example.o" -o "src/xuartlite_selftest_example.o" "../src/xuartlite_selftest_example.c"
+'Finished building: ../src/xuartlite_selftest_example.c'
 ' '
 'Building target: per_test.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/current_system_status.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: per_test.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size per_test.elf  |tee "per_test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  12516	    392	   3588	  16496	   4070	per_test.elf
+  11900	    392	   6852	  19144	   4ac8	per_test.elf
 'Finished building: per_test.elf.size'
 ' '
-10:52:27 **** Incremental Build of configuration Debug for project per_test ****
+17:23:10 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-10:52:45 **** Auto Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:71:5: warning: implicit declaration of function 'TestFunctionXUartLite_Recv'; did you mean 'XUartLite_Recv'? [-Wimplicit-function-declaration]
-     TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~
-     XUartLite_Recv
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12520	    392	   3584	  16496	   4070	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-10:52:48 **** Incremental Build of configuration Debug for project per_test ****
+17:25:10 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-10:55:35 **** Auto Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:71:5: warning: implicit declaration of function 'TestFunctionXUartLite_Recv'; did you mean 'XUartLite_Recv'? [-Wimplicit-function-declaration]
-     TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~~~~
-     XUartLite_Recv
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12500	    392	   3588	  16480	   4060	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-10:55:47 **** Incremental Build of configuration Debug for project per_test ****
+17:26:14 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-10:56:48 **** Incremental Build of configuration Debug for project per_test ****
+17:27:42 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-10:57:55 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-10:57:59 **** Incremental Build of configuration Debug for project start_project ****
-make all 
-make: Nothing to be done for 'all'.
-10:58:06 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-10:58:31 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-10:59:24 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12072	    392	   3584	  16048	   3eb0	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-11:29:54 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-12:11:38 **** Auto Build of project start_project_bsp ****
-make -k all 
-"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
-"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling intc"
-"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling spi"
-"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling standalone";
-inbyte.c: In function 'inbyte':
-inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-outbyte.c: In function 'outbyte':
-outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
- void outbyte(char c) {
-              ~~~~~^
-microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
- #pragma message ("For the sleep routines, assembly instructions are used")
-         ^~~~~~~
-"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling uartlite"
-'Finished building libraries'
-12:11:45 **** Clean-only build of project start_project_bsp ****
+17:33:51 **** Clean-only build of project start_project_bsp ****
 make -k clean 
 make -C microblaze_0/libsrc/bram_v4_3/src -s clean 
 make -C microblaze_0/libsrc/cpu_v2_9/src -s clean 
@@ -339,15 +280,15 @@ make -C microblaze_0/libsrc/spi_v4_4/src -s clean
 make -C microblaze_0/libsrc/standalone_v7_0/src -s clean 
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
 rm -f microblaze_0/lib/libxil.a
-12:11:45 **** Clean-only build of configuration Debug for project per_test ****
+17:33:52 **** Clean-only build of configuration Debug for project per_test ****
 make clean 
-rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d ./src/xintc_tapp_example.d ./src/xspi_selftest_example.d ./src/xuartlite_intr_tapp_example.d ./src/xuartlite_selftest_example.d  per_test.elf.size  per_test.elf
+rm -rf  ./src/CRC_Functions.o ./src/current_system_status.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o  ./src/CRC_Functions.d ./src/current_system_status.d ./src/initializationl_functions.d ./src/logical_functions.d ./src/testperiph.d ./src/xgpio_tapp_example.d ./src/xintc_tapp_example.d ./src/xspi_selftest_example.d ./src/xuartlite_intr_tapp_example.d ./src/xuartlite_selftest_example.d  per_test.elf.size  per_test.elf
 ' '
-12:11:45 **** Clean-only build of configuration Debug for project start_project ****
+17:33:52 **** Clean-only build of configuration Debug for project start_project ****
 make clean 
 rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d  start_project.elf.size  start_project.elf
 ' '
-12:11:46 **** Build of project start_project_bsp ****
+17:33:52 **** Build of project start_project_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_3/src"
 make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -397,7 +338,7 @@ microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling uartlite"
 'Finished building libraries'
-12:11:52 **** Build of configuration Debug for project start_project ****
+17:33:58 **** Build of configuration Debug for project start_project ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -420,15 +361,75 @@ mb-size start_project.elf  |tee "start_project.elf.size"
    4768	    348	   2124	   7240	   1c48	start_project.elf
 'Finished building: start_project.elf.size'
 ' '
-12:11:53 **** Build of configuration Debug for project per_test ****
+17:33:59 **** Build of configuration Debug for project per_test ****
 make all 
+'Building file: ../src/CRC_Functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CRC_Functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/CRC_Functions.d" -MT"src/CRC_Functions.o" -o "src/CRC_Functions.o" "../src/CRC_Functions.c"
+../src/CRC_Functions.c:5: warning: ignoring #pragma DATA_SECTION  [-Wunknown-pragmas]
+ #pragma DATA_SECTION(crc_16_tab, ".slow_vars")
+ 
+'Finished building: ../src/CRC_Functions.c'
+' '
+'Building file: ../src/current_system_status.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/current_system_status.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/current_system_status.d" -MT"src/current_system_status.o" -o "src/current_system_status.o" "../src/current_system_status.c"
+'Finished building: ../src/current_system_status.c'
+' '
+'Building file: ../src/initializationl_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/initializationl_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/initializationl_functions.d" -MT"src/initializationl_functions.o" -o "src/initializationl_functions.o" "../src/initializationl_functions.c"
+../src/initializationl_functions.c: In function 'InitializationSystemDesignAndProject':
+../src/initializationl_functions.c:15:2: warning: implicit declaration of function 'GpioOutputInitialize' [-Wimplicit-function-declaration]
+  GpioOutputInitialize(XPAR_AXI_GPIO_0_DEVICE_ID);
+  ^~~~~~~~~~~~~~~~~~~~
+../src/initializationl_functions.c:16:2: warning: implicit declaration of function 'GpioInputInitialize' [-Wimplicit-function-declaration]
+  GpioInputInitialize(XPAR_AXI_GPIO_1_DEVICE_ID);
+  ^~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/initializationl_functions.c'
+' '
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:15:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:16:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(DataRead);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c: In function 'SetValuesInAddressSpace':
+../src/logical_functions.c:21:3: warning: implicit declaration of function 'set_array_current_status_int' [-Wimplicit-function-declaration]
+   set_array_current_status_int(i, i);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
 ../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
+../src/testperiph.c:83:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
+     GetSystemValues();
+     ^~~~~~~~~~~~~~~
+../src/testperiph.c:84:5: warning: implicit declaration of function 'SetValuesInAddressSpace' [-Wimplicit-function-declaration]
+     SetValuesInAddressSpace();
      ^~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:89:16: warning: implicit declaration of function 'get_array_current_status_int' [-Wimplicit-function-declaration]
+      Send[i] = get_array_current_status_int(i);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:91:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
+     TestCheckTotalSendCount(&axi_uartlite_0_UartLite, &Send);
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:71:8: warning: unused variable 'DataRead' [-Wunused-variable]
+    u32 DataRead = 0x00;
+        ^~~~~~~~
+../src/testperiph.c:70:8: warning: unused variable 'count8' [-Wunused-variable]
+    u32 count8 = 0x00;
+        ^~~~~~
+../src/testperiph.c:69:8: warning: unused variable 'count' [-Wunused-variable]
+    u32 count = 0x00;
+        ^~~~~
 'Finished building: ../src/testperiph.c'
 ' '
 'Building file: ../src/xgpio_tapp_example.c'
@@ -461,741 +462,15 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_selftest_example.o"
 ' '
 'Building target: per_test.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/current_system_status.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: per_test.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
 mb-size per_test.elf  |tee "per_test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  12072	    392	   3584	  16048	   3eb0	per_test.elf
+  11900	    392	   6852	  19144	   4ac8	per_test.elf
 'Finished building: per_test.elf.size'
 ' '
-12:12:26 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-12:26:31 **** Clean-only build of project start_project_bsp ****
-make -k clean 
-make -C microblaze_0/libsrc/bram_v4_3/src -s clean 
-make -C microblaze_0/libsrc/cpu_v2_9/src -s clean 
-make -C microblaze_0/libsrc/gpio_v4_4/src -s clean 
-make -C microblaze_0/libsrc/intc_v3_9/src -s clean 
-make -C microblaze_0/libsrc/spi_v4_4/src -s clean 
-make -C microblaze_0/libsrc/standalone_v7_0/src -s clean 
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
-rm -f microblaze_0/lib/libxil.a
-12:26:31 **** Clean-only build of configuration Debug for project per_test ****
-make clean 
-rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d ./src/xintc_tapp_example.d ./src/xspi_selftest_example.d ./src/xuartlite_intr_tapp_example.d ./src/xuartlite_selftest_example.d  per_test.elf.size  per_test.elf
-' '
-12:26:32 **** Clean-only build of configuration Debug for project start_project ****
-make clean 
-rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d  start_project.elf.size  start_project.elf
-' '
-12:26:32 **** Build of project start_project_bsp ****
-make -k all 
-"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
-"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling intc"
-"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling spi"
-"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling standalone";
-inbyte.c: In function 'inbyte':
-inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-outbyte.c: In function 'outbyte':
-outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
- void outbyte(char c) {
-              ~~~~~^
-microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
- #pragma message ("For the sleep routines, assembly instructions are used")
-         ^~~~~~~
-"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling uartlite"
-'Finished building libraries'
-12:26:38 **** Build of configuration Debug for project start_project ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building target: start_project.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "start_project.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: start_project.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size start_project.elf  |tee "start_project.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   4768	    348	   2124	   7240	   1c48	start_project.elf
-'Finished building: start_project.elf.size'
-' '
-12:26:39 **** Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building file: ../src/xintc_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xintc_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xintc_tapp_example.d" -MT"src/xintc_tapp_example.o" -o "src/xintc_tapp_example.o" "../src/xintc_tapp_example.c"
-'Finished building: ../src/xintc_tapp_example.c'
-' '
-'Building file: ../src/xspi_selftest_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xspi_selftest_example.d" -MT"src/xspi_selftest_example.o" -o "src/xspi_selftest_example.o" "../src/xspi_selftest_example.c"
-'Finished building: ../src/xspi_selftest_example.c'
-' '
-'Building file: ../src/xuartlite_intr_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
-../src/xuartlite_intr_tapp_example.c:524:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
- static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
-             ^~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/xuartlite_intr_tapp_example.c'
-' '
-'Building file: ../src/xuartlite_selftest_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_selftest_example.d" -MT"src/xuartlite_selftest_example.o" -o "src/xuartlite_selftest_example.o" "../src/xuartlite_selftest_example.c"
-'Finished building: ../src/xuartlite_selftest_example.c'
-' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12072	    392	   3584	  16048	   3eb0	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-12:27:22 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-12:34:00 **** Clean-only build of project start_project_bsp ****
-make -k clean 
-make -C microblaze_0/libsrc/bram_v4_3/src -s clean 
-make -C microblaze_0/libsrc/cpu_v2_9/src -s clean 
-make -C microblaze_0/libsrc/gpio_v4_4/src -s clean 
-make -C microblaze_0/libsrc/intc_v3_9/src -s clean 
-make -C microblaze_0/libsrc/spi_v4_4/src -s clean 
-make -C microblaze_0/libsrc/standalone_v7_0/src -s clean 
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
-rm -f microblaze_0/lib/libxil.a
-12:34:00 **** Clean-only build of configuration Debug for project per_test ****
-make clean 
-rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d ./src/xintc_tapp_example.d ./src/xspi_selftest_example.d ./src/xuartlite_intr_tapp_example.d ./src/xuartlite_selftest_example.d  per_test.elf.size  per_test.elf
-' '
-12:34:00 **** Clean-only build of configuration Debug for project start_project ****
-make clean 
-rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d  start_project.elf.size  start_project.elf
-' '
-12:34:01 **** Build of project start_project_bsp ****
-make -k all 
-"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
-"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling intc"
-"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling spi"
-"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling standalone";
-inbyte.c: In function 'inbyte':
-inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-outbyte.c: In function 'outbyte':
-outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
- void outbyte(char c) {
-              ~~~~~^
-microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
- #pragma message ("For the sleep routines, assembly instructions are used")
-         ^~~~~~~
-"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling uartlite"
-'Finished building libraries'
-12:34:07 **** Build of configuration Debug for project start_project ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building target: start_project.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "start_project.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: start_project.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size start_project.elf  |tee "start_project.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   4768	    348	   2124	   7240	   1c48	start_project.elf
-'Finished building: start_project.elf.size'
-' '
-12:34:08 **** Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building file: ../src/xintc_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xintc_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xintc_tapp_example.d" -MT"src/xintc_tapp_example.o" -o "src/xintc_tapp_example.o" "../src/xintc_tapp_example.c"
-'Finished building: ../src/xintc_tapp_example.c'
-' '
-'Building file: ../src/xspi_selftest_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xspi_selftest_example.d" -MT"src/xspi_selftest_example.o" -o "src/xspi_selftest_example.o" "../src/xspi_selftest_example.c"
-'Finished building: ../src/xspi_selftest_example.c'
-' '
-'Building file: ../src/xuartlite_intr_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
-../src/xuartlite_intr_tapp_example.c:524:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
- static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
-             ^~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/xuartlite_intr_tapp_example.c'
-' '
-'Building file: ../src/xuartlite_selftest_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_selftest_example.d" -MT"src/xuartlite_selftest_example.o" -o "src/xuartlite_selftest_example.o" "../src/xuartlite_selftest_example.c"
-'Finished building: ../src/xuartlite_selftest_example.c'
-' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12072	    392	   3584	  16048	   3eb0	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-12:36:22 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-12:37:54 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-12:47:21 **** Clean-only build of project start_project_bsp ****
-make -k clean 
-make -C microblaze_0/libsrc/bram_v4_3/src -s clean 
-make -C microblaze_0/libsrc/cpu_v2_9/src -s clean 
-make -C microblaze_0/libsrc/gpio_v4_4/src -s clean 
-make -C microblaze_0/libsrc/intc_v3_9/src -s clean 
-make -C microblaze_0/libsrc/spi_v4_4/src -s clean 
-make -C microblaze_0/libsrc/standalone_v7_0/src -s clean 
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
-rm -f microblaze_0/lib/libxil.a
-12:47:22 **** Clean-only build of configuration Debug for project per_test ****
-make clean 
-rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d ./src/xintc_tapp_example.d ./src/xspi_selftest_example.d ./src/xuartlite_intr_tapp_example.d ./src/xuartlite_selftest_example.d  per_test.elf.size  per_test.elf
-' '
-12:47:22 **** Clean-only build of configuration Debug for project start_project ****
-make clean 
-rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d  start_project.elf.size  start_project.elf
-' '
-12:47:22 **** Build of project start_project_bsp ****
-make -k all 
-"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
-"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling intc"
-"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling spi"
-"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling standalone";
-inbyte.c: In function 'inbyte':
-inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-outbyte.c: In function 'outbyte':
-outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
- void outbyte(char c) {
-              ~~~~~^
-microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
- #pragma message ("For the sleep routines, assembly instructions are used")
-         ^~~~~~~
-"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling uartlite"
-'Finished building libraries'
-12:47:29 **** Build of configuration Debug for project start_project ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building target: start_project.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "start_project.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: start_project.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size start_project.elf  |tee "start_project.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   4768	    348	   2124	   7240	   1c48	start_project.elf
-'Finished building: start_project.elf.size'
-' '
-12:47:30 **** Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building file: ../src/xintc_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xintc_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xintc_tapp_example.d" -MT"src/xintc_tapp_example.o" -o "src/xintc_tapp_example.o" "../src/xintc_tapp_example.c"
-'Finished building: ../src/xintc_tapp_example.c'
-' '
-'Building file: ../src/xspi_selftest_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xspi_selftest_example.d" -MT"src/xspi_selftest_example.o" -o "src/xspi_selftest_example.o" "../src/xspi_selftest_example.c"
-'Finished building: ../src/xspi_selftest_example.c'
-' '
-'Building file: ../src/xuartlite_intr_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
-../src/xuartlite_intr_tapp_example.c:524:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
- static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
-             ^~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/xuartlite_intr_tapp_example.c'
-' '
-'Building file: ../src/xuartlite_selftest_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_selftest_example.d" -MT"src/xuartlite_selftest_example.o" -o "src/xuartlite_selftest_example.o" "../src/xuartlite_selftest_example.c"
-'Finished building: ../src/xuartlite_selftest_example.c'
-' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12072	    392	   3584	  16048	   3eb0	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-12:54:31 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-13:00:06 **** Clean-only build of project start_project_bsp ****
-make -k clean 
-make -C microblaze_0/libsrc/bram_v4_3/src -s clean 
-make -C microblaze_0/libsrc/cpu_v2_9/src -s clean 
-make -C microblaze_0/libsrc/gpio_v4_4/src -s clean 
-make -C microblaze_0/libsrc/intc_v3_9/src -s clean 
-make -C microblaze_0/libsrc/spi_v4_4/src -s clean 
-make -C microblaze_0/libsrc/standalone_v7_0/src -s clean 
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
-rm -f microblaze_0/lib/libxil.a
-13:00:07 **** Clean-only build of configuration Debug for project per_test ****
-make clean 
-rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d ./src/xintc_tapp_example.d ./src/xspi_selftest_example.d ./src/xuartlite_intr_tapp_example.d ./src/xuartlite_selftest_example.d  per_test.elf.size  per_test.elf
-' '
-13:00:07 **** Clean-only build of configuration Debug for project start_project ****
-make clean 
-rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d  start_project.elf.size  start_project.elf
-' '
-13:00:07 **** Build of project start_project_bsp ****
-make -k all 
-"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
-"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling intc"
-"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling spi"
-"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling standalone";
-inbyte.c: In function 'inbyte':
-inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-outbyte.c: In function 'outbyte':
-outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
- void outbyte(char c) {
-              ~~~~~^
-microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
- #pragma message ("For the sleep routines, assembly instructions are used")
-         ^~~~~~~
-"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling uartlite"
-'Finished building libraries'
-13:00:14 **** Build of configuration Debug for project start_project ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building target: start_project.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "start_project.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: start_project.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size start_project.elf  |tee "start_project.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   4768	    348	   2124	   7240	   1c48	start_project.elf
-'Finished building: start_project.elf.size'
-' '
-13:00:14 **** Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building file: ../src/xintc_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xintc_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xintc_tapp_example.d" -MT"src/xintc_tapp_example.o" -o "src/xintc_tapp_example.o" "../src/xintc_tapp_example.c"
-'Finished building: ../src/xintc_tapp_example.c'
-' '
-'Building file: ../src/xspi_selftest_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xspi_selftest_example.d" -MT"src/xspi_selftest_example.o" -o "src/xspi_selftest_example.o" "../src/xspi_selftest_example.c"
-'Finished building: ../src/xspi_selftest_example.c'
-' '
-'Building file: ../src/xuartlite_intr_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
-../src/xuartlite_intr_tapp_example.c:524:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
- static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
-             ^~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/xuartlite_intr_tapp_example.c'
-' '
-'Building file: ../src/xuartlite_selftest_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_selftest_example.d" -MT"src/xuartlite_selftest_example.o" -o "src/xuartlite_selftest_example.o" "../src/xuartlite_selftest_example.c"
-'Finished building: ../src/xuartlite_selftest_example.c'
-' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12072	    392	   3584	  16048	   3eb0	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-13:02:27 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-13:03:23 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-13:09:08 **** Clean-only build of project start_project_bsp ****
-make -k clean 
-make -C microblaze_0/libsrc/bram_v4_3/src -s clean 
-make -C microblaze_0/libsrc/cpu_v2_9/src -s clean 
-make -C microblaze_0/libsrc/gpio_v4_4/src -s clean 
-make -C microblaze_0/libsrc/intc_v3_9/src -s clean 
-make -C microblaze_0/libsrc/spi_v4_4/src -s clean 
-make -C microblaze_0/libsrc/standalone_v7_0/src -s clean 
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
-rm -f microblaze_0/lib/libxil.a
-13:09:09 **** Clean-only build of configuration Debug for project per_test ****
-make clean 
-rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d ./src/xintc_tapp_example.d ./src/xspi_selftest_example.d ./src/xuartlite_intr_tapp_example.d ./src/xuartlite_selftest_example.d  per_test.elf.size  per_test.elf
-' '
-13:09:09 **** Clean-only build of configuration Debug for project start_project ****
-make clean 
-rm -rf  ./src/testperiph.o ./src/xgpio_tapp_example.o  ./src/testperiph.d ./src/xgpio_tapp_example.d  start_project.elf.size  start_project.elf
-' '
-13:09:09 **** Build of project start_project_bsp ****
-make -k all 
-"Running Make include in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Running Make libs in microblaze_0/libsrc/bram_v4_3/src"
-make -C microblaze_0/libsrc/bram_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling bram"
-mb-ar: creating ../../../lib/libxil.a
-"Running Make libs in microblaze_0/libsrc/cpu_v2_9/src"
-make -C microblaze_0/libsrc/cpu_v2_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling cpu"
-"Running Make libs in microblaze_0/libsrc/gpio_v4_4/src"
-make -C microblaze_0/libsrc/gpio_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling gpio"
-"Running Make libs in microblaze_0/libsrc/intc_v3_9/src"
-make -C microblaze_0/libsrc/intc_v3_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling intc"
-"Running Make libs in microblaze_0/libsrc/spi_v4_4/src"
-make -C microblaze_0/libsrc/spi_v4_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling spi"
-"Running Make libs in microblaze_0/libsrc/standalone_v7_0/src"
-make -C microblaze_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling standalone";
-inbyte.c: In function 'inbyte':
-inbyte.c:11:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-outbyte.c: In function 'outbyte':
-outbyte.c:11:19: warning: unused parameter 'c' [-Wunused-parameter]
- void outbyte(char c) {
-              ~~~~~^
-microblaze_sleep.c:77:9: note: #pragma message: For the sleep routines, assembly instructions are used
- #pragma message ("For the sleep routines, assembly instructions are used")
-         ^~~~~~~
-"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
-make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
-"Compiling uartlite"
-'Finished building libraries'
-13:09:16 **** Build of configuration Debug for project start_project ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building target: start_project.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "start_project.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: start_project.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size start_project.elf  |tee "start_project.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   4768	    348	   2124	   7240	   1c48	start_project.elf
-'Finished building: start_project.elf.size'
-' '
-13:09:17 **** Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:70:5: warning: implicit declaration of function 'TestCheckTotalSendCount' [-Wimplicit-function-declaration]
-     TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-     ^~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/testperiph.c'
-' '
-'Building file: ../src/xgpio_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xgpio_tapp_example.d" -MT"src/xgpio_tapp_example.o" -o "src/xgpio_tapp_example.o" "../src/xgpio_tapp_example.c"
-'Finished building: ../src/xgpio_tapp_example.c'
-' '
-'Building file: ../src/xintc_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xintc_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xintc_tapp_example.d" -MT"src/xintc_tapp_example.o" -o "src/xintc_tapp_example.o" "../src/xintc_tapp_example.c"
-'Finished building: ../src/xintc_tapp_example.c'
-' '
-'Building file: ../src/xspi_selftest_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xspi_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xspi_selftest_example.d" -MT"src/xspi_selftest_example.o" -o "src/xspi_selftest_example.o" "../src/xspi_selftest_example.c"
-'Finished building: ../src/xspi_selftest_example.c'
-' '
-'Building file: ../src/xuartlite_intr_tapp_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
-../src/xuartlite_intr_tapp_example.c:524:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
- static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
-             ^~~~~~~~~~~~~~~~~~~~~~~~~
-'Finished building: ../src/xuartlite_intr_tapp_example.c'
-' '
-'Building file: ../src/xuartlite_selftest_example.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_selftest_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_selftest_example.d" -MT"src/xuartlite_selftest_example.o" -o "src/xuartlite_selftest_example.o" "../src/xuartlite_selftest_example.c"
-'Finished building: ../src/xuartlite_selftest_example.c'
-' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  12072	    392	   3584	  16048	   3eb0	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-13:13:05 **** Incremental Build of configuration Debug for project per_test ****
+17:34:25 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
