@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Fri Mar 17 08:01:59 2023
+| Date             : Fri Mar 17 13:06:56 2023
 | Host             : STAS-W10 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -54,7 +54,7 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        4 |       --- |             --- |
 | Slice Logic              |     0.002 |     5493 |       --- |             --- |
-|   LUT as Logic           |     0.001 |     1983 |     32600 |            6.08 |
+|   LUT as Logic           |     0.001 |     1980 |     32600 |            6.07 |
 |   LUT as Distributed RAM |    <0.001 |       80 |      9600 |            0.83 |
 |   Register               |    <0.001 |     2147 |     65200 |            3.29 |
 |   CARRY4                 |    <0.001 |       38 |      8150 |            0.47 |
@@ -62,7 +62,7 @@ Table of Contents
 |   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
 |   LUT as Shift Register  |    <0.001 |       74 |      9600 |            0.77 |
 |   Others                 |    <0.001 |      567 |       --- |             --- |
-| Signals                  |     0.002 |     3736 |       --- |             --- |
+| Signals                  |     0.002 |     3731 |       --- |             --- |
 | Block RAM                |    <0.001 |     16.5 |        75 |           22.00 |
 | PLL                      |     0.047 |        1 |         5 |           20.00 |
 | I/O                      |     0.003 |       26 |       170 |           15.29 |
