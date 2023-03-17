@@ -109,6 +109,9 @@ int GpioInputExample(u16 DeviceId, u32 *DataRead);
 
 void GpioDriverHandler(void *CallBackRef);
 
+int GpioOutputExampleTest(u16 DeviceId, u32 GpioWidth);
+int GpioInputExampleTest(u32 *DataRead);
+
 
 /************************** Variable Definitions **************************/
 

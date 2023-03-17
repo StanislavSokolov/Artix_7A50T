@@ -275,22 +275,3 @@ int GpioInputExample(u16 DeviceId, u32 *DataRead)
 
 }
 
-int GpioOutputExampleTest(u16 DeviceId, u32 GpioWidth)
-{
-
-	 /* Set the GPIO outputs to low */
-	XGpio_DiscreteWrite(&GpioOutput, LED_CHANNEL,
-			GpioWidth);
-
-	 return XST_SUCCESS;
-
-}
-
-int GpioInputExampleTest(u32 *DataRead)
-{
-
-	*DataRead = XGpio_DiscreteRead(&GpioInput, LED_CHANNEL);
-
-	 return XST_SUCCESS;
-
-}

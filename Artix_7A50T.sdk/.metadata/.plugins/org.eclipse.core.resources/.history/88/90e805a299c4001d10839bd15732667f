@@ -68,7 +68,7 @@ int main ()
 
    while (1) {
 	   TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-//	   TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
+	   TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
 	   GpioInputExampleTest(&DataRead);
 //	   GpioOutputExampleTest(1, DataRead);
 

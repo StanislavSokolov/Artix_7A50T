@@ -52,7 +52,7 @@ int main ()
 
    u32 count = 0x00;
    u32 count8 = 0x00;
-   u32 DataRead = 0x00;
+   u32 DataRead;
    GpioInputExample(XPAR_AXI_GPIO_1_DEVICE_ID, &DataRead);
    GpioOutputExample(XPAR_AXI_GPIO_0_DEVICE_ID,8);
 
@@ -68,9 +68,9 @@ int main ()
 
    while (1) {
 	   TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-//	   TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
+	   TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
 	   GpioInputExampleTest(&DataRead);
-//	   GpioOutputExampleTest(1, DataRead);
+	   GpioOutputExampleTest(1, DataRead);
 
 	   		if (count < 0xFFFF) {
 	   			count = count + 0x01;
@@ -81,8 +81,7 @@ int main ()
 	   			} else {
 	   				count8 = 0x00;
 	   			}
-	   			GpioOutputExampleTest(1, DataRead);
-//	   			GpioOutputExampleTest(1, count8);
+	   			GpioOutputExampleTest(1, DataRead || count8);
 	   		}
    }
 
