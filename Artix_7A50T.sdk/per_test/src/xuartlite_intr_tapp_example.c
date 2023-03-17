@@ -92,7 +92,7 @@
  * The following constant controls the length of the buffers to be sent
  * and received with the UartLite device.
  */
-#define TEST_BUFFER_SIZE		100
+#define TEST_BUFFER_SIZE		16
 
 
 /**************************** Type Definitions *******************************/
@@ -360,7 +360,7 @@ void TestCheckTotalSendCount(XUartLite *UartLiteInstPtr) {
 ****************************************************************************/
 static void UartLiteRecvHandler(void *CallBackRef, unsigned int EventData)
 {
-	TotalRecvCount = TotalRecvCount + 1;
+	TotalRecvCount = EventData;
 }
 
 int TestCheckTotalRecvCount() {

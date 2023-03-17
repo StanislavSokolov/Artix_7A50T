@@ -45,20 +45,15 @@ int main ()
    static XUartLite axi_uartlite_0_UartLite;
    Xil_ICacheEnable();
    Xil_DCacheEnable();
-   print("---Entering main---\n\r");
    int Status = 0;
    int count = 0;
 
    {
-
-	  Status = 10;
       Status = IntcSelfTestExample(XPAR_AXI_INTC_0_DEVICE_ID);
 
    }
 
    {
-
-	   Status = 10;
        Status = IntcInterruptSetup(&intc, XPAR_AXI_INTC_0_DEVICE_ID);
 
    }
@@ -66,8 +61,6 @@ int main ()
 
 
    {
-	  Status = 10;
-	 
       u32 DataRead;
       
       Status = GpioInputExample(XPAR_AXI_GPIO_1_DEVICE_ID, &DataRead);
@@ -76,52 +69,42 @@ int main ()
 
 
    {
-	  Status = 10;
-      
-      Status = GpioOutputExample(XPAR_AXI_GPIO_0_DEVICE_ID,8);
+	   Status = GpioOutputExample(XPAR_AXI_GPIO_0_DEVICE_ID,8);
    }
 
 
 
    {
-//      XStatus status;
-	  Status = 10;
-                  
-      Status = SpiSelfTestExample(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
+      XStatus status;
+      status = SpiSelfTestExample(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
 
    }
 
 
 
    {
-	  Status = 10;
       
       Status = UartLiteSelfTestExample(XPAR_AXI_UARTLITE_0_DEVICE_ID);
    }
         
    {
-	  Status = 10;
       Status = UartLiteIntrExample(&intc, &axi_uartlite_0_UartLite, \
                                   XPAR_AXI_UARTLITE_0_DEVICE_ID, \
                                   XPAR_AXI_INTC_0_AXI_UARTLITE_0_INTERRUPT_INTR);
    }
 
-   Status = 100;
-
    while (1) {
-	   TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-//	   if (count < 100000) {
-//		   count++;
-//	   } else {
-//		   TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
-////		   Status = TestCheckTotalRecvCount();
-//		   count = 0;
-//		   TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
-//	   }
+//	   TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
+	   if (count < 10000000) {
+		   count++;
+	   } else {
+		   TestCheckTotalSendCount(&axi_uartlite_0_UartLite);
+//		   Status = TestCheckTotalRecvCount();
+		   count = 0;
+		   TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite);
+	   }
    }
 
-
-   print("---Exiting main---\n\r");
    Xil_DCacheDisable();
    Xil_ICacheDisable();
    return 0;
