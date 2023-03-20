@@ -2,15 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="UartLiteSendHandler" key="selection"/>
+		<item value="TotalSentCount" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="TotalSentCount"/>
 			<item value="UartLiteSendHandler"/>
 			<item value="TotalRecvCount"/>
-			<item value="TotalSentCount"/>
 			<item value="SET12"/>
 			<item value="SET_12"/>
 			<item value="set_12"/>

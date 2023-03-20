@@ -94,8 +94,8 @@ int main ()
 	   crc = 0xffff;
 	   crc = GetCRC16_B_byte(crc, Send, count_byte);
 	   u32 high_bits = crc/256;
-	   Send[count_byte+1] = high_bits;
-	   Send[count_byte] = crc - high_bits*256;
+	   SendBuffer_RS485[count_byte+1] = high_bits;
+	   SendBuffer_RS485[count_byte] = crc - high_bits*256;
 	   TestCheckTotalSendCount(&axi_uartlite_0_UartLite, &Send);
    }
 
