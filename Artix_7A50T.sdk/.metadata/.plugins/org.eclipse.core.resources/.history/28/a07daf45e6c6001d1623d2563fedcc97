@@ -13,7 +13,7 @@ u32 DataRead = 0x00;
 
 void GetSystemValues() {
 	GpioInputRead(&DataRead);
-//	GpioOutputWrite(DataRead);
+	GpioOutputWrite(DataRead);
 }
 
 void SetValuesInAddressSpace() {

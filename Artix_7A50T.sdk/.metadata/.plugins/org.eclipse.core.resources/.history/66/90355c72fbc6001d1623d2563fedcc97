@@ -100,18 +100,17 @@ int main ()
 	   Send[count_byte+1] = high_bits;
 	   Send[count_byte] = crc - high_bits*256;
 	   TestCheckTotalSendCount(&axi_uartlite_0_UartLite, &Recv);
-	   TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite, &Recv);
-//	   if (count < 0xFFFF) {
-//		   count = count + 0x01;
-//	   } else {
-//			count = 0x0000;
-//			if (count8 < 0x0F) {
-//				count8 = count8 + 0x01;
-//			} else {
-//				count8 = 0x00;
-//				TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite, &Recv);
-//			}
-//	   }
+	   if (count < 0xFFFF) {
+		   count = count + 0x01;
+	   } else {
+			count = 0x0000;
+			if (count8 < 0x0F) {
+				count8 = count8 + 0x01;
+			} else {
+				count8 = 0x00;
+				TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite, &Recv);
+			}
+	   }
 
 
 

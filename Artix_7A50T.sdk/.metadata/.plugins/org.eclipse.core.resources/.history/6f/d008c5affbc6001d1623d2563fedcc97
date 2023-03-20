@@ -371,7 +371,7 @@ int TestCheckTotalRecvCount() {
 void TestFunctionXUartLite_Recv(XUartLite *UartLiteInstPtr, u8 *Recv) {
 	if (TotalRecvCount != 0) {
 		TotalRecvCount = 0;
-		XUartLite_Recv(UartLiteInstPtr, Recv, 16);
+		XUartLite_Recv(UartLiteInstPtr, Recv, 32);
 	}
 }
 
