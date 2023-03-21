@@ -1,4 +1,4 @@
-17:33:58 **** Build of configuration Debug for project start_project ****
+18:38:37 **** Build of configuration Debug for project start_project ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -12,7 +12,7 @@ mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpio_tapp_example.o" -I../..
 ' '
 'Building target: start_project.elf'
 'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "start_project.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "start_project.elf"  ./src/testperiph.o ./src/xgpio_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
 'Finished building target: start_project.elf'
 ' '
 'Invoking: MicroBlaze Print Size'
@@ -22,5 +22,5 @@ mb-size start_project.elf  |tee "start_project.elf.size"
 'Finished building: start_project.elf.size'
 ' '
 
-17:33:59 Build Finished (took 933ms)
+18:38:38 Build Finished (took 975ms)
 

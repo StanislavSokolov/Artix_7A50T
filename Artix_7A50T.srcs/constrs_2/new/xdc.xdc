@@ -11,7 +11,6 @@ set_property PACKAGE_PIN N4 [get_ports reset_rtl_0]
 set_property IOSTANDARD LVCMOS33 [get_ports reset_rtl_0]
 
 
-set_property PACKAGE_PIN N11 [get_ports clk_100MHz]
 set_property IOSTANDARD LVCMOS33 [get_ports clk_100MHz]
 
 
@@ -66,3 +65,6 @@ set_property PACKAGE_PIN K2 [get_ports {gpio_rtl_1_tri_i[0]}]
 set_property PACKAGE_PIN K3 [get_ports {gpio_rtl_1_tri_i[1]}]
 set_property PACKAGE_PIN N3 [get_ports {gpio_rtl_0_tri_o[3]}]
 set_property PACKAGE_PIN M4 [get_ports {gpio_rtl_0_tri_o[2]}]
+
+set_property PACKAGE_PIN N11 [get_ports clk_100MHz]
+set_property CLOCK_DEDICATED_ROUTE TRUE [get_nets design_1_i/clk_wiz_1/inst/clk_out1]
