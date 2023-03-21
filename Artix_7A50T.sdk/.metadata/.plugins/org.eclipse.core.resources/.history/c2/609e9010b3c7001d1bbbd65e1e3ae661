@@ -109,7 +109,7 @@ int main ()
 
 
 
-	   GpioOutputWrite(GetByte(1));
+	   GpioOutputWrite(&GetRecvBuffer()[0]);
    }
 
    Xil_DCacheDisable();

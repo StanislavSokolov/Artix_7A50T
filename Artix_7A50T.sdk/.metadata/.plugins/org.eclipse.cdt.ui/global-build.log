@@ -1,6 +1,49 @@
-09:33:04 **** Incremental Build of configuration Debug for project per_test ****
+09:44:30 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-09:33:15 **** Incremental Build of configuration Debug for project per_test ****
+09:44:40 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+09:49:07 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/xuartlite_intr_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSend':
+../src/xuartlite_intr_tapp_example.c:347:19: warning: implicit declaration of function 'get_array_current_status_int' [-Wimplicit-function-declaration]
+   SendBuffer[i] = get_array_current_status_int(i);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:350:8: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
+  crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
+        ^~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:355:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetData':
+../src/xuartlite_intr_tapp_example.c:403:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &RecvBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetRecvBuffer':
+../src/xuartlite_intr_tapp_example.c:407:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &RecvBuffer;
+         ^~~~~~~~~~~
+At top level:
+../src/xuartlite_intr_tapp_example.c:564:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+ static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/xuartlite_intr_tapp_example.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/current_system_status.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12900	    908	   6880	  20688	   50d0	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+09:49:10 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.

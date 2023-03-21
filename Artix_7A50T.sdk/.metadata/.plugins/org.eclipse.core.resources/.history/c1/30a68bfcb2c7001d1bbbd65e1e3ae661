@@ -122,8 +122,6 @@ static void UartLiteRecvHandler(void *CallBackRef, unsigned int EventData);
 int TestCheckTotalRecvCount();
 int* GetData(XUartLite *UartLiteInstPtr);
 void SendData(XUartLite *UartLiteInstPtr, u8 *Send);
-int* GetRecvBuffer();
-int GetByte(int number);
 
 static int UartLiteSetupIntrSystem(INTC *IntcInstancePtr,
 				XUartLite *UartLiteInstancePtr,
@@ -337,13 +335,7 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData)
 }
 
 int* PrepareDataToSend() {
-	SendBuffer[0] = 10;
-	SendBuffer[1] = 1;
-	SendBuffer[2] = 0;
-	SendBuffer[3] = 0;
-	SendBuffer[4] = 0;
-	SendBuffer[5] = 8;
-	for (int i = 6; i< 14; i++) {
+	for (int i = 0; i< 14; i++) {
 		SendBuffer[i] = get_array_current_status_int(i);
 	}
 	crc = 0xffff;
@@ -401,14 +393,6 @@ int* GetData(XUartLite *UartLiteInstPtr) {
 	}
 
 	return &RecvBuffer;
-}
-
-int* GetRecvBuffer() {
-	return &RecvBuffer;
-}
-
-int GetByte(int number) {
-	return RecvBuffer[number];
 }
 
 /****************************************************************************/
