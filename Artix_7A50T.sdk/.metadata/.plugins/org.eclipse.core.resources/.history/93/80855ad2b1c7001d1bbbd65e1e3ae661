@@ -120,7 +120,7 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData);
 static void UartLiteRecvHandler(void *CallBackRef, unsigned int EventData);
 
 int TestCheckTotalRecvCount();
-int* GetData(XUartLite *UartLiteInstPtr);
+void GetData(XUartLite *UartLiteInstPtr, u8 *Recv);
 void SendData(XUartLite *UartLiteInstPtr, u8 *Send);
 
 static int UartLiteSetupIntrSystem(INTC *IntcInstancePtr,
@@ -386,13 +386,11 @@ int TestCheckTotalRecvCount() {
 	return TotalRecvCount;
 }
 
-int* GetData(XUartLite *UartLiteInstPtr) {
+void GetData(XUartLite *UartLiteInstPtr, u8 *Recv) {
 	if (TotalRecvCount != 0) {
 		TotalRecvCount = 0;
-		XUartLite_Recv(UartLiteInstPtr, RecvBuffer, TEST_BUFFER_SIZE);
+		XUartLite_Recv(UartLiteInstPtr, Recv, 16);
 	}
-
-	return &RecvBuffer;
 }
 
 /****************************************************************************/

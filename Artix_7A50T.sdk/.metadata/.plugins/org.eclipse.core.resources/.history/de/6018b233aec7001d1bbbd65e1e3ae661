@@ -66,9 +66,9 @@ int main ()
 
    IntcInterruptSetup(&intc, XPAR_AXI_INTC_0_DEVICE_ID);
 
-//   u32 count = 0x0000;
-//   u32 count8 = 0x00;
-//   u32 DataRead = 0x00;
+   u32 count = 0x0000;
+   u32 count8 = 0x00;
+   u32 DataRead = 0x00;
 
    SpiSelfTestExample(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
 
@@ -78,23 +78,29 @@ int main ()
                                   XPAR_AXI_UARTLITE_0_DEVICE_ID, \
                                   XPAR_AXI_INTC_0_AXI_UARTLITE_0_INTERRUPT_INTR);
 
+   unsigned int crc;
+
+   int count_byte = 14;
+
+   u8 Send[16];
+   	   u8 Recv[16];
+
    while (1) {
 	   GetSystemValues();
 	   SetValuesInAddressSpace();
 
-//	   PrepareDataToSend();
 
 
-//	   for (int i = 0; i< 14; i++) {
-//		   Send[i] = get_array_current_status_int(i);
-//	   }
-//	   crc = 0xffff;
-//	   crc = GetCRC16_B_byte(crc, Send, count_byte);
-//	   u32 high_bits = crc/256;
-//	   Send[count_byte+1] = high_bits;
-//	   Send[count_byte] = crc - high_bits*256;
-	   SendData(&axi_uartlite_0_UartLite, PrepareDataToSend()); // если данные отправлены, то выполнить PrepareDataToSend() - не надо выполнять его в мэйне постоянно
-	   GetData(&axi_uartlite_0_UartLite); // тестовая, надо ждать прерывания
+	   for (int i = 0; i< 14; i++) {
+		   Send[i] = get_array_current_status_int(i);
+	   }
+	   crc = 0xffff;
+	   crc = GetCRC16_B_byte(crc, Send, count_byte);
+	   u32 high_bits = crc/256;
+	   Send[count_byte+1] = high_bits;
+	   Send[count_byte] = crc - high_bits*256;
+	   TestCheckTotalSendCount(&axi_uartlite_0_UartLite, &Recv);
+	   TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite, &Recv);
 //	   if (count < 0xFFFF) {
 //		   count = count + 0x01;
 //	   } else {
@@ -109,7 +115,7 @@ int main ()
 
 
 
-	   GpioOutputWrite(0);
+	   GpioOutputWrite(Recv[4]);
    }
 
    Xil_DCacheDisable();
