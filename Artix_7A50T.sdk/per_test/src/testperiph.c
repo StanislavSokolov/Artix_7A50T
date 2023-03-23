@@ -66,8 +66,8 @@ int main ()
 
    IntcInterruptSetup(&intc, XPAR_AXI_INTC_0_DEVICE_ID);
 
-//   u32 count = 0x0000;
-//   u32 count8 = 0x00;
+   u32 count = 0x0000;
+   u32 count8 = 0x00;
 //   u32 DataRead = 0x00;
 
    SpiSelfTestExample(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
@@ -93,19 +93,21 @@ int main ()
 //	   u32 high_bits = crc/256;
 //	   Send[count_byte+1] = high_bits;
 //	   Send[count_byte] = crc - high_bits*256;
-	   SendData(&axi_uartlite_0_UartLite, PrepareDataToSend()); // если данные отправлены, то выполнить PrepareDataToSend() - не надо выполнять его в мэйне постоянно
+//	   SendData(&axi_uartlite_0_UartLite, PrepareDataToSend()); // если данные отправлены, то выполнить PrepareDataToSend() - не надо выполнять его в мэйне постоянно
 	   GetData(&axi_uartlite_0_UartLite); // тестовая, надо ждать прерывания
-//	   if (count < 0xFFFF) {
-//		   count = count + 0x01;
-//	   } else {
-//			count = 0x0000;
-//			if (count8 < 0x0F) {
-//				count8 = count8 + 0x01;
-//			} else {
-//				count8 = 0x00;
+	   if (count < 0x0FFF) {	// меньше не работает отображение на мобилке
+		   count = count + 0x01;
+	   } else {
+		   SendData(&axi_uartlite_0_UartLite, PrepareDataToSend());
+			count = 0x0000;
+			if (count8 < 0x0F) {
+				count8 = count8 + 0x01;
+			} else {
+				count8 = 0x00;
 //				TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite, &Recv);
-//			}
-//	   }
+//				SendData(&axi_uartlite_0_UartLite, PrepareDataToSend());
+			}
+	   }
 
 
 
