@@ -92,7 +92,7 @@
  * The following constant controls the length of the buffers to be sent
  * and received with the UartLite device.
  */
-#define TEST_BUFFER_SIZE		100
+#define TEST_BUFFER_SIZE		16
 
 
 /**************************** Type Definitions *******************************/
@@ -120,7 +120,12 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData);
 static void UartLiteRecvHandler(void *CallBackRef, unsigned int EventData);
 
 int TestCheckTotalRecvCount();
-void TestFunctionXUartLite_Recv();
+int* GetData(XUartLite *UartLiteInstPtr);
+void SendData(XUartLite *UartLiteInstPtr, u8 *Send);
+int* GetRecvBuffer();
+int GetByte(int number);
+int* PrepareDataToSendTest();
+void GetUARTValue();
 
 static int UartLiteSetupIntrSystem(INTC *IntcInstancePtr,
 				XUartLite *UartLiteInstancePtr,
@@ -150,6 +155,12 @@ static XUartLite UartLiteInst;  /* The instance of the UartLite Device */
  * The following buffer is used in this example to send data  with the UartLite.
  */
 u8 SendBuffer[TEST_BUFFER_SIZE];
+u8 RecvBuffer[TEST_BUFFER_SIZE];
+
+
+unsigned int crc;
+
+int count_byte = 14;
 
 /*
  * The following counter is used to determine when the entire buffer has
@@ -292,9 +303,9 @@ int UartLiteIntrExample(INTC *IntcInstancePtr,
 	 * Wait for the entire buffer to be transmitted,  the function may get
 	 * locked up in this loop if the interrupts are not working correctly.
 	 */
-	while ((TotalSentCount != TEST_BUFFER_SIZE)) {
-
-	}
+//	while ((TotalSentCount != TEST_BUFFER_SIZE)) {
+//
+//	}
 
 //	UartLiteDisableIntrSystem(IntcInstancePtr, UartLiteIntrId);
 
@@ -327,6 +338,36 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData)
 	TotalSentCount = EventData;
 }
 
+int* PrepareDataToSend() {
+	SendBuffer[0] = 10;
+	SendBuffer[1] = 1;
+	SendBuffer[2] = 0;
+	SendBuffer[3] = 0;
+	SendBuffer[4] = 0;
+	SendBuffer[5] = 8;
+	for (int i = 6; i< 14; i++) {
+		SendBuffer[i] = get_array_current_status_int(i);
+	}
+	crc = 0xffff;
+	crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
+	u32 high_bits = crc/256;
+	SendBuffer[count_byte+1] = high_bits;
+	SendBuffer[count_byte] = crc - high_bits*256;
+
+	return &SendBuffer;
+}
+
+int* PrepareDataToSendTest() {
+	return &SendBuffer;
+}
+
+void SendData(XUartLite *UartLiteInstPtr, u8 *Send) {
+	if (TotalSentCount == TEST_BUFFER_SIZE) {
+		TotalSentCount = 0;
+		XUartLite_Send(UartLiteInstPtr, Send, TEST_BUFFER_SIZE);
+	}
+}
+
 /****************************************************************************/
 /**
 *
@@ -352,15 +393,33 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData)
 ****************************************************************************/
 static void UartLiteRecvHandler(void *CallBackRef, unsigned int EventData)
 {
-	TotalRecvCount = TotalRecvCount + 1;
+//	TotalRecvCount = 1;
+	XUartLite_Recv(UartLiteInstPtr, RecvBuffer, TEST_BUFFER_SIZE);
 }
 
 int TestCheckTotalRecvCount() {
 	return TotalRecvCount;
 }
 
-void TestFunctionXUartLite_Recv() {
-	XUartLite_Recv(UartLiteInstPtr, SendBuffer, TEST_BUFFER_SIZE);
+int* GetData(XUartLite *UartLiteInstPtr) {
+	if (TotalRecvCount != 0) {
+		TotalRecvCount = 0;
+		XUartLite_Recv(UartLiteInstPtr, RecvBuffer, TEST_BUFFER_SIZE);
+	}
+
+	return &RecvBuffer;
+}
+
+int* GetRecvBuffer() {
+	return &RecvBuffer;
+}
+
+int GetByte(int number) {
+	return RecvBuffer[number];
+}
+
+void GetUARTValue() {
+	SendBuffer = RecvBuffer;
 }
 
 /****************************************************************************/

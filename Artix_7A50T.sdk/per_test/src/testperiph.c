@@ -94,20 +94,28 @@ int main ()
 //	   Send[count_byte+1] = high_bits;
 //	   Send[count_byte] = crc - high_bits*256;
 //	   SendData(&axi_uartlite_0_UartLite, PrepareDataToSend()); // если данные отправлены, то выполнить PrepareDataToSend() - не надо выполнять его в мэйне постоянно
-	   GetData(&axi_uartlite_0_UartLite); // тестовая, надо ждать прерывания
-	   if (count < 0x0FFF) {	// меньше не работает отображение на мобилке
-		   count = count + 0x01;
-	   } else {
-		   SendData(&axi_uartlite_0_UartLite, PrepareDataToSend());
-			count = 0x0000;
-			if (count8 < 0x0F) {
-				count8 = count8 + 0x01;
-			} else {
-				count8 = 0x00;
-//				TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite, &Recv);
-//				SendData(&axi_uartlite_0_UartLite, PrepareDataToSend());
-			}
+//	   GetData(&axi_uartlite_0_UartLite); // тестовая, надо ждать прерывания
+
+	   if (TestCheckTotalRecvCount() != 0) {
+		   SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
 	   }
+
+
+
+//	   if (count < 0x0FFF) {	// меньше не работает отображение на мобилке
+//		   count = count + 0x01;
+//	   } else {
+////		   SendData(&axi_uartlite_0_UartLite, PrepareDataToSend());
+//		   SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
+//			count = 0x0000;
+//			if (count8 < 0x0F) {
+//				count8 = count8 + 0x01;
+//			} else {
+//				count8 = 0x00;
+////				TestFunctionXUartLite_Recv(&axi_uartlite_0_UartLite, &Recv);
+////				SendData(&axi_uartlite_0_UartLite, PrepareDataToSend());
+//			}
+//	   }
 
 
 

@@ -124,8 +124,6 @@ int* GetData(XUartLite *UartLiteInstPtr);
 void SendData(XUartLite *UartLiteInstPtr, u8 *Send);
 int* GetRecvBuffer();
 int GetByte(int number);
-int* PrepareDataToSendTest();
-void GetUARTValue();
 
 static int UartLiteSetupIntrSystem(INTC *IntcInstancePtr,
 				XUartLite *UartLiteInstancePtr,
@@ -357,10 +355,6 @@ int* PrepareDataToSend() {
 	return &SendBuffer;
 }
 
-int* PrepareDataToSendTest() {
-	return &SendBuffer;
-}
-
 void SendData(XUartLite *UartLiteInstPtr, u8 *Send) {
 	if (TotalSentCount == TEST_BUFFER_SIZE) {
 		TotalSentCount = 0;
@@ -409,25 +403,12 @@ int* GetData(XUartLite *UartLiteInstPtr) {
 	return &RecvBuffer;
 }
 
-//int* GetData(XUartLite *UartLiteInstPtr) {
-//	if (TotalRecvCount != 0) {
-//		TotalRecvCount = 0;
-//		XUartLite_Recv(UartLiteInstPtr, SendBuffer, TEST_BUFFER_SIZE);
-//	}
-//
-//	return &SendBuffer;
-//}
-
 int* GetRecvBuffer() {
 	return &RecvBuffer;
 }
 
 int GetByte(int number) {
 	return RecvBuffer[number];
-}
-
-void GetUARTValue() {
-
 }
 
 /****************************************************************************/
