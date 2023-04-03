@@ -2,9 +2,9 @@
 
 
 
-int Array_current_status_bool[BUFFER_SIZE_ARRAY_CURRENT_STATUS_BOOL];
-int Array_current_status_int[BUFFER_SIZE_ARRAY_CURRENT_STATUS_INT];
-int Array_current_status_global_errors[BUFFER_SIZE_ARRAY_CURRENT_GLOBAL_ERRORS];
+int ArrayCurrentStatusBool[BUFFER_SIZE_ARRAY_CURRENT_STATUS_BOOL];
+int ArrayCurrentStatusInt[BUFFER_SIZE_ARRAY_CURRENT_STATUS_INT];
+int ArrayCurrentStatusGlobalErrors[BUFFER_SIZE_ARRAY_CURRENT_GLOBAL_ERRORS];
 
 ///////////////////////////////////////////////////////////
 
@@ -12,48 +12,48 @@ int Array_current_status_global_errors[BUFFER_SIZE_ARRAY_CURRENT_GLOBAL_ERRORS];
 //	if (Array_current_status_bool[number] == 0) return 0; else return 65280;
 //}
 
-int get_array_current_status_bool(int number){
-	return Array_current_status_bool[number];
+int GetArrayCurrentStatusBool(int number){
+	return ArrayCurrentStatusBool[number];
 }
 
-void set_array_current_status_bool(int number, int status){
-	Array_current_status_bool[number] = status;
-}
-
-///////////////////////////////////////////////////////////
-
-int get_array_current_status_int(int number){
-	return Array_current_status_int[number];
-}
-
-void set_array_current_status_int(int number, int status){
-	Array_current_status_int[number] = status;
+void SetArrayCurrentStatusBool(int number, int status){
+	ArrayCurrentStatusBool[number] = status;
 }
 
 ///////////////////////////////////////////////////////////
 
-void reset_errors_current_system_status(){
+int GetArrayCurrentStatusInt(int number){
+	return ArrayCurrentStatusInt[number];
+}
+
+void SetArrayCurrentStatusInt(int number, int status){
+	ArrayCurrentStatusInt[number] = status;
+}
+
+///////////////////////////////////////////////////////////
+
+void ResetErrorsCurrentSystemStatus(){
 	for (int i = 17; i < 400; i++){
-		set_array_current_status_bool(i, 0);
+		SetArrayCurrentStatusBool(i, 0);
 	}
 }
 
 ///////////////////////////////////////////////////////////
 
-int get_array_current_status_global_errors(int number){
-	return Array_current_status_global_errors[number];
+int GetArrayCurrentStatusGlobalErrors(int number){
+	return ArrayCurrentStatusGlobalErrors[number];
 }
 
-void set_array_current_status_global_errors(int number, int status){
-	Array_current_status_global_errors[number] = status;
+void SetArrayCurrentStatusGlobalErrors(int number, int status){
+	ArrayCurrentStatusGlobalErrors[number] = status;
 }
 
 ///////////////////////////////////////////////////////////
 
-int get_group_registers_errors(int group, int registers){
+int GetGroupRegistersErrors(int group, int registers){
 	int data = 0;
 	for (int i = 0; i < 16; i++){
-		data = (Array_current_status_bool[group*128 + registers*16 + i] << i) | data;
+		data = (ArrayCurrentStatusBool[group*128 + registers*16 + i] << i) | data;
 	}
 	return data;
 }

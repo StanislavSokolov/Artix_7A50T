@@ -94,6 +94,12 @@
  */
 #define TEST_BUFFER_SIZE		16
 
+#define ADDRESS_DEVICE			10
+#define INIT_ARTIX				100
+#define READ					56
+#define WRITE					57
+#define INIT_LOAD				58
+#define LOAD					51
 
 /**************************** Type Definitions *******************************/
 
@@ -124,6 +130,7 @@ int* GetData(XUartLite *UartLiteInstPtr);
 void SendData(XUartLite *UartLiteInstPtr, u8 *Send);
 int* GetRecvBuffer();
 int GetByte(int number);
+int* PrepareDataToSend(int mode, int reg);
 int* PrepareDataToSendTest();
 void GetUARTValue();
 
@@ -294,6 +301,8 @@ int UartLiteIntrExample(INTC *IntcInstancePtr,
 		SendBuffer[Index] = Index;
 	}
 
+	SendBuffer[0] = ADDRESS_DEVICE;
+
 	/*
 	 * Send the buffer using the UartLite.
 	 */
@@ -338,11 +347,56 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData)
 	TotalSentCount = EventData;
 }
 
-int* PrepareDataToSend() {
-	SendBuffer[0] = 10;
-	SendBuffer[1] = 56;
-	for (int i = 2; i< 14; i++) {
-		SendBuffer[i] = 0;
+int* PrepareDataToSend(int mode, int reg) {
+	switch (mode) {
+		case READ:
+			SendBuffer[0] = ADDRESS_DEVICE;
+			SendBuffer[1] = READ;
+			SendBuffer[2] = reg;
+			SendBuffer[3] = GetArrayCurrentStatusInt(reg);
+			SendBuffer[4] = 0;
+			SendBuffer[5] = 0;
+			SendBuffer[6] = 0;
+			SendBuffer[7] = 0;
+			SendBuffer[8] = 0;
+			SendBuffer[9] = 0;
+			SendBuffer[10] = 0;
+			SendBuffer[11] = 0;
+			SendBuffer[12] = 0;
+			SendBuffer[13] = 0;
+			break;
+		case WRITE:
+			SendBuffer[0] = ADDRESS_DEVICE;
+			SendBuffer[1] = WRITE;
+			SendBuffer[2] = 0;
+			SendBuffer[3] = reg;
+			SendBuffer[4] = 0;
+			SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+			SendBuffer[6] = 0;
+			SendBuffer[7] = 0;
+			SendBuffer[8] = 0;
+			SendBuffer[9] = 0;
+			SendBuffer[10] = 0;
+			SendBuffer[11] = 0;
+			SendBuffer[12] = 0;
+			SendBuffer[13] = 0;
+			break;
+		case INIT_ARTIX:
+			SendBuffer[0] = ADDRESS_DEVICE;
+			SendBuffer[1] = INIT_ARTIX;
+			SendBuffer[2] = 0;
+			SendBuffer[3] = 5;
+			SendBuffer[4] = 0;
+			SendBuffer[5] = 13;
+			SendBuffer[6] = 0;
+			SendBuffer[7] = 0;
+			SendBuffer[8] = 0;
+			SendBuffer[9] = 0;
+			SendBuffer[10] = 0;
+			SendBuffer[11] = 0;
+			SendBuffer[12] = 0;
+			SendBuffer[13] = 0;
+			break;
 	}
 //	SendBuffer[2] = 0;
 //	SendBuffer[3] = 0;
@@ -354,8 +408,8 @@ int* PrepareDataToSend() {
 	crc = 0xffff;
 	crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
 	u32 high_bits = crc/256;
-	SendBuffer[count_byte+1] = high_bits;
-	SendBuffer[count_byte] = crc - high_bits*256;
+	SendBuffer[15] = high_bits;
+	SendBuffer[14] = crc - high_bits*256;
 
 	return &SendBuffer;
 }
@@ -407,9 +461,25 @@ int* GetData(XUartLite *UartLiteInstPtr) {
 	if (TotalRecvCount != 0) {
 		TotalRecvCount = 0;
 		XUartLite_Recv(UartLiteInstPtr, RecvBuffer, TEST_BUFFER_SIZE);
-	}
 
-	return &RecvBuffer;
+		// It needs to add the checking CRC
+
+		if (RecvBuffer[0] == ADDRESS_DEVICE) {
+			switch (RecvBuffer[1]) {
+				case READ:
+					PrepareDataToSend(READ, RecvBuffer[2]);
+					break;
+				case WRITE:
+					SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5]);
+					PrepareDataToSend(WRITE, RecvBuffer[2]);
+					break;
+				case INIT_ARTIX:
+					PrepareDataToSend(INIT_ARTIX, 0);
+					break;
+			}
+		}
+	}
+	return &SendBuffer;
 }
 
 //int* GetData(XUartLite *UartLiteInstPtr) {
