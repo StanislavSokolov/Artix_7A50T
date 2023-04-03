@@ -1,2 +1,4 @@
 1678774879167	Delete resource 'standalone_bsp_0_xuartlite_selftest_example_1'
 1678774901790	Delete resource 'standalone_bsp_0'
+1679057883402	Delete 2 resources
+1679058483405	Delete resource 'per_test/src/gpio_header.h'

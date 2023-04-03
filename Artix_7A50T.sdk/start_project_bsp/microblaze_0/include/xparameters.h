@@ -461,6 +461,7 @@
 
 /******************************************************************/
 
+#define STDOUT_BASEADDRESS 0x40600000
 
 /******************************************************************/
 
@@ -633,6 +634,39 @@
 
 /******************************************************************/
 
+/* Definitions for driver MIG_7SERIES */
+#define XPAR_XMIG7SERIES_NUM_INSTANCES 1U
+
+/* Definitions for peripheral MIG_7SERIES_0 */
+#define XPAR_MIG_7SERIES_0_DEVICE_ID 0U
+#define XPAR_MIG_7SERIES_0_DDR3_ROW_WIDTH 14U
+#define XPAR_MIG_7SERIES_0_DDR3_COL_WIDTH 0U
+#define XPAR_MIG_7SERIES_0_DDR3_BANK_WIDTH 3U
+#define XPAR_MIG_7SERIES_0_DDR3_DQ_WIDTH 16U
+
+
+/******************************************************************/
+
+
+/* Definitions for peripheral MIG_7SERIES_0 */
+#define XPAR_MIG_7SERIES_0_BASEADDR 0x80000000
+#define XPAR_MIG_7SERIES_0_HIGHADDR 0x8FFFFFFF
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral MIG_7SERIES_0 */
+#define XPAR_MIG7SERIES_0_DEVICE_ID XPAR_MIG_7SERIES_0_DEVICE_ID
+#define XPAR_MIG7SERIES_0_DDR_ROW_WIDTH 14U
+#define XPAR_MIG7SERIES_0_DDR_COL_WIDTH 0U
+#define XPAR_MIG7SERIES_0_DDR_BANK_WIDTH 3U
+#define XPAR_MIG7SERIES_0_DDR_DQ_WIDTH 16U
+#define XPAR_MIG7SERIES_0_BASEADDR 0x80000000U
+#define XPAR_MIG7SERIES_0_HIGHADDR 0x8FFFFFFFU
+
+
+/******************************************************************/
+
 /* Definitions for driver SPI */
 #define XPAR_XSPI_NUM_INSTANCES 1U
 
@@ -697,5 +731,9 @@
 
 
 /******************************************************************/
+
+/* Xilinx EDK In-system and Serial Flash Library (XilIsf) User Settings */
+#define XPAR_XISF_FLASH_FAMILY	5
+#define XPAR_XISF_INTERFACE_AXISPI	1
 
 #endif  /* end of protection macro */
