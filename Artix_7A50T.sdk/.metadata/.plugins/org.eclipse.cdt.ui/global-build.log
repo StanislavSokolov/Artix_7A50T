@@ -1,3 +1,240 @@
-09:52:33 **** Incremental Build of configuration Debug for project per_test ****
+14:32:48 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+14:32:51 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+14:33:41 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+14:40:21 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:82:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
+     GetSystemValues();
+     ^~~~~~~~~~~~~~~
+../src/testperiph.c:83:5: warning: implicit declaration of function 'SetValuesInAddressSpace' [-Wimplicit-function-declaration]
+     SetValuesInAddressSpace();
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:105:13: warning: implicit declaration of function 'TestCheckTotalRecvCount' [-Wimplicit-function-declaration]
+         if (TestCheckTotalRecvCount() != 0) {
+             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:106:10: warning: implicit declaration of function 'SendData' [-Wimplicit-function-declaration]
+          SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
+          ^~~~~~~~
+../src/testperiph.c:106:45: warning: implicit declaration of function 'GetData' [-Wimplicit-function-declaration]
+          SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
+                                             ^~~~~~~
+../src/testperiph.c:127:13: warning: implicit declaration of function 'GetByte'; did you mean 'outbyte'? [-Wimplicit-function-declaration]
+         if (GetByte(2) == 49) GpioOutputWrite(GetByte(5));
+             ^~~~~~~
+             outbyte
+../src/testperiph.c:127:31: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+         if (GetByte(2) == 49) GpioOutputWrite(GetByte(5));
+                               ^~~~~~~~~~~~~~~
+                               XGpio_DiscreteWrite
+../src/testperiph.c:70:8: warning: unused variable 'count8' [-Wunused-variable]
+    u32 count8 = 0x00;
+        ^~~~~~
+../src/testperiph.c:69:8: warning: unused variable 'count' [-Wunused-variable]
+    u32 count = 0x0000;
+        ^~~~~
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/current_system_status.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12352	    392	   5848	  18592	   48a0	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+14:40:40 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+14:45:15 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:82:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
+     GetSystemValues();
+     ^~~~~~~~~~~~~~~
+../src/testperiph.c:83:5: warning: implicit declaration of function 'SetValuesInAddressSpace' [-Wimplicit-function-declaration]
+     SetValuesInAddressSpace();
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:105:13: warning: implicit declaration of function 'TestCheckTotalRecvCount' [-Wimplicit-function-declaration]
+         if (TestCheckTotalRecvCount() != 0) {
+             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:106:10: warning: implicit declaration of function 'SendData' [-Wimplicit-function-declaration]
+          SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
+          ^~~~~~~~
+../src/testperiph.c:106:45: warning: implicit declaration of function 'GetData' [-Wimplicit-function-declaration]
+          SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
+                                             ^~~~~~~
+../src/testperiph.c:127:13: warning: implicit declaration of function 'GetByte'; did you mean 'outbyte'? [-Wimplicit-function-declaration]
+         if (GetByte(2) == 48) GpioOutputWrite(GetByte(5));
+             ^~~~~~~
+             outbyte
+../src/testperiph.c:127:31: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+         if (GetByte(2) == 48) GpioOutputWrite(GetByte(5));
+                               ^~~~~~~~~~~~~~~
+                               XGpio_DiscreteWrite
+../src/testperiph.c:70:8: warning: unused variable 'count8' [-Wunused-variable]
+    u32 count8 = 0x00;
+        ^~~~~~
+../src/testperiph.c:69:8: warning: unused variable 'count' [-Wunused-variable]
+    u32 count = 0x0000;
+        ^~~~~
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/current_system_status.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12352	    392	   5848	  18592	   48a0	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+14:45:19 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+15:12:49 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:82:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
+     GetSystemValues();
+     ^~~~~~~~~~~~~~~
+../src/testperiph.c:83:5: warning: implicit declaration of function 'SetValuesInAddressSpace' [-Wimplicit-function-declaration]
+     SetValuesInAddressSpace();
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:105:13: warning: implicit declaration of function 'TestCheckTotalRecvCount' [-Wimplicit-function-declaration]
+         if (TestCheckTotalRecvCount() != 0) {
+             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:106:10: warning: implicit declaration of function 'SendData' [-Wimplicit-function-declaration]
+          SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
+          ^~~~~~~~
+../src/testperiph.c:106:45: warning: implicit declaration of function 'GetData' [-Wimplicit-function-declaration]
+          SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
+                                             ^~~~~~~
+../src/testperiph.c:128:13: warning: implicit declaration of function 'GetByte'; did you mean 'outbyte'? [-Wimplicit-function-declaration]
+         if (GetByte(3) == 48) GpioOutputWrite(GetByte(5));
+             ^~~~~~~
+             outbyte
+../src/testperiph.c:128:31: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+         if (GetByte(3) == 48) GpioOutputWrite(GetByte(5));
+                               ^~~~~~~~~~~~~~~
+                               XGpio_DiscreteWrite
+../src/testperiph.c:70:8: warning: unused variable 'count8' [-Wunused-variable]
+    u32 count8 = 0x00;
+        ^~~~~~
+../src/testperiph.c:69:8: warning: unused variable 'count' [-Wunused-variable]
+    u32 count = 0x0000;
+        ^~~~~
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/current_system_status.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12352	    392	   5848	  18592	   48a0	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+15:12:51 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+15:15:04 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+15:48:19 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+15:53:11 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:00:04 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:01:58 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:04:26 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/testperiph.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c: In function 'main':
+../src/testperiph.c:82:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
+     GetSystemValues();
+     ^~~~~~~~~~~~~~~
+../src/testperiph.c:83:5: warning: implicit declaration of function 'SetValuesInAddressSpace' [-Wimplicit-function-declaration]
+     SetValuesInAddressSpace();
+     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:105:13: warning: implicit declaration of function 'TestCheckTotalRecvCount' [-Wimplicit-function-declaration]
+         if (TestCheckTotalRecvCount() != 0) {
+             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/testperiph.c:106:10: warning: implicit declaration of function 'SendData' [-Wimplicit-function-declaration]
+          SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
+          ^~~~~~~~
+../src/testperiph.c:106:45: warning: implicit declaration of function 'GetData' [-Wimplicit-function-declaration]
+          SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
+                                             ^~~~~~~
+../src/testperiph.c:128:13: warning: implicit declaration of function 'GetByte'; did you mean 'outbyte'? [-Wimplicit-function-declaration]
+         if (GetByte(2) == 48) GpioOutputWrite(GetByte(5));
+             ^~~~~~~
+             outbyte
+../src/testperiph.c:128:31: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+         if (GetByte(2) == 48) GpioOutputWrite(GetByte(5));
+                               ^~~~~~~~~~~~~~~
+                               XGpio_DiscreteWrite
+../src/testperiph.c:70:8: warning: unused variable 'count8' [-Wunused-variable]
+    u32 count8 = 0x00;
+        ^~~~~~
+../src/testperiph.c:69:8: warning: unused variable 'count' [-Wunused-variable]
+    u32 count = 0x0000;
+        ^~~~~
+'Finished building: ../src/testperiph.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/current_system_status.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12352	    392	   5848	  18592	   48a0	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:04:27 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:04:58 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:05:19 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:15:59 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+11:12:14 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.

@@ -124,9 +124,7 @@ int main ()
 //	   }
 
 
-//	   	   if (GetByte(2) == 48) GpioOutputWrite(GetByte(5));
-	   	   if (GetByte(2) == 48) GpioOutputWrite(GetByte(5));
-
+	   	   if (GetByte[2] == 48) GpioOutputWrite(GetByte(5));
 
    }
 

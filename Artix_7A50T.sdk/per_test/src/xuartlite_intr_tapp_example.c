@@ -340,14 +340,17 @@ static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData)
 
 int* PrepareDataToSend() {
 	SendBuffer[0] = 10;
-	SendBuffer[1] = 1;
-	SendBuffer[2] = 0;
-	SendBuffer[3] = 0;
-	SendBuffer[4] = 0;
-	SendBuffer[5] = 8;
-	for (int i = 6; i< 14; i++) {
-		SendBuffer[i] = get_array_current_status_int(i);
+	SendBuffer[1] = 56;
+	for (int i = 2; i< 14; i++) {
+		SendBuffer[i] = 0;
 	}
+//	SendBuffer[2] = 0;
+//	SendBuffer[3] = 0;
+//	SendBuffer[4] = 0;
+//	SendBuffer[5] = 8;
+//	for (int i = 6; i< 14; i++) {
+//		SendBuffer[i] = get_array_current_status_int(i);
+//	}
 	crc = 0xffff;
 	crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
 	u32 high_bits = crc/256;

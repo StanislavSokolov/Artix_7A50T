@@ -103,7 +103,9 @@ int main ()
 //	   }
 
 	   	   if (TestCheckTotalRecvCount() != 0) {
-	   		   SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
+	   		   u8 Recv[16] = GetData(&axi_uartlite_0_UartLite);
+	   		   if (Recv[2] == 48) GpioOutputWrite(Recv[5]);
+	   		   SendData(&axi_uartlite_0_UartLite, Recv);
 	   	   }
 
 
@@ -124,10 +126,8 @@ int main ()
 //	   }
 
 
-//	   	   if (GetByte(2) == 48) GpioOutputWrite(GetByte(5));
-	   	   if (GetByte(2) == 48) GpioOutputWrite(GetByte(5));
 
-
+//	   GpioOutputWrite(GetByte(2));
    }
 
    Xil_DCacheDisable();
