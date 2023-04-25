@@ -1,6 +1,35 @@
-18:20:59 **** Incremental Build of configuration Debug for project per_test ****
+17:33:55 **** Incremental Build of configuration Debug for project per_test ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:15:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:16:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(GetArrayCurrentStatusInt(48));
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:17:18: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  GpioOutputWrite(GetArrayCurrentStatusInt(48));
+                  ^~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/current_system_status.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_selftest_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13276	    908	   6256	  20440	   4fd8	per_test.elf
+'Finished building: per_test.elf.size'
+' '
 
-18:21:00 Build Finished (took 161ms)
+17:33:56 Build Finished (took 717ms)
 
