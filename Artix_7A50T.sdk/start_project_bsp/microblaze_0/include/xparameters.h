@@ -473,6 +473,28 @@
  
  
 /******************************************************************/
+/* Definitions for driver IP_AXI_ADC */
+#define XPAR_IP_AXI_ADC_NUM_INSTANCES 1
+
+/* Definitions for peripheral IP_AXI_ADC_1 */
+#define XPAR_IP_AXI_ADC_1_DEVICE_ID 0
+#define XPAR_IP_AXI_ADC_1_S00_AXI_BASEADDR 0x44A10000
+#define XPAR_IP_AXI_ADC_1_S00_AXI_HIGHADDR 0x44A1FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver IP_AXI_ENCODER */
+#define XPAR_IP_AXI_ENCODER_NUM_INSTANCES 1
+
+/* Definitions for peripheral IP_AXI_ENCODER_0 */
+#define XPAR_IP_AXI_ENCODER_0_DEVICE_ID 0
+#define XPAR_IP_AXI_ENCODER_0_S00_AXI_BASEADDR 0x44A20000
+#define XPAR_IP_AXI_ENCODER_0_S00_AXI_HIGHADDR 0x44A2FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver BRAM */
 #define XPAR_XBRAM_NUM_INSTANCES 2U
 

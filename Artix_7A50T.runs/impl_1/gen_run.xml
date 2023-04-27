@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a50tftg256-3" LaunchTime="1682604790">
+<GenRun Id="impl_1" LaunchPart="xc7a50tftg256-3" LaunchTime="1682610966">
   <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>
@@ -115,7 +115,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -139,4 +141,6 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_intc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_mig_7series_0_166M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IP_AXI_ADC_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IP_AXI_Encoder_0_0"/>
 </GenRun>

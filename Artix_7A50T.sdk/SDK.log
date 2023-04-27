@@ -19757,3 +19757,56 @@ con
 ----------------End of Script----------------
 
 16:51:04 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_per_test.elf_on_local.tcl'
+17:18:16 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1682604987659,  Project:1679413084323
+17:18:16 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+17:18:19 INFO  : Copied contents of D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+17:18:19 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:18:32 INFO  : 
+17:18:33 INFO  : Updating hardware inferred compiler options for bootloader.
+17:18:34 INFO  : Updating hardware inferred compiler options for per_test.
+17:18:35 INFO  : Updating hardware inferred compiler options for start_project.
+17:18:35 INFO  : Clearing existing target manager status.
+17:19:18 INFO  : Disconnected from the channel tcfchan#1.
+17:19:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:19:19 INFO  : Jtag cable 'Digilent JTAG-SMT2 210251991099' is selected.
+17:19:19 INFO  : 'jtag frequency' command is executed.
+17:19:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0' command is executed.
+17:19:20 INFO  : FPGA configured successfully with bitstream "D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+17:19:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:19:20 INFO  : Context for processor 'microblaze_0' is selected.
+17:19:21 INFO  : Processor reset is completed for 'microblaze_0'.
+17:19:21 INFO  : Context for processor 'microblaze_0' is selected.
+17:19:21 INFO  : The application 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/per_test/Debug/per_test.elf' is downloaded to processor 'microblaze_0'.
+17:19:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099" && level==0} -index 0
+fpga -file D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+dow D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/per_test/Debug/per_test.elf
+----------------End of Script----------------
+
+17:19:21 INFO  : Memory regions updated for context MicroBlaze #0
+17:19:21 INFO  : Memory regions updated for context MicroBlaze #0
+17:19:21 INFO  : Context for processor 'microblaze_0' is selected.
+17:19:21 INFO  : 'con' command is executed.
+17:19:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent JTAG-SMT2 210251991099"} -index 0
+con
+----------------End of Script----------------
+
+17:19:21 INFO  : Launch script is exported to file 'D:\GITEA\GitHub\ES\Artix_7A50T\Artix_7A50T.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_per_test.elf_on_local.tcl'
+19:01:34 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1682611279561,  Project:1682604987659
+19:01:34 INFO  : Project design_1_wrapper_hw_platform_0's source hardware specification located at D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+19:01:51 INFO  : Copied contents of D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
+19:01:52 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+19:01:53 INFO  : 
+19:01:54 INFO  : Updating hardware inferred compiler options for bootloader.
+19:01:55 INFO  : Updating hardware inferred compiler options for per_test.
+19:01:56 INFO  : Updating hardware inferred compiler options for start_project.
+19:01:56 INFO  : Clearing existing target manager status.
+19:02:19 INFO  : Disconnected from the channel tcfchan#2.

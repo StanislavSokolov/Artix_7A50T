@@ -60,6 +60,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_mig_7s
 # IP: bd/design_1/ip/design_1_rst_mig_7series_0_166M_0/design_1_rst_mig_7series_0_166M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_rst_mig_7series_0_166M_0 || ORIG_REF_NAME==design_1_rst_mig_7series_0_166M_0} -quiet] -quiet
 
+# IP: bd/design_1/ip/design_1_IP_AXI_Encoder_0_0/design_1_IP_AXI_Encoder_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_IP_AXI_Encoder_0_0 || ORIG_REF_NAME==design_1_IP_AXI_Encoder_0_0} -quiet] -quiet
+
+# IP: bd/design_1/ip/design_1_IP_AXI_ADC_1_0/design_1_IP_AXI_ADC_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_IP_AXI_ADC_1_0 || ORIG_REF_NAME==design_1_IP_AXI_ADC_1_0} -quiet] -quiet
+
 # IP: bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_auto_cc_0 || ORIG_REF_NAME==design_1_auto_cc_0} -quiet] -quiet
 

@@ -1,4 +1,4 @@
-17:18:43 **** Auto Build of configuration Debug for project start_project ****
+19:02:04 **** Auto Build of configuration Debug for project start_project ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -22,5 +22,5 @@ mb-size start_project.elf  |tee "start_project.elf.size"
 'Finished building: start_project.elf.size'
 ' '
 
-17:18:44 Build Finished (took 1s.68ms)
+19:02:05 Build Finished (took 1s.66ms)
 

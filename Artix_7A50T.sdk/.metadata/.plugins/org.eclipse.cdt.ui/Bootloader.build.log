@@ -1,4 +1,4 @@
-17:18:48 **** Auto Build of configuration Debug for project bootloader ****
+19:02:08 **** Auto Build of configuration Debug for project bootloader ****
 make all 
 'Building file: ../src/bootloader.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -43,5 +43,5 @@ mb-size bootloader.elf  |tee "bootloader.elf.size"
 'Finished building: bootloader.elf.size'
 ' '
 
-17:18:49 Build Finished (took 1s.186ms)
+19:02:09 Build Finished (took 970ms)
 

@@ -29,6 +29,8 @@ set_property parent.project_path D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.xpr 
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
+set_property ip_repo_paths d:/GITEA/GitHub/ES/IP_cores [current_project]
+update_ip_catalog
 set_property ip_output_repo d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
