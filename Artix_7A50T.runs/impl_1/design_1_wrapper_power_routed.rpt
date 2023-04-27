@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Tue Mar 21 18:37:41 2023
+| Date             : Thu Apr 27 17:16:00 2023
 | Host             : STAS-W10 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.841        |
+| Total On-Chip Power (W)  | 0.840        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.765        |
@@ -54,7 +54,7 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.041 |       24 |       --- |             --- |
 | Slice Logic              |     0.039 |    16329 |       --- |             --- |
-|   LUT as Logic           |     0.032 |     6103 |     32600 |           18.72 |
+|   LUT as Logic           |     0.032 |     6100 |     32600 |           18.71 |
 |   LUT as Distributed RAM |     0.004 |      440 |      9600 |            4.58 |
 |   Register               |     0.002 |     6395 |     65200 |            9.81 |
 |   CARRY4                 |    <0.001 |      193 |      8150 |            2.37 |
@@ -62,7 +62,7 @@ Table of Contents
 |   BUFG                   |    <0.001 |        4 |        32 |           12.50 |
 |   LUT as Shift Register  |    <0.001 |      246 |      9600 |            2.56 |
 |   Others                 |    <0.001 |      885 |       --- |             --- |
-| Signals                  |     0.052 |    12085 |       --- |             --- |
+| Signals                  |     0.052 |    12102 |       --- |             --- |
 | Block RAM                |     0.002 |     16.5 |        75 |           22.00 |
 | MMCM                     |     0.089 |        1 |         5 |           20.00 |
 | PLL                      |     0.113 |        2 |         5 |           40.00 |
@@ -70,7 +70,7 @@ Table of Contents
 | PHASER                   |     0.117 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.075 |          |           |                 |
-| Total                    |     0.841 |          |           |                 |
+| Total                    |     0.840 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,7 +80,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.186 |       0.175 |      0.011 |
+| Vccint    |       1.000 |     0.186 |       0.174 |      0.011 |
 | Vccaux    |       1.800 |     0.230 |       0.217 |      0.013 |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -173,8 +173,8 @@ Table of Contents
 |   design_1_i                         |     0.757 |
 |     axi_gpio_1                       |     0.001 |
 |       U0                             |     0.001 |
-|     axi_quad_spi_0                   |     0.015 |
-|       U0                             |     0.015 |
+|     axi_quad_spi_0                   |     0.014 |
+|       U0                             |     0.014 |
 |     axi_uartlite_0                   |     0.002 |
 |       U0                             |     0.002 |
 |     clk_wiz_1                        |     0.054 |
@@ -187,7 +187,7 @@ Table of Contents
 |     microblaze_0_local_memory        |     0.002 |
 |       lmb_bram                       |     0.002 |
 |     mig_7series_0                    |     0.638 |
-|       u_design_1_mig_7series_0_0_mig |     0.634 |
+|       u_design_1_mig_7series_0_0_mig |     0.633 |
 |   spi_rtl_0_sck_iobuf                |     0.005 |
 +--------------------------------------+-----------+
 
