@@ -24,7 +24,7 @@ int GetCurrentValueSpeedSensorChannel(int channel){
 
 void GetCurrentValueSpeedSensorTable(){
 	s0 = GetCurrentValueSpeedSensorChannel(0);
-	s0_inv = GetCurrentValueSpeedSensorChannel(1);
+//	s0_inv = GetCurrentValueSpeedSensorChannell(1);
 	s1 = GetCurrentValueSpeedSensorChannel(2);
 	s1_inv = GetCurrentValueSpeedSensorChannel(3);
 	s2 = GetCurrentValueSpeedSensorChannel(4);

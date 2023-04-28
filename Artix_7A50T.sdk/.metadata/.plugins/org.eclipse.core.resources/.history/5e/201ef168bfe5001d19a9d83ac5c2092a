@@ -28,7 +28,7 @@ void GetSystemValues() {
 
 	GetCurrentValueAdcTable();								// получить значения АЦП (записываем массив adc_channel[] в adc.c)
 	GetValueErrorsNegativePositiveAdcTable();				// получить значения ошибок АЦП (заполняем поля в adc.c)
-	SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+	SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc);
 	//
 	//		get_value_min_time_error_group_table();						// получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
 	//		get_value_acknowledge_error_group_table();
