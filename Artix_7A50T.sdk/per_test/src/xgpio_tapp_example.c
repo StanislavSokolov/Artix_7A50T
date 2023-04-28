@@ -107,9 +107,9 @@ int GpioOutputInitialize(u16 DeviceId);
 
 int GpioInputInitialize(u16 DeviceId);
 
-int GpioOutputWrite(u32 GpioWidth);
+int GpioOutputWrite(u32 GpioWidth, u32 DeviceId);
 
-int GpioInputRead(u32 *DataRead);
+int GpioInputRead(u32 *DataRead, u32 DeviceId);
 
 void GpioDriverHandler(void *CallBackRef);
 
@@ -120,8 +120,10 @@ void GpioDriverHandler(void *CallBackRef);
  * The following are declared globally so they are zeroed and so they are
  * easily accessible from a debugger
  */
-XGpio GpioOutput; /* The driver instance for GPIO Device configured as O/P */
-XGpio GpioInput;  /* The driver instance for GPIO Device configured as I/P */
+XGpio GpioOutput_0; /* The driver instance for GPIO Device configured as O/P */
+XGpio GpioOutput_1; /* The driver instance for GPIO Device configured as O/P */
+XGpio GpioInput_0;  /* The driver instance for GPIO Device configured as I/P */
+XGpio GpioInput_1;  /* The driver instance for GPIO Device configured as I/P */
 
 /*****************************************************************************/
 /**
@@ -189,16 +191,30 @@ int GpioOutputInitialize(u16 DeviceId)
 	 * Initialize the GPIO driver so that it's ready to use,
 	 * specify the device ID that is generated in xparameters.h
 	 */
-	 Status = XGpio_Initialize(&GpioOutput, DeviceId);
+	 int id = DeviceId/2;
+
+	 if (id == 0) Status = XGpio_Initialize(&GpioOutput_0, DeviceId);
+	 else if (id == 1) Status = XGpio_Initialize(&GpioOutput_1, DeviceId);
+
 	 if (Status != XST_SUCCESS)  {
 		  return XST_FAILURE;
 	 }
 
-	 /* Set the direction for all signals to be outputs */
-	 XGpio_SetDataDirection(&GpioOutput, LED_CHANNEL, 0x0);
+	 if (id == 0) {
+		 /* Set the direction for all signals to be outputs */
+		 	 XGpio_SetDataDirection(&GpioOutput_0, LED_CHANNEL, 0x0);
 
-	 /* Set the GPIO outputs to low */
-	 XGpio_DiscreteWrite(&GpioOutput, LED_CHANNEL, 0x0);
+		 	 /* Set the GPIO outputs to low */
+		 	 XGpio_DiscreteWrite(&GpioOutput_0, LED_CHANNEL, 0x0);
+	 } else if (id == 1) {
+		 /* Set the direction for all signals to be outputs */
+		 	 XGpio_SetDataDirection(&GpioOutput_1, LED_CHANNEL, 0x0);
+
+		 	 /* Set the GPIO outputs to low */
+		 	 XGpio_DiscreteWrite(&GpioOutput_1, LED_CHANNEL, 0x0);
+	 }
+
+
 
 	 return XST_SUCCESS;
 }
@@ -230,32 +246,43 @@ int GpioInputInitialize(u16 DeviceId)
 	  * Initialize the GPIO driver so that it's ready to use,
 	  * specify the device ID that is generated in xparameters.h
 	  */
-	 Status = XGpio_Initialize(&GpioInput, DeviceId);
+	 int id = DeviceId/2;
+
+	 if (id == 0) Status = XGpio_Initialize(&GpioInput_0, DeviceId);
+	 else if (id == 1) Status = XGpio_Initialize(&GpioInput_1, DeviceId);
+
 	 if (Status != XST_SUCCESS) {
 		  return XST_FAILURE;
 	 }
 
 	 /* Set the direction for all signals to be inputs */
-	 XGpio_SetDataDirection(&GpioInput, LED_CHANNEL, 0xFFFFFFFF);
+	 if (id == 0) XGpio_SetDataDirection(&GpioInput_0, LED_CHANNEL, 0xFFFFFFFF);
+	 else if (id == 1) XGpio_SetDataDirection(&GpioInput_1, LED_CHANNEL, 0xFFFFFFFF);
+
 
 	 return XST_SUCCESS;
 
 }
 
-int GpioOutputWrite(u32 GpioWidth)
+int GpioOutputWrite(u32 GpioWidth, u32 DeviceId)
 {
-	XGpio_DiscreteWrite(&GpioOutput, LED_CHANNEL,
-			GpioWidth);
+	u32 id = DeviceId/2;
 
-	 return XST_SUCCESS;
+	if (id == 0) XGpio_DiscreteWrite(&GpioOutput_0, LED_CHANNEL, GpioWidth);
+	else if (id == 1) XGpio_DiscreteWrite(&GpioOutput_1, LED_CHANNEL, GpioWidth);
+
+	return XST_SUCCESS;
 
 }
 
-int GpioInputRead(u32 *DataRead)
+int GpioInputRead(u32 *DataRead, u32 DeviceId)
 {
 
-	*DataRead = XGpio_DiscreteRead(&GpioInput, LED_CHANNEL);
+	u32 id = DeviceId/2;
 
-	 return XST_SUCCESS;
+	if (id == 0) *DataRead = XGpio_DiscreteRead(&GpioInput_0, LED_CHANNEL);
+	else if (id == 1) *DataRead = XGpio_DiscreteRead(&GpioInput_1, LED_CHANNEL);
+
+	return XST_SUCCESS;
 
 }

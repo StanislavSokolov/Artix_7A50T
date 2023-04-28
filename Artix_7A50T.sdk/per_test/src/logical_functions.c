@@ -12,13 +12,16 @@
 u32 DataRead = 0x00;
 
 void GetSystemValues() {
-	GpioInputRead(&DataRead);
+	GpioInputRead(&DataRead, 1);
 	SetArrayCurrentStatusInt(100, DataRead);
+	GpioInputRead(&DataRead, 3);
+	SetArrayCurrentStatusInt(101, DataRead);
 	u32 word = 0;
 	for (int i = 0; i < 8; i++) {
 		word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
 	}
-	GpioOutputWrite(word);
+	GpioOutputWrite(word, 0);
+	GpioOutputWrite(word, 2);
 //	GpioOutputWrite(DataRead);
 }
 

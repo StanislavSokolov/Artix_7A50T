@@ -14,6 +14,8 @@
 void InitializationSystemDesignAndProject(int SystemDesign, int ProjectNumber){
 	GpioOutputInitialize(XPAR_AXI_GPIO_0_DEVICE_ID);
 	GpioInputInitialize(XPAR_AXI_GPIO_1_DEVICE_ID);
+	GpioOutputInitialize(XPAR_AXI_GPIO_2_DEVICE_ID);
+	GpioInputInitialize(XPAR_AXI_GPIO_3_DEVICE_ID);
 
 
 //	InitializationGPIO(SystemDesign, ProjectNumber);

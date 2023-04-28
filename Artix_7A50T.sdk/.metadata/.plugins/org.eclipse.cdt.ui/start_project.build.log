@@ -1,4 +1,4 @@
-19:02:04 **** Auto Build of configuration Debug for project start_project ****
+13:01:49 **** Auto Build of configuration Debug for project start_project ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -18,9 +18,9 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -
 'Invoking: MicroBlaze Print Size'
 mb-size start_project.elf  |tee "start_project.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   4768	    348	   2124	   7240	   1c48	start_project.elf
+   4756	    380	   2128	   7264	   1c60	start_project.elf
 'Finished building: start_project.elf.size'
 ' '
 
-19:02:05 Build Finished (took 1s.66ms)
+13:01:51 Build Finished (took 1s.882ms)
 
