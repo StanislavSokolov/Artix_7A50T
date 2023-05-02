@@ -1,47 +1,6 @@
-11:46:18 **** Auto Build of configuration Debug for project bootloader ****
+17:28:55 **** Incremental Build of configuration Debug for project bootloader ****
 make all 
-'Building file: ../src/bootloader.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/bootloader.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/bootloader.d" -MT"src/bootloader.o" -o "src/bootloader.o" "../src/bootloader.c"
-In file included from ../src/bootloader.c:37:
-../src/blconfig.h:32:2: warning: #warning "Please provide the correct address value for the definition FLASH_IMAGE_BASEADDR. Please give the flash offset @ which SREC application is programmed" [-Wcpp]
- #warning "Please provide the correct address value for the definition FLASH_IMAGE_BASEADDR. Please give the flash offset @ which SREC application is programmed"
-  ^~~~~~~
-../src/bootloader.c:56:2: warning: #warning "Set your Device ID here, as defined in xparameters.h" [-Wcpp]
- #warning "Set your Device ID here, as defined in xparameters.h"
-  ^~~~~~~
-../src/bootloader.c: In function 'flash_get_srec_line':
-../src/bootloader.c:289:24: warning: assignment to 'u32' {aka 'long unsigned int'} from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
-      ReadParam.Address = flbuf++;
-                        ^
-../src/bootloader.c:309:13: warning: implicit declaration of function 'IsfWaitForFlashNotBusy' [-Wimplicit-function-declaration]
-    Status = IsfWaitForFlashNotBusy();
-             ^~~~~~~~~~~~~~~~~~~~~~
-../src/bootloader.c:334:28: warning: assignment to 'u32' {aka 'long unsigned int'} from 'uint8_t *' {aka 'unsigned char *'} makes integer from pointer without a cast [-Wint-conversion]
-          ReadParam.Address = flbuf++;
-                            ^
-../src/bootloader.c: At top level:
-../src/bootloader.c:50:13: warning: 'display_progress' declared 'static' but never defined [-Wunused-function]
- static void display_progress (uint32_t lines);
-             ^~~~~~~~~~~~~~~~
-'Finished building: ../src/bootloader.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: bootloader.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "bootloader.elf"  ./src/bootloader.o ./src/platform.o ./src/srec.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
-'Finished building target: bootloader.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size bootloader.elf  |tee "bootloader.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  14880	    292	   1932	  17104	   42d0	bootloader.elf
-'Finished building: bootloader.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-11:46:20 Build Finished (took 1s.226ms)
+17:28:55 Build Finished (took 160ms)
 

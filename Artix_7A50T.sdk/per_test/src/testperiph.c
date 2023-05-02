@@ -54,31 +54,31 @@ int main ()
 	int SystemDesign = 0;
 	int ProjectNumber = 0;
 
-	int latch = 0;
-
 	InitializationSystemDesignAndProject(SystemDesign, ProjectNumber);
 	InitializationInitialValues();
 
-
    static XIntc intc;
-   static XUartLite axi_uartlite_0_UartLite;
-
-
    IntcSelfTestExample(XPAR_AXI_INTC_0_DEVICE_ID);
-
    IntcInterruptSetup(&intc, XPAR_AXI_INTC_0_DEVICE_ID);
-
-   u32 count = 0;
-   u32 count8 = 0x00;
-//   u32 DataRead = 0x00;
 
    SpiSelfTestExample(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
 
-   UartLiteSelfTestExample(XPAR_AXI_UARTLITE_0_DEVICE_ID);
 
+   static XUartLite axi_uartlite_0_UartLite;
+   UartLiteSelfTestExample(XPAR_AXI_UARTLITE_0_DEVICE_ID);
    UartLiteIntrExample(&intc, &axi_uartlite_0_UartLite, \
-                                  XPAR_AXI_UARTLITE_0_DEVICE_ID, \
-                                  XPAR_AXI_INTC_0_AXI_UARTLITE_0_INTERRUPT_INTR);
+                                     XPAR_AXI_UARTLITE_0_DEVICE_ID, \
+                                     XPAR_AXI_INTC_0_AXI_UARTLITE_0_INTERRUPT_INTR);
+
+   static XUartLite axi_uartlite_1_UartLite;
+   UartLiteSelfTestExample(XPAR_AXI_UARTLITE_1_DEVICE_ID);
+   UartLiteIntrExample(&intc, &axi_uartlite_1_UartLite, \
+                                     XPAR_AXI_UARTLITE_1_DEVICE_ID, \
+                                     XPAR_AXI_INTC_0_AXI_UARTLITE_1_INTERRUPT_INTR);
+
+
+
+
 
 
    while (1) {
