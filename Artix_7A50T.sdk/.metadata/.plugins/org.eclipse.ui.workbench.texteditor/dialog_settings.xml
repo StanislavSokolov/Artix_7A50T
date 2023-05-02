@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="UartLiteRecvHandler" key="selection"/>
+		<item value="load_resistances" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="load_resistances"/>
 			<item value="UartLiteRecvHandler"/>
 			<item value="RecvBuffer"/>
 			<item value="TotalSentCount"/>
@@ -15,7 +16,6 @@
 			<item value="TotalRecvCount"/>
 			<item value="SET12"/>
 			<item value="SET_12"/>
-			<item value="set_12"/>
 		</list>
 		<list key="replacehistory">
 		</list>

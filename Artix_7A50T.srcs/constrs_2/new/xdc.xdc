@@ -57,6 +57,12 @@ set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_3_tri_i[0]}]
 set_property PACKAGE_PIN H3 [get_ports {gpio_rtl_3_tri_i[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_3_tri_i[1]}]
 
+set_property PACKAGE_PIN C3 [get_ports uart_rtl_1_txd]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_rtl_1_txd]
+set_property PACKAGE_PIN C2 [get_ports uart_rtl_1_rxd]
+set_property IOSTANDARD LVCMOS33 [get_ports uart_rtl_1_rxd]
+
+
 set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_0_tri_o[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_0_tri_o[6]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_0_tri_o[5]}]

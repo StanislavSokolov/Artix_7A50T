@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date                      : Fri Apr 28 12:55:45 2023
+| Date                      : Tue May  2 11:40:06 2023
 | Host                      : STAS-W10 running 64-bit major release  (build 9200)
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           101 |
+|           103 |
 +---------------+
 
 
@@ -68,8 +68,8 @@ Table of Contents
 | B15        | DDR3_0_ba[2]        | High Range | IO_L9P_T1_DQS_AD3P_15        | OUTPUT      | SSTL15      |      15 |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | B16        | DDR3_0_ras_n        | High Range | IO_L10N_T1_AD11N_15          | OUTPUT      | SSTL15      |      15 |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | C1         |                     | High Range | IO_L9P_T1_DQS_AD7P_35        | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
-| C2         |                     | High Range | IO_L7N_T1_AD6N_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
-| C3         |                     | High Range | IO_L7P_T1_AD6P_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
+| C2         | uart_rtl_1_rxd      | High Range | IO_L7N_T1_AD6N_35            | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |          | NONE             |              |                   |              |
+| C3         | uart_rtl_1_txd      | High Range | IO_L7P_T1_AD6P_35            | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | C4         |                     | High Range | IO_L12N_T1_MRCC_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | C5         |                     |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |              |                   |              |
 | C6         |                     | High Range | IO_L5N_T0_AD13N_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |

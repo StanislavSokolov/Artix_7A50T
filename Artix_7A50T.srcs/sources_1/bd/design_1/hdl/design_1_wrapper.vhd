@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Fri Apr 28 12:06:02 2023
+--Date        : Tue May  2 11:35:38 2023
 --Host        : STAS-W10 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -58,7 +58,9 @@ entity design_1_wrapper is
     spi_rtl_0_sck_io : inout STD_LOGIC;
     spi_rtl_0_ss_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     uart_rtl_0_rxd : in STD_LOGIC;
-    uart_rtl_0_txd : out STD_LOGIC
+    uart_rtl_0_txd : out STD_LOGIC;
+    uart_rtl_1_rxd : in STD_LOGIC;
+    uart_rtl_1_txd : out STD_LOGIC
   );
 end design_1_wrapper;
 
@@ -84,23 +86,8 @@ architecture STRUCTURE of design_1_wrapper is
     S1_inv_0 : in STD_LOGIC;
     S2_0 : in STD_LOGIC;
     S2_inv_0 : in STD_LOGIC;
-    DDR3_0_dq : inout STD_LOGIC_VECTOR ( 15 downto 0 );
-    DDR3_0_dqs_p : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-    DDR3_0_dqs_n : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-    DDR3_0_addr : out STD_LOGIC_VECTOR ( 13 downto 0 );
-    DDR3_0_ba : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    DDR3_0_ras_n : out STD_LOGIC;
-    DDR3_0_cas_n : out STD_LOGIC;
-    DDR3_0_we_n : out STD_LOGIC;
-    DDR3_0_reset_n : out STD_LOGIC;
-    DDR3_0_ck_p : out STD_LOGIC_VECTOR ( 0 to 0 );
-    DDR3_0_ck_n : out STD_LOGIC_VECTOR ( 0 to 0 );
-    DDR3_0_cke : out STD_LOGIC_VECTOR ( 0 to 0 );
-    DDR3_0_cs_n : out STD_LOGIC_VECTOR ( 0 to 0 );
-    DDR3_0_dm : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    DDR3_0_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
-    uart_rtl_0_rxd : in STD_LOGIC;
-    uart_rtl_0_txd : out STD_LOGIC;
+    gpio_rtl_3_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    gpio_rtl_2_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     spi_rtl_0_io0_i : in STD_LOGIC;
     spi_rtl_0_io0_o : out STD_LOGIC;
     spi_rtl_0_io0_t : out STD_LOGIC;
@@ -119,10 +106,27 @@ architecture STRUCTURE of design_1_wrapper is
     spi_rtl_0_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_0_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_0_ss_t : out STD_LOGIC;
+    uart_rtl_0_rxd : in STD_LOGIC;
+    uart_rtl_0_txd : out STD_LOGIC;
+    DDR3_0_dq : inout STD_LOGIC_VECTOR ( 15 downto 0 );
+    DDR3_0_dqs_p : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+    DDR3_0_dqs_n : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+    DDR3_0_addr : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    DDR3_0_ba : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    DDR3_0_ras_n : out STD_LOGIC;
+    DDR3_0_cas_n : out STD_LOGIC;
+    DDR3_0_we_n : out STD_LOGIC;
+    DDR3_0_reset_n : out STD_LOGIC;
+    DDR3_0_ck_p : out STD_LOGIC_VECTOR ( 0 to 0 );
+    DDR3_0_ck_n : out STD_LOGIC_VECTOR ( 0 to 0 );
+    DDR3_0_cke : out STD_LOGIC_VECTOR ( 0 to 0 );
+    DDR3_0_cs_n : out STD_LOGIC_VECTOR ( 0 to 0 );
+    DDR3_0_dm : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    DDR3_0_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
     gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     gpio_rtl_1_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    gpio_rtl_2_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    gpio_rtl_3_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 )
+    uart_rtl_1_rxd : in STD_LOGIC;
+    uart_rtl_1_txd : out STD_LOGIC
   );
   end component design_1;
   component IOBUF is
@@ -212,7 +216,9 @@ design_1_i: component design_1
       spi_rtl_0_ss_o(0) => spi_rtl_0_ss_o_0(0),
       spi_rtl_0_ss_t => spi_rtl_0_ss_t,
       uart_rtl_0_rxd => uart_rtl_0_rxd,
-      uart_rtl_0_txd => uart_rtl_0_txd
+      uart_rtl_0_txd => uart_rtl_0_txd,
+      uart_rtl_1_rxd => uart_rtl_1_rxd,
+      uart_rtl_1_txd => uart_rtl_1_txd
     );
 spi_rtl_0_io0_iobuf: component IOBUF
      port map (

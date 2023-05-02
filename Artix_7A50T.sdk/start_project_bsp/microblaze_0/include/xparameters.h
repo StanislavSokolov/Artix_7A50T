@@ -641,7 +641,7 @@
 
 /******************************************************************/
 
-#define XPAR_INTC_MAX_NUM_INTR_INPUTS 1
+#define XPAR_INTC_MAX_NUM_INTR_INPUTS 2
 #define XPAR_XINTC_HAS_IPR 1
 #define XPAR_XINTC_HAS_SIE 1
 #define XPAR_XINTC_HAS_CIE 1
@@ -656,7 +656,7 @@
 #define XPAR_AXI_INTC_0_KIND_OF_INTR 0xFFFFFFFF
 #define XPAR_AXI_INTC_0_HAS_FAST 0
 #define XPAR_AXI_INTC_0_IVAR_RESET_VALUE 0x0000000000000010
-#define XPAR_AXI_INTC_0_NUM_INTR_INPUTS 1
+#define XPAR_AXI_INTC_0_NUM_INTR_INPUTS 2
 #define XPAR_AXI_INTC_0_ADDR_WIDTH 32
 
 
@@ -668,6 +668,8 @@
 #define XPAR_AXI_INTC_0_TYPE 0U
 #define XPAR_AXI_UARTLITE_0_INTERRUPT_MASK 0X000001U
 #define XPAR_AXI_INTC_0_AXI_UARTLITE_0_INTERRUPT_INTR 0U
+#define XPAR_AXI_UARTLITE_1_INTERRUPT_MASK 0X000002U
+#define XPAR_AXI_INTC_0_AXI_UARTLITE_1_INTERRUPT_INTR 1U
 
 /******************************************************************/
 
@@ -678,11 +680,12 @@
 #define XPAR_INTC_0_KIND_OF_INTR 0xFFFFFFFFU
 #define XPAR_INTC_0_HAS_FAST 0U
 #define XPAR_INTC_0_IVAR_RESET_VALUE 0x0000000000000010U
-#define XPAR_INTC_0_NUM_INTR_INPUTS 1U
+#define XPAR_INTC_0_NUM_INTR_INPUTS 2U
 #define XPAR_INTC_0_ADDR_WIDTH 32U
 #define XPAR_INTC_0_INTC_TYPE 0U
 
 #define XPAR_INTC_0_UARTLITE_0_VEC_ID XPAR_AXI_INTC_0_AXI_UARTLITE_0_INTERRUPT_INTR
+#define XPAR_INTC_0_UARTLITE_1_VEC_ID XPAR_AXI_INTC_0_AXI_UARTLITE_1_INTERRUPT_INTR
 
 /******************************************************************/
 
@@ -758,7 +761,7 @@
 /******************************************************************/
 
 /* Definitions for driver UARTLITE */
-#define XPAR_XUARTLITE_NUM_INSTANCES 1
+#define XPAR_XUARTLITE_NUM_INSTANCES 2
 
 /* Definitions for peripheral AXI_UARTLITE_0 */
 #define XPAR_AXI_UARTLITE_0_BASEADDR 0x40600000
@@ -768,6 +771,16 @@
 #define XPAR_AXI_UARTLITE_0_USE_PARITY 0
 #define XPAR_AXI_UARTLITE_0_ODD_PARITY 0
 #define XPAR_AXI_UARTLITE_0_DATA_BITS 8
+
+
+/* Definitions for peripheral AXI_UARTLITE_1 */
+#define XPAR_AXI_UARTLITE_1_BASEADDR 0x40610000
+#define XPAR_AXI_UARTLITE_1_HIGHADDR 0x4061FFFF
+#define XPAR_AXI_UARTLITE_1_DEVICE_ID 1
+#define XPAR_AXI_UARTLITE_1_BAUDRATE 9600
+#define XPAR_AXI_UARTLITE_1_USE_PARITY 0
+#define XPAR_AXI_UARTLITE_1_ODD_PARITY 0
+#define XPAR_AXI_UARTLITE_1_DATA_BITS 8
 
 
 /******************************************************************/
@@ -780,6 +793,15 @@
 #define XPAR_UARTLITE_0_USE_PARITY 0
 #define XPAR_UARTLITE_0_ODD_PARITY 0
 #define XPAR_UARTLITE_0_DATA_BITS 8
+
+/* Canonical definitions for peripheral AXI_UARTLITE_1 */
+#define XPAR_UARTLITE_1_DEVICE_ID XPAR_AXI_UARTLITE_1_DEVICE_ID
+#define XPAR_UARTLITE_1_BASEADDR 0x40610000
+#define XPAR_UARTLITE_1_HIGHADDR 0x4061FFFF
+#define XPAR_UARTLITE_1_BAUDRATE 9600
+#define XPAR_UARTLITE_1_USE_PARITY 0
+#define XPAR_UARTLITE_1_ODD_PARITY 0
+#define XPAR_UARTLITE_1_DATA_BITS 8
 
 
 /******************************************************************/
