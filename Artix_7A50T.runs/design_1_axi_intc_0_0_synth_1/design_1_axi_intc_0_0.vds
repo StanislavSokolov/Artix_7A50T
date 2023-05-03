@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue May  2 11:36:15 2023
-# Process ID: 17776
+# Start of session at: Wed May  3 12:02:00 2023
+# Process ID: 15696
 # Current directory: D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/design_1_axi_intc_0_0_synth_1
 # Command line: vivado.exe -log design_1_axi_intc_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_intc_0_0.tcl
 # Log file: D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/design_1_axi_intc_0_0_synth_1/design_1_axi_intc_0_0.vds
@@ -19,21 +19,21 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50t'
 INFO: [Device 21-403] Loading part xc7a50tftg256-3
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18228 
+INFO: Helper process launched with PID 11532 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 805.805 ; gain = 176.988
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 807.379 ; gain = 178.598
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_axi_intc_0_0' [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/synth/design_1_axi_intc_0_0.vhd:85]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_INSTANCE bound to: design_1_axi_intc_0_0 - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_NUM_INTR_INPUTS bound to: 2 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 4 - type: integer 
 	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
-	Parameter C_KIND_OF_INTR bound to: 32'b11111111111111111111111111111111 
+	Parameter C_KIND_OF_INTR bound to: 32'b11111111111111111111111111110011 
 	Parameter C_KIND_OF_EDGE bound to: 32'b11111111111111111111111111111111 
 	Parameter C_KIND_OF_LVL bound to: 32'b11111111111111111111111111111111 
-	Parameter C_ASYNC_INTR bound to: 32'b11111111111111111111111111111100 
+	Parameter C_ASYNC_INTR bound to: 32'b11111111111111111111111111110000 
 	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_IVAR_RESET_VALUE bound to: 64'b0000000000000000000000000000000000000000000000000000000000010000 
@@ -56,12 +56,12 @@ INFO: [Synth 8-638] synthesizing module 'axi_intc' [d:/GITEA/GitHub/ES/Artix_7A5
 	Parameter C_INSTANCE bound to: design_1_axi_intc_0_0 - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_NUM_INTR_INPUTS bound to: 2 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 4 - type: integer 
 	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
-	Parameter C_KIND_OF_INTR bound to: -1 - type: integer 
+	Parameter C_KIND_OF_INTR bound to: -13 - type: integer 
 	Parameter C_KIND_OF_EDGE bound to: -1 - type: integer 
 	Parameter C_KIND_OF_LVL bound to: -1 - type: integer 
-	Parameter C_ASYNC_INTR bound to: -4 - type: integer 
+	Parameter C_ASYNC_INTR bound to: -16 - type: integer 
 	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
 	Parameter C_IVAR_RESET_VALUE bound to: 64'b0000000000000000000000000000000000000000000000000000000000010000 
 	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
@@ -81,12 +81,12 @@ INFO: [Synth 8-638] synthesizing module 'axi_intc' [d:/GITEA/GitHub/ES/Artix_7A5
 INFO: [Synth 8-638] synthesizing module 'intc_core' [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/c0fe/hdl/axi_intc_v4_1_vh_rfs.vhd:794]
 	Parameter C_FAMILY bound to: artix7 - type: string 
 	Parameter C_DWIDTH bound to: 32 - type: integer 
-	Parameter C_NUM_INTR_INPUTS bound to: 2 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 4 - type: integer 
 	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
-	Parameter C_KIND_OF_INTR bound to: -1 - type: integer 
+	Parameter C_KIND_OF_INTR bound to: -13 - type: integer 
 	Parameter C_KIND_OF_EDGE bound to: -1 - type: integer 
 	Parameter C_KIND_OF_LVL bound to: -1 - type: integer 
-	Parameter C_ASYNC_INTR bound to: -4 - type: integer 
+	Parameter C_ASYNC_INTR bound to: -16 - type: integer 
 	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
 	Parameter C_HAS_IPR bound to: 1 - type: integer 
 	Parameter C_HAS_SIE bound to: 1 - type: integer 
@@ -337,8 +337,6 @@ WARNING: [Synth 8-3331] design intc_core has unconnected port Wr_data[7]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Wr_data[6]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Wr_data[5]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Wr_data[4]
-WARNING: [Synth 8-3331] design intc_core has unconnected port Wr_data[3]
-WARNING: [Synth 8-3331] design intc_core has unconnected port Wr_data[2]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Processor_clk
 WARNING: [Synth 8-3331] design intc_core has unconnected port processor_rst
 WARNING: [Synth 8-3331] design intc_core has unconnected port Processor_ack[1]
@@ -362,9 +360,11 @@ WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_
 WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[15]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[14]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[13]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[12]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[11]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 876.512 ; gain = 247.695
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 878.734 ; gain = 249.953
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -377,10 +377,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 876.512 ; gain = 247.695
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 878.734 ; gain = 249.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 876.512 ; gain = 247.695
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 878.734 ; gain = 249.953
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -396,27 +396,27 @@ Parsing XDC File [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/d
 Finished Parsing XDC File [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_clocks.xdc] for cell 'U0'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 981.895 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 985.293 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 992.988 ; gain = 11.094
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 996.875 ; gain = 11.582
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a50tftg256-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/design_1_axi_intc_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 ---------------------------------------------------------------------------------------------------
@@ -429,7 +429,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -447,19 +447,22 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 2     
 	                9 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
-	                2 Bit    Registers := 4     
-	                1 Bit    Registers := 52    
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 64    
 +---Muxes : 
 	   7 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
-	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
 	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 6     
-	   2 Input      2 Bit        Muxes := 4     
-	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 23    
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 22    
 	   4 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -472,15 +475,16 @@ Module intc_core
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 18    
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 30    
 +---Muxes : 
 	   7 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
-	   2 Input     30 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 2     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input     29 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 3     
+	   3 Input      2 Bit        Muxes := 1     
 Module pselect_f 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -595,8 +599,6 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[2]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[3]'
-INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[3]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[4]'
 INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[4]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[5]'
 INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[5]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[6]'
 INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[6]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[7]'
@@ -627,8 +629,6 @@ INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[30]' (FDR)
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\INTC_CORE_I/IPR_GEN.ipr_reg[31] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[0] )
-INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[2]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[3]'
-INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[3]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[4]'
 INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[4]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[5]'
 INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[5]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[6]'
 INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[6]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[7]'
@@ -657,7 +657,7 @@ INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_a
 INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[29]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[30]'
 INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[30]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[31]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -669,13 +669,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -687,7 +687,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -711,7 +711,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -724,7 +724,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -736,25 +736,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -771,12 +771,12 @@ Report Cell Usage:
 |      |Cell |Count |
 +------+-----+------+
 |1     |LUT1 |     2|
-|2     |LUT2 |    11|
-|3     |LUT3 |    15|
-|4     |LUT4 |    12|
-|5     |LUT5 |    44|
-|6     |LUT6 |    20|
-|7     |FDRE |    73|
+|2     |LUT2 |    17|
+|3     |LUT3 |    16|
+|4     |LUT4 |    13|
+|5     |LUT5 |    47|
+|6     |LUT6 |    25|
+|7     |FDRE |    90|
 |8     |FDSE |     2|
 +------+-----+------+
 
@@ -784,40 +784,40 @@ Report Instance Areas:
 +------+-------------------------+-----------------+------+
 |      |Instance                 |Module           |Cells |
 +------+-------------------------+-----------------+------+
-|1     |top                      |                 |   179|
-|2     |  U0                     |axi_intc         |   179|
-|3     |    AXI_LITE_IPIF_I      |axi_lite_ipif    |   138|
-|4     |      I_SLAVE_ATTACHMENT |slave_attachment |   138|
-|5     |        I_DECODER        |address_decoder  |    74|
-|6     |    INTC_CORE_I          |intc_core        |    37|
+|1     |top                      |                 |   212|
+|2     |  U0                     |axi_intc         |   212|
+|3     |    AXI_LITE_IPIF_I      |axi_lite_ipif    |   139|
+|4     |      I_SLAVE_ATTACHMENT |slave_attachment |   139|
+|5     |        I_DECODER        |address_decoder  |    77|
+|6     |    INTC_CORE_I          |intc_core        |    69|
 +------+-------------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 992.988 ; gain = 364.172
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 996.875 ; gain = 368.094
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 67 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 992.988 ; gain = 247.695
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 992.988 ; gain = 364.172
+Synthesis finished with 0 errors, 0 critical warnings and 65 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:27 . Memory (MB): peak = 996.875 ; gain = 249.953
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 996.875 ; gain = 368.094
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1004.984 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1015.926 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-133 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+129 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 1004.984 ; gain = 615.531
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1004.984 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1015.926 ; gain = 625.832
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1015.926 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/design_1_axi_intc_0_0_synth_1/design_1_axi_intc_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_intc_0_0, cache-ID = 5564bc678dea8d89
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_intc_0_0, cache-ID = 871c5c2873e2a35b
 INFO: [Coretcl 2-1174] Renamed 5 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1004.984 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1015.926 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/design_1_axi_intc_0_0_synth_1/design_1_axi_intc_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_intc_0_0_utilization_synth.rpt -pb design_1_axi_intc_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May  2 11:36:59 2023...
+INFO: [Common 17-206] Exiting Vivado at Wed May  3 12:02:44 2023...
