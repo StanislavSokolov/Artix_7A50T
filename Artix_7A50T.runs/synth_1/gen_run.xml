@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a50tftg256-3" LaunchTime="1683104515">
+<GenRun Id="synth_1" LaunchPart="xc7a50tftg256-3" LaunchTime="1683734991">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -79,4 +79,5 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_AckChecker_wrapper_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_Inverter_3lvl_wrapper_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_IP_AXI_LEDS_0_0"/>
 </GenRun>

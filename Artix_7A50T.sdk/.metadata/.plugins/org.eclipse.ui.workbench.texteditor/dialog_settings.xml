@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="load_resistances" key="selection"/>
+		<item value="XPAR_INTC_0_DEVICE_ID" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="XPAR_INTC_0_DEVICE_ID"/>
+			<item value="XPAR_UARTLITE_0_DEVICE_ID"/>
+			<item value="XPAR_INTC_0_UARTLITE_0_VEC_ID"/>
 			<item value="load_resistances"/>
 			<item value="UartLiteRecvHandler"/>
 			<item value="RecvBuffer"/>
 			<item value="TotalSentCount"/>
 			<item value="UartLiteSendHandler"/>
-			<item value="TotalRecvCount"/>
-			<item value="SET12"/>
-			<item value="SET_12"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -24,7 +24,7 @@
 		<item value="269" key="DIALOG_WIDTH"/>
 		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
 		<item value="373" key="DIALOG_HEIGHT"/>
-		<item value="1049" key="DIALOG_X_ORIGIN"/>
-		<item value="260" key="DIALOG_Y_ORIGIN"/>
+		<item value="1294" key="DIALOG_X_ORIGIN"/>
+		<item value="244" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

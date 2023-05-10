@@ -506,6 +506,17 @@
 
 /******************************************************************/
 
+/* Definitions for driver IP_AXI_LEDS */
+#define XPAR_IP_AXI_LEDS_NUM_INSTANCES 1
+
+/* Definitions for peripheral IP_AXI_LEDS_0 */
+#define XPAR_IP_AXI_LEDS_0_DEVICE_ID 0
+#define XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR 0x44A50000
+#define XPAR_IP_AXI_LEDS_0_S00_AXI_HIGHADDR 0x44A5FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver IP_AXI_PWM */
 #define XPAR_IP_AXI_PWM_NUM_INSTANCES 1
 

@@ -303,7 +303,7 @@ int UartLiteIntrExampleRS485(INTC *IntcInstancePtr,
 		RecvBufferRS485[Index] = Index;
 	}
 
-//	PrepareDataToSend(INIT_ARTIX, 0);
+	PrepareDataToSendRS485(INIT_ARTIX_RS485, 0);
 
 	/*
 	 * Send the buffer using the UartLite.
