@@ -55,6 +55,9 @@ int main ()
 	int SystemDesign = 0;
 	int ProjectNumber = 0;
 
+	int CountControlPanel = 0;
+	int CountTimeOutRS485 = 0;
+
 
 
 	InitializationSystemDesignAndProject(SystemDesign, ProjectNumber);
@@ -66,7 +69,7 @@ int main ()
 
    SpiSelfTestExample(XPAR_AXI_QUAD_SPI_0_DEVICE_ID);
 
-   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001); // send
+//   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001); // send
 //   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000); // recv
 
 
@@ -85,10 +88,28 @@ int main ()
 //   PWMIntr(&intc);
 
 
-   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
+//   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
 
    while (1) {
 	   GetSystemValues();
+
+		   if (CountTimeOutRS485 < 10000) {
+			   CountTimeOutRS485++;
+//		   		   if (TestCheckTotalRecvCountRS485() == 0) {
+//		   			   CountTimeOutRS485++;
+//		   		   } else {
+//		   			   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
+//		   			   CountTimeOutRS485 = 0;
+//		   			   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
+//		   		   }
+		   	   } else {
+		   		   CountTimeOutRS485 = 0;
+		   		   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
+		   		   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
+		   	   }
+
+
+
 
 //	   SetValuesInAddressSpace();
 //	   SetValuesInAddressSpace();
@@ -122,12 +143,20 @@ int main ()
 //	   		   }
 	   	   }
 
+//	   	   if (LoadingControlPanel(CountControlPanel) == 0) {
+//	   		   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
+//	   		   CountControlPanel++;
+//	   	   } else {
+//
+//	   	   }
+
 	   	if (TotalSentCountRS485Check() != 0) {
+//	   		Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000);
 	   	//	   		   if (latch == 0) {
 	   	//	   			   latch = 1;
 	   	//	   			   ResetTotalRecvCount();
 	   	//	   		   } else {
-	   		   			   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
+//	   		   			   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
 	   	//	   		   }
 	   		   	   }
 

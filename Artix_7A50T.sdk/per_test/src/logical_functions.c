@@ -10,6 +10,7 @@
 #include "xplatform_info.h"
 
 u32 DataRead = 0;
+u32 LatchStartControlPanel = 0;
 
 void GetSystemValues() {
 	GpioInputRead(&DataRead, 1);
@@ -46,4 +47,36 @@ void SetValuesInAddressSpace() {
 
 	SetArrayCurrentStatusInt(48, DataRead);
 }
+
+
+// функция загрузки поста управления
+int LoadingControlPanel(int count) {
+		if (LatchStartControlPanel == 0) {
+			if (count == 0) {
+//				set_array_current_status_int(87, 0);
+//				preparing_message_RS485(2, 16, 1, 100, 200);
+			}
+			else if (count == 1) {
+//					set_array_current_status_bool(544, 0);
+//					preparing_message_RS485(2, 15, 533, 16, 2);
+			}
+			else {
+
+					if ((1 < count) && (count < 11)) {
+//						set_array_current_status_int(87, count);
+//						preparing_message_RS485(2, 16, 1, 100, 200);
+					}
+					else if (count == 11) {
+//						set_array_current_status_int(87, 0);
+//						set_array_current_status_bool(544, 1);
+//						preparing_message_RS485(2, 15, 533, 16, 2);
+					} else if (count == 13) {
+						LatchStartControlPanel = 1;
+					}
+				}
+			}
+
+		return LatchStartControlPanel;
+}
+
 
