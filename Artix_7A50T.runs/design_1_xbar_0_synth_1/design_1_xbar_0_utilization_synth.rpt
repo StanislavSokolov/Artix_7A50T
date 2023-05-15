@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed May 10 17:41:15 2023
+| Date         : Mon May 15 18:30:44 2023
 | Host         : STAS-W10 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_xbar_0_utilization_synth.rpt -pb design_1_xbar_0_utilization_synth.pb
 | Design       : design_1_xbar_0
@@ -146,12 +146,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  410 |                 LUT |
+| LUT6     |  380 |                 LUT |
 | FDRE     |  156 |        Flop & Latch |
-| LUT4     |  109 |                 LUT |
-| LUT2     |   66 |                 LUT |
-| LUT5     |   62 |                 LUT |
-| LUT3     |   46 |                 LUT |
+| LUT4     |  132 |                 LUT |
+| LUT2     |   69 |                 LUT |
+| LUT5     |   61 |                 LUT |
+| LUT3     |   43 |                 LUT |
 | LUT1     |    2 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+

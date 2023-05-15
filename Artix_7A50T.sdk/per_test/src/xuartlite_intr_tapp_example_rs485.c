@@ -384,12 +384,12 @@ int* PrepareDataToSendRS485(int mode, int reg) {
 
 			break;
 		case INIT_ARTIX_RS485:
-			SendBufferRS485[0] = ADDRESS_DEVICE_RS485;
-			SendBufferRS485[1] = INIT_ARTIX_RS485;
+			SendBufferRS485[0] = 2;
+			SendBufferRS485[1] = 4;
 			SendBufferRS485[2] = 0;
-			SendBufferRS485[3] = 5;
+			SendBufferRS485[3] = 1;
 			SendBufferRS485[4] = 0;
-			SendBufferRS485[5] = 13;
+			SendBufferRS485[5] = 20;
 //			SendBufferRS485[6] = 0;
 //			SendBufferRS485[7] = 0;
 
@@ -461,10 +461,20 @@ void ResetTotalRecvCountRS485() {
 }
 
 int* GetDataRS485(XUartLite *UartLiteInstPtr) {
-	TotalRecvCountRS485 = 0;
-//	XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, TEST_BUFFER_SIZE_RS485);
+//	TotalRecvCountRS485 = 0;
+	XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, TEST_BUFFER_SIZE_RS485);
 
 	// It needs to add the checking CRC
+
+	SetArrayCurrentStatusInt(105, RecvBufferRS485[0]);
+	SetArrayCurrentStatusInt(106, RecvBufferRS485[1]);
+	SetArrayCurrentStatusInt(107, RecvBufferRS485[2]);
+	SetArrayCurrentStatusInt(108, RecvBufferRS485[3]);
+	SetArrayCurrentStatusInt(109, RecvBufferRS485[4]);
+	SetArrayCurrentStatusInt(110, RecvBufferRS485[5]);
+	SetArrayCurrentStatusInt(111, RecvBufferRS485[6]);
+	SetArrayCurrentStatusInt(112, RecvBufferRS485[7]);
+
 
 //	if (RecvBufferRS485[0] == ADDRESS_DEVICE_RS485) {
 //		switch (RecvBufferRS485[1]) {

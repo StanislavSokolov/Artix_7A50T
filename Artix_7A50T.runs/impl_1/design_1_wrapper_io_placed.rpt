@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date                      : Thu May 11 13:41:39 2023
+| Date                      : Mon May 15 18:34:06 2023
 | Host                      : STAS-W10 running 64-bit major release  (build 9200)
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           104 |
+|           105 |
 +---------------+
 
 
@@ -36,7 +36,7 @@ Table of Contents
 | Pin Number | Signal Name         | Bank Type  | Pin Name                     | Use         | IO Standard | IO Bank | Drive (mA) | Slew | On-Chip Termination | Off-Chip Termination | Voltage | Constraint | Pull Type | DQS Bias | Vref     | Signal Integrity | Pre Emphasis | Lvds Pre Emphasis | Equalization |
 +------------+---------------------+------------+------------------------------+-------------+-------------+---------+------------+------+---------------------+----------------------+---------+------------+-----------+----------+----------+------------------+--------------+-------------------+--------------+
 | A1         |                     |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |              |                   |              |
-| A2         |                     | High Range | IO_L8N_T1_AD14N_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
+| A2         | uart_rtl_1_rxd      | High Range | IO_L8N_T1_AD14N_35           | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | A3         | a0_0                | High Range | IO_L4N_T0_35                 | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | A4         | data_in_b3_0        | High Range | IO_L3N_T0_DQS_AD5N_35        | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | A5         | data_in_a3_0        | High Range | IO_L3P_T0_DQS_AD5P_35        | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |          | NONE             |              |                   |              |
@@ -52,7 +52,7 @@ Table of Contents
 | A15        | DDR3_0_ba[1]        | High Range | IO_L9N_T1_DQS_AD3N_15        | OUTPUT      | SSTL15      |      15 |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | A16        |                     | High Range | VCCO_15                      | VCCO        |             |      15 |            |      |                     |                      |    1.50 |            |           |          |          |                  |              |                   |              |
 | B1         |                     | High Range | IO_L9N_T1_DQS_AD7N_35        | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
-| B2         |                     | High Range | IO_L8P_T1_AD14P_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
+| B2         | LEDS_1              | High Range | IO_L8P_T1_AD14P_35           | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | B3         |                     | High Range | VCCO_35                      | VCCO        |             |      35 |            |      |                     |                      |    3.30 |            |           |          |          |                  |              |                   |              |
 | B4         | sclk_0              | High Range | IO_L4P_T0_35                 | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | B5         | data_in_b2_0        | High Range | IO_L2N_T0_AD12N_35           | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |          | NONE             |              |                   |              |
@@ -68,11 +68,11 @@ Table of Contents
 | B15        | DDR3_0_ba[2]        | High Range | IO_L9P_T1_DQS_AD3P_15        | OUTPUT      | SSTL15      |      15 |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | B16        | DDR3_0_ras_n        | High Range | IO_L10N_T1_AD11N_15          | OUTPUT      | SSTL15      |      15 |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | C1         |                     | High Range | IO_L9P_T1_DQS_AD7P_35        | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
-| C2         | uart_rtl_1_rxd      | High Range | IO_L7N_T1_AD6N_35            | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |          |          | NONE             |              |                   |              |
+| C2         | LEDS_0              | High Range | IO_L7N_T1_AD6N_35            | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | C3         | uart_rtl_1_txd      | High Range | IO_L7P_T1_AD6P_35            | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | C4         |                     | High Range | IO_L12N_T1_MRCC_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | C5         |                     |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |              |                   |              |
-| C6         | LEDS_0              | High Range | IO_L5N_T0_AD13N_35           | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
+| C6         |                     | High Range | IO_L5N_T0_AD13N_35           | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | C7         | not_cs_0            | High Range | IO_L5P_T0_AD13P_35           | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | C8         | DDR3_0_addr[13]     | High Range | IO_L1P_T0_AD0P_15            | OUTPUT      | SSTL15      |      15 |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | C9         | DDR3_0_addr[12]     | High Range | IO_L1N_T0_AD0N_15            | OUTPUT      | SSTL15      |      15 |            | FAST |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
