@@ -58,6 +58,7 @@ int main ()
 	int CountControlPanel = 0;
 	int CountTimeOutRS485 = 0;
 	int ModeRS485 = 4;
+	int CountSentByte = 0;
 
 
 
@@ -97,19 +98,29 @@ int main ()
 	   GetSystemValues();
 
 		   if (CountTimeOutRS485 < 100000) {
-//			   CountTimeOutRS485++;
-		   		   if (TestCheckTotalRecvCountRS485() == 0) {
-		   			   CountTimeOutRS485++;
-		   		   } else {
-		   			   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
-		   			   CountTimeOutRS485 = 0;
-		   			   ResetTotalRecvCountRS485();
-		   			   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485));
-		   		   }
+//		   		   if (TestCheckTotalRecvCountRS485() == 0) {
+//		   			   CountTimeOutRS485++;
+//		   		   } else {
+//		   			   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
+//		   			   CountTimeOutRS485 = 0;
+//		   			   ResetTotalRecvCountRS485();
+//		   			   GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485);
+//		   			   SendDataRS485(&axi_uartlite_1_UartLite, PrepareDataToSendRS485(ModeRS485, 1, 20), 8);
+//		   		   }
+	   		   if (TestCheckTotalRecvCountRS485() == 0) {
+	   			   CountTimeOutRS485++;
+	   		   } else {
+	   			   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
+	   			   CountTimeOutRS485 = 0;
+	   			   ResetTotalRecvCountRS485();
+	   			   GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485);
+	   			   SendDataRS485(&axi_uartlite_1_UartLite, PrepareDataToSendRS485(ModeRS485, 1, 1), 8);
+	   		   }
 		   	   } else {
 		   		   CountTimeOutRS485 = 0;
 		   		   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
-		   		   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite, 0));
+//		   		   GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485);
+		   		   SendDataRS485(&axi_uartlite_1_UartLite, PrepareDataToSendRS485(ModeRS485, 1, 1), 8);
 		   	   }
 
 
@@ -154,16 +165,33 @@ int main ()
 //
 //	   	   }
 
-	   	if (TotalSentCountRS485Check() != 0) {
+	   	if (TotalSentCountRS485Check() == 8) {
+//	   		switch (ModeRS485) {
+//	   			case 4:
+//	   				if (TotalSentCountRS485Check() == 8) {
+	   					ResetTotalSentCountRS485();
+	   					Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000);
+
+//	   				}
+//	   				break;
+//	   			case 15:
+//	   				if (TotalSentCountRS485Check() == 8) Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000);
+//	   				break;
+//	   			case 16:
+//	   				if (TotalSentCountRS485Check() == 8) Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000);
+//	   				break;
+//	   		}
+	   	}
+
 	   		// необходимо установить режим запроса и количество получаемых байт
-	   		Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000);
+//	   		Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000);
 	   	//	   		   if (latch == 0) {
 	   	//	   			   latch = 1;
 //	   		   			   ResetTotalRecvCount();
 	   	//	   		   } else {
 //	   		   			   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
 	   	//	   		   }
-	   		   	   }
+//	   		   	   }
 
 
 
