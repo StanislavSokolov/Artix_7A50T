@@ -94,12 +94,16 @@
  */
 #define TEST_BUFFER_SIZE_RS485		8
 
-#define ADDRESS_DEVICE_RS485		10
-#define INIT_ARTIX_RS485			100
-#define READ_RS485					56
-#define WRITE_RS485					57
-#define INIT_LOAD_RS485				58
-#define LOAD_RS485					51
+#define ADDRESS_DEVICE_RS485		2
+
+#define READ_COIL_STATUS			1
+#define READ_INPUT_STATUS			2
+#define READ_HOLDING_REGISTERS		3
+#define READ_INPUT_REGISTERS		4
+#define FORCE_SINGLE_COIL			5
+#define PRESET_SINGLE_REGISTER		6
+#define FORCE_MULTIPLE_COILS		15
+#define PRESET_MULTIPLE_REGISTERS	16
 
 /**************************** Type Definitions *******************************/
 
@@ -127,11 +131,11 @@ static void UartLiteRecvHandlerRS485(void *CallBackRef, unsigned int EventData);
 
 int TestCheckTotalRecvCountRS485();
 void ResetTotalRecvCountRS485();
-int* GetDataRS485(XUartLite *UartLiteInstPtr);
+int* GetDataRS485(XUartLite *UartLiteInstPtr, int mode);
 void SendDataRS485(XUartLite *UartLiteInstPtr, u8 *Send);
 int* GetRecvBufferRS485();
 int GetByteRS485(int number);
-int* PrepareDataToSendRS485(int mode, int reg);
+int* PrepareDataToSendRS485(int mode, int reg, int count);
 int* PrepareDataToSendTestRS485();
 void GetUARTValueRS485();
 
@@ -163,7 +167,7 @@ static XUartLite UartLiteInst;  /* The instance of the UartLite Device */
  * The following buffer is used in this example to send data  with the UartLite.
  */
 u8 SendBufferRS485[TEST_BUFFER_SIZE_RS485];
-u8 RecvBufferRS485[TEST_BUFFER_SIZE_RS485];
+u8 RecvBufferRS485[TEST_BUFFER_SIZE_RS485 - 1];
 
 
 unsigned int crc_rs485;
@@ -298,7 +302,7 @@ int UartLiteIntrExampleRS485(INTC *IntcInstancePtr,
 	/*
 	 * Initialize the send buffer bytes with a pattern to send.
 	 */
-	for (Index = 0; Index < TEST_BUFFER_SIZE_RS485; Index++) {
+	for (Index = 0; Index < TEST_BUFFER_SIZE_RS485 - 1; Index++) {
 		SendBufferRS485[Index] = Index;
 		RecvBufferRS485[Index] = Index;
 	}
@@ -359,11 +363,34 @@ int TotalSentCountRS485Check() {
 
 }
 
-int* PrepareDataToSendRS485(int mode, int reg) {
+int* PrepareDataToSendRS485(int mode, int reg, int count) {
 	switch (mode) {
-		case READ_RS485:
+		case READ_COIL_STATUS:
+
+			break;
+		case READ_INPUT_STATUS:
+
+			break;
+		case READ_HOLDING_REGISTERS:
+
+			break;
+		case READ_INPUT_REGISTERS:
 			SendBufferRS485[0] = ADDRESS_DEVICE_RS485;
-			SendBufferRS485[1] = READ_RS485;
+			SendBufferRS485[1] = READ_INPUT_REGISTERS;
+			SendBufferRS485[2] = 0;
+			SendBufferRS485[3] = reg;
+			SendBufferRS485[4] = 0;
+			SendBufferRS485[5] = count;
+			break;
+		case FORCE_SINGLE_COIL:
+
+			break;
+		case PRESET_SINGLE_REGISTER:
+
+			break;
+		case FORCE_MULTIPLE_COILS:
+			SendBufferRS485[0] = ADDRESS_DEVICE_RS485;
+			SendBufferRS485[1] = FORCE_MULTIPLE_COILS;
 			SendBufferRS485[2] = 0;
 			SendBufferRS485[3] = reg;
 			SendBufferRS485[4] = 0;
@@ -372,24 +399,13 @@ int* PrepareDataToSendRS485(int mode, int reg) {
 //			SendBufferRS485[7] = 0;
 
 			break;
-		case WRITE_RS485:
-			SendBufferRS485[0] = ADDRESS_DEVICE_RS485;
-			SendBufferRS485[1] = WRITE_RS485;
-			SendBufferRS485[2] = 0;
-			SendBufferRS485[3] = reg;
-			SendBufferRS485[4] = 0;
-			SendBufferRS485[5] = GetArrayCurrentStatusInt(reg);
-//			SendBufferRS485[6] = 0;
-//			SendBufferRS485[7] = 0;
-
-			break;
-		case INIT_ARTIX_RS485:
-			SendBufferRS485[0] = 2;
+		case PRESET_MULTIPLE_REGISTERS:
+			SendBufferRS485[0] = PRESET_MULTIPLE_REGISTERS;
 			SendBufferRS485[1] = 4;
 			SendBufferRS485[2] = 0;
-			SendBufferRS485[3] = 1;
+			SendBufferRS485[3] = 100;
 			SendBufferRS485[4] = 0;
-			SendBufferRS485[5] = 20;
+			SendBufferRS485[5] = 2;
 //			SendBufferRS485[6] = 0;
 //			SendBufferRS485[7] = 0;
 
@@ -460,11 +476,37 @@ void ResetTotalRecvCountRS485() {
 	TotalRecvCountRS485 = 0;
 }
 
-int* GetDataRS485(XUartLite *UartLiteInstPtr) {
-//	TotalRecvCountRS485 = 0;
-	XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, TEST_BUFFER_SIZE_RS485);
+int* GetDataRS485(XUartLite *UartLiteInstPtr, int mode) {
 
-	// It needs to add the checking CRC
+	if (mode == 0) {
+		PrepareDataToSendRS485(READ_INPUT_REGISTERS, 1, 1);
+	} else {
+		XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, TEST_BUFFER_SIZE_RS485 - 1);
+		switch (mode) {
+		case READ_COIL_STATUS:
+
+			break;
+		case READ_INPUT_STATUS:
+
+			break;
+		case READ_HOLDING_REGISTERS:
+
+			break;
+		case READ_INPUT_REGISTERS:
+			PrepareDataToSendRS485(READ_INPUT_REGISTERS, 1, 1);
+			break;
+		case FORCE_SINGLE_COIL:
+
+			break;
+		case PRESET_SINGLE_REGISTER:
+
+			break;
+		case FORCE_MULTIPLE_COILS:
+			break;
+		case PRESET_MULTIPLE_REGISTERS:
+			break;
+		}
+	}
 
 	SetArrayCurrentStatusInt(105, RecvBufferRS485[0]);
 	SetArrayCurrentStatusInt(106, RecvBufferRS485[1]);
@@ -473,7 +515,7 @@ int* GetDataRS485(XUartLite *UartLiteInstPtr) {
 	SetArrayCurrentStatusInt(109, RecvBufferRS485[4]);
 	SetArrayCurrentStatusInt(110, RecvBufferRS485[5]);
 	SetArrayCurrentStatusInt(111, RecvBufferRS485[6]);
-	SetArrayCurrentStatusInt(112, RecvBufferRS485[7]);
+//	SetArrayCurrentStatusInt(112, RecvBufferRS485[7]);
 
 
 //	if (RecvBufferRS485[0] == ADDRESS_DEVICE_RS485) {
@@ -494,7 +536,8 @@ int* GetDataRS485(XUartLite *UartLiteInstPtr) {
 //	}
 //	SendBufferRS485[0] = 1;
 //	SendBufferRS485[1] = 2;
-	PrepareDataToSendRS485(INIT_ARTIX_RS485, 0);
+//	PrepareDataToSendRS485(READ_INPUT_REGISTERS, 1, 20); // it works
+	 // it works
 	return &SendBufferRS485;
 //	return &RecvBuffer;
 }

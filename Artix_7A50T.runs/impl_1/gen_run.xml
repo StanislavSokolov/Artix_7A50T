@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a50tftg256-3" LaunchTime="1684164585">
+<GenRun Id="impl_1" LaunchPart="xc7a50tftg256-3" LaunchTime="1684214916">
   <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>
@@ -133,6 +133,7 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_ilmb_bram_if_cntlr_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_microblaze_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_uartlite_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_IP_AXI_INVERTER_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_quad_spi_0_2"/>

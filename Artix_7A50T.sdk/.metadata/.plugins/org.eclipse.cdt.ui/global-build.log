@@ -1,43 +1,38 @@
-18:39:01 **** Incremental Build of configuration Debug for project per_test ****
+' '
+10:46:17 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-18:39:09 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-18:39:36 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-18:44:27 **** Auto Build of configuration Debug for project per_test ****
+10:46:37 **** Auto Build of configuration Debug for project per_test ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
 ../src/testperiph.c: In function 'main':
-../src/testperiph.c:96:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
+../src/testperiph.c:97:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
      GetSystemValues();
      ^~~~~~~~~~~~~~~
-../src/testperiph.c:100:15: warning: implicit declaration of function 'TestCheckTotalRecvCountRS485' [-Wimplicit-function-declaration]
+../src/testperiph.c:101:15: warning: implicit declaration of function 'TestCheckTotalRecvCountRS485' [-Wimplicit-function-declaration]
            if (TestCheckTotalRecvCountRS485() == 0) {
                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:105:12: warning: implicit declaration of function 'ResetTotalRecvCountRS485' [-Wimplicit-function-declaration]
+../src/testperiph.c:106:12: warning: implicit declaration of function 'ResetTotalRecvCountRS485' [-Wimplicit-function-declaration]
             ResetTotalRecvCountRS485();
             ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:106:12: warning: implicit declaration of function 'SendDataRS485' [-Wimplicit-function-declaration]
-            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
+../src/testperiph.c:107:12: warning: implicit declaration of function 'SendDataRS485' [-Wimplicit-function-declaration]
+            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485));
             ^~~~~~~~~~~~~
-../src/testperiph.c:106:52: warning: implicit declaration of function 'GetDataRS485' [-Wimplicit-function-declaration]
-            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
+../src/testperiph.c:107:52: warning: implicit declaration of function 'GetDataRS485' [-Wimplicit-function-declaration]
+            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485));
                                                     ^~~~~~~~~~~~
-../src/testperiph.c:140:13: warning: implicit declaration of function 'TestCheckTotalRecvCount' [-Wimplicit-function-declaration]
+../src/testperiph.c:141:13: warning: implicit declaration of function 'TestCheckTotalRecvCount' [-Wimplicit-function-declaration]
          if (TestCheckTotalRecvCount() != 0) {
              ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:145:11: warning: implicit declaration of function 'SendData' [-Wimplicit-function-declaration]
+../src/testperiph.c:146:11: warning: implicit declaration of function 'SendData' [-Wimplicit-function-declaration]
            SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
            ^~~~~~~~
-../src/testperiph.c:145:46: warning: implicit declaration of function 'GetData' [-Wimplicit-function-declaration]
+../src/testperiph.c:146:46: warning: implicit declaration of function 'GetData' [-Wimplicit-function-declaration]
            SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
                                               ^~~~~~~
-../src/testperiph.c:156:10: warning: implicit declaration of function 'TotalSentCountRS485Check' [-Wimplicit-function-declaration]
+../src/testperiph.c:157:10: warning: implicit declaration of function 'TotalSentCountRS485Check' [-Wimplicit-function-declaration]
       if (TotalSentCountRS485Check() != 0) {
           ^~~~~~~~~~~~~~~~~~~~~~~~
 ../src/testperiph.c:58:6: warning: unused variable 'CountControlPanel' [-Wunused-variable]
@@ -53,43 +48,43 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -
 'Invoking: MicroBlaze Print Size'
 mb-size per_test.elf  |tee "per_test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  17776	   1116	   6572	  25464	   6378	per_test.elf
+  18048	   1116	   6572	  25736	   6488	per_test.elf
 'Finished building: per_test.elf.size'
 ' '
-18:44:29 **** Incremental Build of configuration Debug for project per_test ****
+10:46:40 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-18:45:12 **** Auto Build of configuration Debug for project per_test ****
+10:47:10 **** Auto Build of configuration Debug for project per_test ****
 make all 
 'Building file: ../src/testperiph.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
 ../src/testperiph.c: In function 'main':
-../src/testperiph.c:96:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
+../src/testperiph.c:97:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
      GetSystemValues();
      ^~~~~~~~~~~~~~~
-../src/testperiph.c:100:15: warning: implicit declaration of function 'TestCheckTotalRecvCountRS485' [-Wimplicit-function-declaration]
+../src/testperiph.c:101:15: warning: implicit declaration of function 'TestCheckTotalRecvCountRS485' [-Wimplicit-function-declaration]
            if (TestCheckTotalRecvCountRS485() == 0) {
                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:105:12: warning: implicit declaration of function 'ResetTotalRecvCountRS485' [-Wimplicit-function-declaration]
+../src/testperiph.c:106:12: warning: implicit declaration of function 'ResetTotalRecvCountRS485' [-Wimplicit-function-declaration]
             ResetTotalRecvCountRS485();
             ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:106:12: warning: implicit declaration of function 'SendDataRS485' [-Wimplicit-function-declaration]
-            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
+../src/testperiph.c:107:12: warning: implicit declaration of function 'SendDataRS485' [-Wimplicit-function-declaration]
+            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485));
             ^~~~~~~~~~~~~
-../src/testperiph.c:106:52: warning: implicit declaration of function 'GetDataRS485' [-Wimplicit-function-declaration]
-            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
+../src/testperiph.c:107:52: warning: implicit declaration of function 'GetDataRS485' [-Wimplicit-function-declaration]
+            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485));
                                                     ^~~~~~~~~~~~
-../src/testperiph.c:140:13: warning: implicit declaration of function 'TestCheckTotalRecvCount' [-Wimplicit-function-declaration]
+../src/testperiph.c:141:13: warning: implicit declaration of function 'TestCheckTotalRecvCount' [-Wimplicit-function-declaration]
          if (TestCheckTotalRecvCount() != 0) {
              ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:145:11: warning: implicit declaration of function 'SendData' [-Wimplicit-function-declaration]
+../src/testperiph.c:146:11: warning: implicit declaration of function 'SendData' [-Wimplicit-function-declaration]
            SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
            ^~~~~~~~
-../src/testperiph.c:145:46: warning: implicit declaration of function 'GetData' [-Wimplicit-function-declaration]
+../src/testperiph.c:146:46: warning: implicit declaration of function 'GetData' [-Wimplicit-function-declaration]
            SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
                                               ^~~~~~~
-../src/testperiph.c:156:10: warning: implicit declaration of function 'TotalSentCountRS485Check' [-Wimplicit-function-declaration]
+../src/testperiph.c:157:10: warning: implicit declaration of function 'TotalSentCountRS485Check' [-Wimplicit-function-declaration]
       if (TotalSentCountRS485Check() != 0) {
           ^~~~~~~~~~~~~~~~~~~~~~~~
 ../src/testperiph.c:58:6: warning: unused variable 'CountControlPanel' [-Wunused-variable]
@@ -105,132 +100,44 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -
 'Invoking: MicroBlaze Print Size'
 mb-size per_test.elf  |tee "per_test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  17776	   1116	   6572	  25464	   6378	per_test.elf
+  18076	   1116	   6576	  25768	   64a8	per_test.elf
 'Finished building: per_test.elf.size'
 ' '
-18:45:14 **** Incremental Build of configuration Debug for project per_test ****
+10:47:13 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-19:00:49 **** Auto Build of configuration Debug for project per_test ****
+10:48:13 **** Auto Build of configuration Debug for project per_test ****
 make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:96:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
-     GetSystemValues();
-     ^~~~~~~~~~~~~~~
-../src/testperiph.c:100:15: warning: implicit declaration of function 'TestCheckTotalRecvCountRS485' [-Wimplicit-function-declaration]
-           if (TestCheckTotalRecvCountRS485() == 0) {
-               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:105:12: warning: implicit declaration of function 'ResetTotalRecvCountRS485' [-Wimplicit-function-declaration]
-            ResetTotalRecvCountRS485();
-            ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:106:12: warning: implicit declaration of function 'SendDataRS485' [-Wimplicit-function-declaration]
-            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
-            ^~~~~~~~~~~~~
-../src/testperiph.c:106:52: warning: implicit declaration of function 'GetDataRS485' [-Wimplicit-function-declaration]
-            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
-                                                    ^~~~~~~~~~~~
-../src/testperiph.c:140:13: warning: implicit declaration of function 'TestCheckTotalRecvCount' [-Wimplicit-function-declaration]
-         if (TestCheckTotalRecvCount() != 0) {
-             ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:145:11: warning: implicit declaration of function 'SendData' [-Wimplicit-function-declaration]
-           SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
-           ^~~~~~~~
-../src/testperiph.c:145:46: warning: implicit declaration of function 'GetData' [-Wimplicit-function-declaration]
-           SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
-                                              ^~~~~~~
-../src/testperiph.c:156:10: warning: implicit declaration of function 'TotalSentCountRS485Check' [-Wimplicit-function-declaration]
-      if (TotalSentCountRS485Check() != 0) {
-          ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:58:6: warning: unused variable 'CountControlPanel' [-Wunused-variable]
-  int CountControlPanel = 0;
-      ^~~~~~~~~~~~~~~~~
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  17852	   1116	   6576	  25544	   63c8	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-19:00:53 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-19:11:07 **** Auto Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:96:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
-     GetSystemValues();
-     ^~~~~~~~~~~~~~~
-../src/testperiph.c:100:15: warning: implicit declaration of function 'TestCheckTotalRecvCountRS485' [-Wimplicit-function-declaration]
-           if (TestCheckTotalRecvCountRS485() == 0) {
-               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:105:12: warning: implicit declaration of function 'ResetTotalRecvCountRS485' [-Wimplicit-function-declaration]
-            ResetTotalRecvCountRS485();
-            ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:106:12: warning: implicit declaration of function 'SendDataRS485' [-Wimplicit-function-declaration]
-            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
-            ^~~~~~~~~~~~~
-../src/testperiph.c:106:52: warning: implicit declaration of function 'GetDataRS485' [-Wimplicit-function-declaration]
-            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
-                                                    ^~~~~~~~~~~~
-../src/testperiph.c:140:13: warning: implicit declaration of function 'TestCheckTotalRecvCount' [-Wimplicit-function-declaration]
-         if (TestCheckTotalRecvCount() != 0) {
-             ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:145:11: warning: implicit declaration of function 'SendData' [-Wimplicit-function-declaration]
-           SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
-           ^~~~~~~~
-../src/testperiph.c:145:46: warning: implicit declaration of function 'GetData' [-Wimplicit-function-declaration]
-           SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
-                                              ^~~~~~~
-../src/testperiph.c:156:10: warning: implicit declaration of function 'TotalSentCountRS485Check' [-Wimplicit-function-declaration]
-      if (TotalSentCountRS485Check() != 0) {
-          ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:58:6: warning: unused variable 'CountControlPanel' [-Wunused-variable]
-  int CountControlPanel = 0;
-      ^~~~~~~~~~~~~~~~~
-'Finished building: ../src/testperiph.c'
-' '
 'Building file: ../src/xuartlite_intr_tapp_example_rs485.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example_rs485.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example_rs485.d" -MT"src/xuartlite_intr_tapp_example_rs485.o" -o "src/xuartlite_intr_tapp_example_rs485.o" "../src/xuartlite_intr_tapp_example_rs485.c"
 ../src/xuartlite_intr_tapp_example_rs485.c: In function 'PrepareDataToSendRS485':
-../src/xuartlite_intr_tapp_example_rs485.c:370:25: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+../src/xuartlite_intr_tapp_example_rs485.c:397:25: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
     SendBufferRS485[5] = GetArrayCurrentStatusInt(reg);
                          ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/xuartlite_intr_tapp_example_rs485.c:406:14: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
+../src/xuartlite_intr_tapp_example_rs485.c:422:14: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
   crc_rs485 = GetCRC16_B_byte(crc_rs485, SendBufferRS485, count_byte_rs485);
               ^~~~~~~~~~~~~~~
-../src/xuartlite_intr_tapp_example_rs485.c:411:9: warning: returning 'u8 (*)[8]' {aka 'unsigned char (*)[8]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+../src/xuartlite_intr_tapp_example_rs485.c:427:9: warning: returning 'u8 (*)[8]' {aka 'unsigned char (*)[8]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
   return &SendBufferRS485;
          ^~~~~~~~~~~~~~~~
 ../src/xuartlite_intr_tapp_example_rs485.c: In function 'PrepareDataToSendTestRS485':
-../src/xuartlite_intr_tapp_example_rs485.c:415:9: warning: returning 'u8 (*)[8]' {aka 'unsigned char (*)[8]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+../src/xuartlite_intr_tapp_example_rs485.c:431:9: warning: returning 'u8 (*)[8]' {aka 'unsigned char (*)[8]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
   return &SendBufferRS485;
          ^~~~~~~~~~~~~~~~
 ../src/xuartlite_intr_tapp_example_rs485.c: In function 'GetDataRS485':
-../src/xuartlite_intr_tapp_example_rs485.c:469:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+../src/xuartlite_intr_tapp_example_rs485.c:511:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
   SetArrayCurrentStatusInt(105, RecvBufferRS485[0]);
   ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/xuartlite_intr_tapp_example_rs485.c:498:9: warning: returning 'u8 (*)[8]' {aka 'unsigned char (*)[8]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+../src/xuartlite_intr_tapp_example_rs485.c:541:9: warning: returning 'u8 (*)[8]' {aka 'unsigned char (*)[8]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
   return &SendBufferRS485;
          ^~~~~~~~~~~~~~~~
 ../src/xuartlite_intr_tapp_example_rs485.c: In function 'GetRecvBufferRS485':
-../src/xuartlite_intr_tapp_example_rs485.c:512:9: warning: returning 'u8 (*)[8]' {aka 'unsigned char (*)[8]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+../src/xuartlite_intr_tapp_example_rs485.c:555:9: warning: returning 'u8 (*)[7]' {aka 'unsigned char (*)[7]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
   return &RecvBufferRS485;
          ^~~~~~~~~~~~~~~~
 At top level:
-../src/xuartlite_intr_tapp_example_rs485.c:673:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+../src/xuartlite_intr_tapp_example_rs485.c:716:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
  static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
              ^~~~~~~~~~~~~~~~~~~~~~~~~
 'Finished building: ../src/xuartlite_intr_tapp_example_rs485.c'
@@ -243,61 +150,12 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -
 'Invoking: MicroBlaze Print Size'
 mb-size per_test.elf  |tee "per_test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  17852	   1116	   6576	  25544	   63c8	per_test.elf
+  18076	   1116	   6576	  25768	   64a8	per_test.elf
 'Finished building: per_test.elf.size'
 ' '
-19:11:09 **** Incremental Build of configuration Debug for project per_test ****
+10:48:15 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-19:13:16 **** Auto Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/testperiph.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
-../src/testperiph.c: In function 'main':
-../src/testperiph.c:96:5: warning: implicit declaration of function 'GetSystemValues' [-Wimplicit-function-declaration]
-     GetSystemValues();
-     ^~~~~~~~~~~~~~~
-../src/testperiph.c:100:15: warning: implicit declaration of function 'TestCheckTotalRecvCountRS485' [-Wimplicit-function-declaration]
-           if (TestCheckTotalRecvCountRS485() == 0) {
-               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:105:12: warning: implicit declaration of function 'ResetTotalRecvCountRS485' [-Wimplicit-function-declaration]
-            ResetTotalRecvCountRS485();
-            ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:106:12: warning: implicit declaration of function 'SendDataRS485' [-Wimplicit-function-declaration]
-            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
-            ^~~~~~~~~~~~~
-../src/testperiph.c:106:52: warning: implicit declaration of function 'GetDataRS485' [-Wimplicit-function-declaration]
-            SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
-                                                    ^~~~~~~~~~~~
-../src/testperiph.c:140:13: warning: implicit declaration of function 'TestCheckTotalRecvCount' [-Wimplicit-function-declaration]
-         if (TestCheckTotalRecvCount() != 0) {
-             ^~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:145:11: warning: implicit declaration of function 'SendData' [-Wimplicit-function-declaration]
-           SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
-           ^~~~~~~~
-../src/testperiph.c:145:46: warning: implicit declaration of function 'GetData' [-Wimplicit-function-declaration]
-           SendData(&axi_uartlite_0_UartLite, GetData(&axi_uartlite_0_UartLite));
-                                              ^~~~~~~
-../src/testperiph.c:156:10: warning: implicit declaration of function 'TotalSentCountRS485Check' [-Wimplicit-function-declaration]
-      if (TotalSentCountRS485Check() != 0) {
-          ^~~~~~~~~~~~~~~~~~~~~~~~
-../src/testperiph.c:58:6: warning: unused variable 'CountControlPanel' [-Wunused-variable]
-  int CountControlPanel = 0;
-      ^~~~~~~~~~~~~~~~~
-'Finished building: ../src/testperiph.c'
-' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  17852	   1116	   6576	  25544	   63c8	per_test.elf
-'Finished building: per_test.elf.size'
-' '
-19:13:17 **** Incremental Build of configuration Debug for project per_test ****
+10:48:53 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.

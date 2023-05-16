@@ -57,6 +57,7 @@ int main ()
 
 	int CountControlPanel = 0;
 	int CountTimeOutRS485 = 0;
+	int ModeRS485 = 4;
 
 
 
@@ -103,12 +104,12 @@ int main ()
 		   			   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
 		   			   CountTimeOutRS485 = 0;
 		   			   ResetTotalRecvCountRS485();
-		   			   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
+		   			   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485));
 		   		   }
 		   	   } else {
 		   		   CountTimeOutRS485 = 0;
 		   		   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
-		   		   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
+		   		   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite, 0));
 		   	   }
 
 
@@ -154,6 +155,7 @@ int main ()
 //	   	   }
 
 	   	if (TotalSentCountRS485Check() != 0) {
+	   		// необходимо установить режим запроса и количество получаемых байт
 	   		Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000);
 	   	//	   		   if (latch == 0) {
 	   	//	   			   latch = 1;
