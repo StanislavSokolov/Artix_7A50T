@@ -410,8 +410,8 @@ int* PrepareDataToSendRS485(int mode, int reg, int count) {
 			SendBufferRS485[1] = FORCE_MULTIPLE_COILS;
 			SendBufferRS485[2] = 0;
 			SendBufferRS485[3] = reg;
-			SendBufferRS485[4] = 1;
-			SendBufferRS485[5] = 0;
+			SendBufferRS485[4] = 0;
+			SendBufferRS485[5] = count;
 			SendBufferRS485[6] = count/8;
 
 			for (int i = 0; i < count/8; i++) SendBufferRS485[7 + i] = i;
@@ -512,10 +512,10 @@ int* GetDataRS485(XUartLite *UartLiteInstPtr, int mode) {
 
 			break;
 		case FORCE_MULTIPLE_COILS:
-			XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, 8);
+			XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, 7);
 			break;
 		case PRESET_MULTIPLE_REGISTERS:
-			XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, 8);
+			XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, 7);
 			break;
 	}
 //

@@ -415,6 +415,7 @@ int* PrepareDataToSendRS485(int mode, int reg, int count) {
 			SendBufferRS485[6] = count/8;
 
 			for (int i = 0; i < count/8; i++) SendBufferRS485[7 + i] = i;
+			SendBufferRS485[7] = 100;
 
 			crc_rs485 = 0xffff;
 			crc_rs485 = GetCRC16_B_byte(crc_rs485, SendBufferRS485, 7 + count/8);
