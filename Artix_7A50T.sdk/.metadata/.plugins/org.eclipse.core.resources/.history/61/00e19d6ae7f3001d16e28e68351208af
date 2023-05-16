@@ -92,7 +92,7 @@
  * The following constant controls the length of the buffers to be sent
  * and received with the UartLite device.
  */
-#define TEST_BUFFER_SIZE_RS485		64
+#define TEST_BUFFER_SIZE_RS485		32
 
 #define ADDRESS_DEVICE_RS485		2
 

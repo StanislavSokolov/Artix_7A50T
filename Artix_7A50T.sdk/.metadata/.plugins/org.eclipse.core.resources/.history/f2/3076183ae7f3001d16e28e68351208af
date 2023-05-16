@@ -92,7 +92,7 @@
  * The following constant controls the length of the buffers to be sent
  * and received with the UartLite device.
  */
-#define TEST_BUFFER_SIZE_RS485		64
+#define TEST_BUFFER_SIZE_RS485		16
 
 #define ADDRESS_DEVICE_RS485		2
 
@@ -473,7 +473,10 @@ int* PrepareDataToSendTestRS485() {
 }
 
 void SendDataRS485(XUartLite *UartLiteInstPtr, u8 *Send, int bytes) {
-	XUartLite_Send(UartLiteInstPtr, Send, bytes);
+//	if (TotalSentCount == TEST_BUFFER_SIZE) {
+//		TotalSentCount = 0;
+		XUartLite_Send(UartLiteInstPtr, Send, bytes);
+//	}
 }
 
 /****************************************************************************/
@@ -501,6 +504,8 @@ void SendDataRS485(XUartLite *UartLiteInstPtr, u8 *Send, int bytes) {
 ****************************************************************************/
 static void UartLiteRecvHandlerRS485(void *CallBackRef, unsigned int EventData)
 {
+//	if (latch == 0) latch = 1;
+//	else TotalRecvCount = 1;
 	TotalRecvCountRS485++;
 }
 
@@ -513,32 +518,38 @@ void ResetTotalRecvCountRS485() {
 }
 
 int* GetDataRS485(XUartLite *UartLiteInstPtr, int mode) {
-	switch (mode) {
-		case READ_COIL_STATUS:
 
-			break;
-		case READ_INPUT_STATUS:
+//	if (mode == 0) {
+//		PrepareDataToSendRS485(READ_INPUT_REGISTERS, 1, 20);
+//	} else {
 
-			break;
-		case READ_HOLDING_REGISTERS:
-
-			break;
-		case READ_INPUT_REGISTERS:
-			XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, 45);
-			break;
-		case FORCE_SINGLE_COIL:
-
-			break;
-		case PRESET_SINGLE_REGISTER:
-
-			break;
-		case FORCE_MULTIPLE_COILS:
-			XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, 7);
-			break;
-		case PRESET_MULTIPLE_REGISTERS:
-			XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, 7);
-			break;
-	}
+		XUartLite_Recv(UartLiteInstPtr, RecvBufferRS485, 7);
+//		switch (mode) {
+//		case READ_COIL_STATUS:
+//
+//			break;
+//		case READ_INPUT_STATUS:
+//
+//			break;
+//		case READ_HOLDING_REGISTERS:
+//
+//			break;
+//		case READ_INPUT_REGISTERS:
+//			PrepareDataToSendRS485(READ_INPUT_REGISTERS, 1, 20);
+//			break;
+//		case FORCE_SINGLE_COIL:
+//
+//			break;
+//		case PRESET_SINGLE_REGISTER:
+//
+//			break;
+//		case FORCE_MULTIPLE_COILS:
+//			PrepareDataToSendRS485(READ_INPUT_REGISTERS, 1, 1);
+//			break;
+//		case PRESET_MULTIPLE_REGISTERS:
+//			break;
+//		}
+//	}
 //
 //	SetArrayCurrentStatusInt(105, RecvBufferRS485[0]);
 //	SetArrayCurrentStatusInt(106, RecvBufferRS485[1]);
@@ -549,7 +560,29 @@ int* GetDataRS485(XUartLite *UartLiteInstPtr, int mode) {
 //	SetArrayCurrentStatusInt(111, RecvBufferRS485[6]);
 //	SetArrayCurrentStatusInt(112, RecvBufferRS485[7]);
 
-	return &RecvBufferRS485;
+
+//	if (RecvBufferRS485[0] == ADDRESS_DEVICE_RS485) {
+//		switch (RecvBufferRS485[1]) {
+//			case READ_RS485:
+//				PrepareDataToSendRS485(READ_RS485, RecvBufferRS485[3]);
+//				break;
+//			case WRITE_RS485:
+//				SetArrayCurrentStatusInt(RecvBufferRS485[2], RecvBufferRS485[5]);
+//				PrepareDataToSendRS485(WRITE_RS485, RecvBufferRS485[2]);
+//				break;
+//			case INIT_ARTIX_RS485:
+//				PrepareDataToSendRS485(INIT_ARTIX_RS485, 0);
+//				break;
+//		}
+//	} else {
+//		PrepareDataToSendRS485(INIT_ARTIX_RS485, 0);
+//	}
+//	SendBufferRS485[0] = 1;
+//	SendBufferRS485[1] = 2;
+//	PrepareDataToSendRS485(READ_INPUT_REGISTERS, 1, 20); // it works
+	 // it works
+	return &SendBufferRS485;
+//	return &RecvBuffer;
 }
 
 //int* GetData(XUartLite *UartLiteInstPtr) {

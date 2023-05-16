@@ -114,13 +114,13 @@ int main ()
 	   			   CountTimeOutRS485 = 0;
 	   			   ResetTotalRecvCountRS485();
 	   			   GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485);
-	   			   SendDataRS485(&axi_uartlite_1_UartLite, PrepareDataToSendRS485(ModeRS485, 1, 20), 8);
+	   			   SendDataRS485(&axi_uartlite_1_UartLite, PrepareDataToSendRS485(ModeRS485, 1, 1), 8);
 	   		   }
 		   	   } else {
 		   		   CountTimeOutRS485 = 0;
 		   		   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
-		   		   GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485);
-		   		   SendDataRS485(&axi_uartlite_1_UartLite, PrepareDataToSendRS485(ModeRS485, 1, 20), 8);
+//		   		   GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485);
+		   		   SendDataRS485(&axi_uartlite_1_UartLite, PrepareDataToSendRS485(ModeRS485, 1, 1), 8);
 		   	   }
 
 
