@@ -160,7 +160,7 @@ int main ()
 	   			   	       break;
 	   			   	   case (16):
 	   			   		   NumberReg = 1;
-	   			   		   CountReg = 100;
+	   			   		   CountReg = 20;
 	   			   	       CountByteToSend = 209;
 	   			   	       break;
 	   			   }
