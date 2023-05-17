@@ -123,7 +123,7 @@ int main ()
 //	   				   if (Group == 3) ModeRS485 = 4;
 //	   			   }
 
-	   			   if ((ModeRS485 == 15) && (Group == 4)) ModeRS485 = 16; else if (ModeRS485 == 16) ModeRS485 = 15;
+	   			   if ((ModeRS485 == 15) && (Grope == 4)) ModeRS485 = 16; else if (ModeRS485 == 16) ModeRS485 = 15;
 	   			   switch (ModeRS485) {
 	   			   	   case (4):
 						   NumberReg = 1;
