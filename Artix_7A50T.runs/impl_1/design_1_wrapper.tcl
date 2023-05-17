@@ -71,6 +71,8 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.cache/wt [current_project]
   set_property parent.project_path D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.xpr [current_project]
+  set_property ip_repo_paths D:/GITEA/GitHub/ES/IP_cores [current_project]
+  update_ip_catalog
   set_property ip_output_repo D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]

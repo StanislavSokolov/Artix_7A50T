@@ -14,6 +14,8 @@
 void InitializationSystemDesignAndProject(int SystemDesign, int ProjectNumber){
 	GpioOutputInitialize(XPAR_AXI_GPIO_0_DEVICE_ID);
 	GpioInputInitialize(XPAR_AXI_GPIO_1_DEVICE_ID);
+	GpioOutputInitialize(XPAR_AXI_GPIO_2_DEVICE_ID);
+	GpioInputInitialize(XPAR_AXI_GPIO_3_DEVICE_ID);
 
 
 //	InitializationGPIO(SystemDesign, ProjectNumber);
@@ -23,49 +25,20 @@ void InitializationSystemDesignAndProject(int SystemDesign, int ProjectNumber){
 	// функция инициализации начальных значений
 void InitializationInitialValues(){
 //	read_current_value_PSGPIO();								// прочитать свой адрес
-//	set_setpoint_value_adc_table();								// записать уставки аналоговых сигналов в МАЗ
+	SetSetpointValueAdcTable();								// записать уставки аналоговых сигналов в МАЗ
 //
 //	set_initial_values_control_transistor_keys();								// записать уставки аналоговых сигналов в МАЗ
 //
-//	get_current_value_adc_table();								// получить значения АЦП
+	GetCurrentValueAdcTable();								// получить значения АЦП
 //	get_current_value_digital_input_table();					// получить текущие значения входов
-//	get_current_value_speed_sensor_table();
+	GetCurrentValueSpeedSensorTable();
 ////	set_current_value_digital_output_table();					// установить выходы
 //
 //	set_array_current_status_int(0, 1);
 //	set_array_current_status_int(1, 1);
 }
 
-//	// функция загрузки поста управления
-//int loading_control_panel(int count){
-//	set_current_value_PSGPIO(15, 1);
-//	if (latch_start_PMU == 0) {
-//		if (count == 0) {
-//			set_array_current_status_int(87, 0);
-//			preparing_message_RS485(2, 16, 1, 100, 200);
-//		}
-//		else if (count == 1) {
-//				set_array_current_status_bool(544, 0);
-//				preparing_message_RS485(2, 15, 533, 16, 2);
-//		}
-//		else {
-//
-//				if ((1 < count) && (count < 11)) {
-//					set_array_current_status_int(87, count);
-//					preparing_message_RS485(2, 16, 1, 100, 200);
-//				}
-//				else if (count == 11) {
-//					set_array_current_status_int(87, 0);
-//					set_array_current_status_bool(544, 1);
-//					preparing_message_RS485(2, 15, 533, 16, 2);
-//				} else if (count == 13) {
-//					latch_start_PMU = 1;
-//				}
-//			}
-//		}
-//
-//	return latch_start_PMU;
-//}
+
 //
 //// функция получения всех значений от ПЛИС
 //

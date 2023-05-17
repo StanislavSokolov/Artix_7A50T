@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7a50tftg256-3
@@ -30,6 +31,8 @@ set_property parent.project_path D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.xpr 
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
+set_property ip_repo_paths d:/GITEA/GitHub/ES/IP_cores [current_project]
+update_ip_catalog
 set_property ip_output_repo d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_ip -quiet D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0.xci

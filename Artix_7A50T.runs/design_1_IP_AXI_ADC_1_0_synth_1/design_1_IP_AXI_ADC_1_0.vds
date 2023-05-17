@@ -1,0 +1,550 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Apr 27 18:36:39 2023
+# Process ID: 10500
+# Current directory: D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/design_1_IP_AXI_ADC_1_0_synth_1
+# Command line: vivado.exe -log design_1_IP_AXI_ADC_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_IP_AXI_ADC_1_0.tcl
+# Log file: D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/design_1_IP_AXI_ADC_1_0_synth_1/design_1_IP_AXI_ADC_1_0.vds
+# Journal file: D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/design_1_IP_AXI_ADC_1_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_IP_AXI_ADC_1_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/GITEA/GitHub/ES/IP_cores'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top design_1_IP_AXI_ADC_1_0 -part xc7a50tftg256-3 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50t'
+INFO: [Device 21-403] Loading part xc7a50tftg256-3
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12652 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 804.570 ; gain = 177.988
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_IP_AXI_ADC_1_0' [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_IP_AXI_ADC_1_0/synth/design_1_IP_AXI_ADC_1_0.vhd:94]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'IP_AXI_ADC_v2_0' declared at 'd:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0.vhd:5' bound to instance 'U0' of component 'IP_AXI_ADC_v2_0' [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_IP_AXI_ADC_1_0/synth/design_1_IP_AXI_ADC_1_0.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'IP_AXI_ADC_v2_0' [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0.vhd:63]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'IP_AXI_ADC_v2_0_S00_AXI' declared at 'd:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:6' bound to instance 'IP_AXI_ADC_v2_0_S00_AXI_inst' of component 'IP_AXI_ADC_v2_0_S00_AXI' [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'IP_AXI_ADC_v2_0_S00_AXI' [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:101]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-226] default block is never used [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:356]
+INFO: [Synth 8-226] default block is never used [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:738]
+WARNING: [Synth 8-614] signal 'ch0' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch1' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch2' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch3' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch4' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch5' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch6' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch7' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch8' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch9' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch10' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch11' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch12' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch13' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch14' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'ch15' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'slv_reg3' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch0_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch0_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'errors_channel' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch1_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch1_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch2_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch2_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch3_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch3_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch4_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch4_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch5_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch5_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch6_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch6_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch7_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch7_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch8_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch8_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch9_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch9_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch10_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch10_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch11_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch11_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch12_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch12_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch13_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch13_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch14_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch14_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch15_down' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-614] signal 'setpoint_ch15_up' is read in the process but is not in the sensitivity list [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:733]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg5_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:326]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg6_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:327]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg7_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:328]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg8_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:329]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg9_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:330]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg10_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:331]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg11_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:332]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg12_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:333]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg13_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:334]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg14_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:335]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg15_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:336]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg16_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:337]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg17_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:338]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg18_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:339]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg19_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:340]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg20_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:341]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg21_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:342]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg22_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:343]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg23_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:344]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg24_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:345]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg25_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:346]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg26_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:347]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg27_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:348]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg28_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:349]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg29_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:350]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg30_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:351]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg31_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:352]
+WARNING: [Synth 8-6014] Unused sequential element loc_addr_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:354]
+WARNING: [Synth 8-6014] Unused sequential element odd_updated_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:1046]
+WARNING: [Synth 8-6014] Unused sequential element even_updated_reg was removed.  [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:1089]
+INFO: [Synth 8-256] done synthesizing module 'IP_AXI_ADC_v2_0_S00_AXI' (1#1) [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:101]
+INFO: [Synth 8-256] done synthesizing module 'IP_AXI_ADC_v2_0' (2#1) [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'design_1_IP_AXI_ADC_1_0' (3#1) [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_IP_AXI_ADC_1_0/synth/design_1_IP_AXI_ADC_1_0.vhd:94]
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 874.469 ; gain = 247.887
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 874.469 ; gain = 247.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 874.469 ; gain = 247.887
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1000.027 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.108 . Memory (MB): peak = 1003.348 ; gain = 3.320
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1003.348 ; gain = 376.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a50tftg256-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1003.348 ; gain = 376.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1003.348 ; gain = 376.766
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "a0_sign" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "not_cs_sign" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "sclk_sign" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "a0_sign" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "not_cs_sign" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "sclk_sign" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-327] inferring latch for variable 'reg_data_out_reg' [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/f7fd/hdl/IP_AXI_ADC_v2_0_S00_AXI.vhd:740]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1003.348 ; gain = 376.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 12    
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 64    
+	                7 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 48    
+	  32 Input     32 Bit        Muxes := 5     
+	   7 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 8     
+	  12 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 69    
+	  12 Input      1 Bit        Muxes := 8     
+	   7 Input      1 Bit        Muxes := 4     
+	  17 Input      1 Bit        Muxes := 2     
+	  15 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module IP_AXI_ADC_v2_0_S00_AXI 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 12    
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 64    
+	                7 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 48    
+	  32 Input     32 Bit        Muxes := 5     
+	   7 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 8     
+	  12 Input     32 Bit        Muxes := 1     
+	   3 Input     32 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 69    
+	  12 Input      1 Bit        Muxes := 8     
+	   7 Input      1 Bit        Muxes := 4     
+	  17 Input      1 Bit        Muxes := 2     
+	  15 Input      1 Bit        Muxes := 2     
+	   5 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5587] ROM size for "sclk_sign" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "a0_sign" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5587] ROM size for "not_cs_sign" is below threshold of ROM address width. It will be mapped to LUTs
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design IP_AXI_ADC_v2_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-3886] merging instance 'U0/IP_AXI_ADC_v2_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/IP_AXI_ADC_v2_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/IP_AXI_ADC_v2_0_S00_AXI_inst /\axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/IP_AXI_ADC_v2_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/IP_AXI_ADC_v2_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/IP_AXI_ADC_v2_0_S00_AXI_inst /\axi_bresp_reg[1] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1003.348 ; gain = 376.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1003.348 ; gain = 376.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1003.348 ; gain = 376.766
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1015.633 ; gain = 389.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[31] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[31]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[30] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[30]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[29] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[29]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[28] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[28]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[27] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[27]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[26] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[26]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[25] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[25]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[24] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[24]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[23] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[23]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[22] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[22]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[21] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[21]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[20] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[20]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[19] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[19]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[18] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[18]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[17] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[17]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[16] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[16]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[15] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[15]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[14] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[14]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[13] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[13]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[11] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a0_reg[11]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[31] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[31]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[30] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[30]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[29] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[29]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[28] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[28]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[27] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[27]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[26] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[26]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[25] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[25]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[24] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[24]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[23] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[23]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[22] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[22]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[21] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[21]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[20] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[20]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[19] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[19]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[18] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[18]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[17] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[17]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[16] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[16]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[15] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[15]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[14] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[14]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[13] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[13]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[11] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b3_reg[11]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[31] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[31]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[30] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[30]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[29] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[29]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[28] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[28]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[27] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[27]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[26] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[26]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[25] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[25]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[24] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[24]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[23] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[23]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[22] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[22]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[21] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[21]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[20] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[20]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[19] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[19]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[18] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[18]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[17] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[17]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[16] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[16]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[15] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[15]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[14] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[14]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[13] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[13]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[11] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b0_reg[11]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[31] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[31]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[30] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[30]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[29] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[29]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[28] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[28]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[27] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[27]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[26] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[26]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[25] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[25]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[24] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[24]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[23] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[23]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[22] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[22]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[21] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[21]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[20] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[20]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[19] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[19]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[18] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[18]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[17] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[17]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[16] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[16]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[15] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[15]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[14] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[14]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[13] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[13]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[11] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_a1_reg[11]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[31] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[31]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[30] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[30]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[29] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[29]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[28] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[28]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[27] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[27]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[26] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[26]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[25] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[25]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[24] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[24]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[23] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[23]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[22] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[22]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[21] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[21]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[20] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[20]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[19] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[19]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[18] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[18]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[17] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[17]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[16] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[16]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[15] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[15]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[14] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[14]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[13] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[13]_inv.
+INFO: [Synth 8-5365] Flop U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[11] is being inverted and renamed to U0/IP_AXI_ADC_v2_0_S00_AXI_inst/receive_data_b1_reg[11]_inv.
+INFO: [Common 17-14] Message 'Synth 8-5365' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1020.363 ; gain = 393.781
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1020.363 ; gain = 393.781
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1020.363 ; gain = 393.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1020.363 ; gain = 393.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1020.363 ; gain = 393.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1020.363 ; gain = 393.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |   208|
+|2     |LUT1   |   130|
+|3     |LUT2   |    17|
+|4     |LUT3   |    33|
+|5     |LUT4   |  1324|
+|6     |LUT5   |    41|
+|7     |LUT6   |   856|
+|8     |MUXF7  |    81|
+|9     |MUXF8  |     2|
+|10    |FDRE   |  1874|
+|11    |FDSE   |   167|
+|12    |LD     |    32|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------------------+------------------------+------+
+|      |Instance                         |Module                  |Cells |
++------+---------------------------------+------------------------+------+
+|1     |top                              |                        |  4765|
+|2     |  U0                             |IP_AXI_ADC_v2_0         |  4765|
+|3     |    IP_AXI_ADC_v2_0_S00_AXI_inst |IP_AXI_ADC_v2_0_S00_AXI |  4756|
++------+---------------------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1020.363 ; gain = 393.781
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 1020.363 ; gain = 264.902
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1020.363 ; gain = 393.781
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 323 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'design_1_IP_AXI_ADC_1_0' is not ideal for floorplanning, since the cellview 'IP_AXI_ADC_v2_0_S00_AXI' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1036.438 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  LD => LDCE: 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+138 Infos, 95 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:45 . Memory (MB): peak = 1036.438 ; gain = 648.445
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1036.438 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/design_1_IP_AXI_ADC_1_0_synth_1/design_1_IP_AXI_ADC_1_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_IP_AXI_ADC_1_0, cache-ID = 73e586901ce8cf0d
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1036.438 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/design_1_IP_AXI_ADC_1_0_synth_1/design_1_IP_AXI_ADC_1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_IP_AXI_ADC_1_0_utilization_synth.rpt -pb design_1_IP_AXI_ADC_1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 27 18:37:34 2023...
