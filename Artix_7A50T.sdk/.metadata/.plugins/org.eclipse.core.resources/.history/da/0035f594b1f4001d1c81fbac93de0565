@@ -389,10 +389,10 @@ int* PrepareDataToSendRS485(int mode, int reg, int count) {
 		case READ_INPUT_REGISTERS:
 			SendBufferRS485[0] = ADDRESS_DEVICE_RS485;
 			SendBufferRS485[1] = READ_INPUT_REGISTERS;
-			SendBufferRS485[2] = reg/256;
-			SendBufferRS485[3] = reg - (reg/256)*256;
-			SendBufferRS485[4] = count/256;
-			SendBufferRS485[5] = count - (count/256)*256;
+			SendBufferRS485[2] = 0;
+			SendBufferRS485[3] = reg;
+			SendBufferRS485[4] = 0;
+			SendBufferRS485[5] = count;
 			crc_rs485 = 0xffff;
 			crc_rs485 = GetCRC16_B_byte(crc_rs485, SendBufferRS485, 6);
 			high_bits_crc_rs485 = crc_rs485/256;
@@ -408,14 +408,14 @@ int* PrepareDataToSendRS485(int mode, int reg, int count) {
 		case FORCE_MULTIPLE_COILS:
 			SendBufferRS485[0] = ADDRESS_DEVICE_RS485;
 			SendBufferRS485[1] = FORCE_MULTIPLE_COILS;
-			SendBufferRS485[2] = reg/256;
-			SendBufferRS485[3] = reg - (reg/256)*256;
+			SendBufferRS485[2] = 0;
+			SendBufferRS485[3] = reg;
 			SendBufferRS485[4] = count/256;
 			SendBufferRS485[5] = count - (count/256)*256;
 			SendBufferRS485[6] = count/8;
 
 //			for (int i = 0; i < count/8; i++) SendBufferRS485[7 + i] = i;
-			for (int i = 0; i < count/8; i++) SendBufferRS485[7 + i] = 255;
+			for (int i = 0; i < count/8; i++) SendBufferRS485[7 + i] = 1;
 
 			crc_rs485 = 0xffff;
 			crc_rs485 = GetCRC16_B_byte(crc_rs485, SendBufferRS485, 7 + count/8);
@@ -426,12 +426,12 @@ int* PrepareDataToSendRS485(int mode, int reg, int count) {
 		case PRESET_MULTIPLE_REGISTERS:
 			SendBufferRS485[0] = ADDRESS_DEVICE_RS485;
 			SendBufferRS485[1] = PRESET_MULTIPLE_REGISTERS;
-			SendBufferRS485[2] = reg/256;
-			SendBufferRS485[3] = reg - (reg/256)*256;
-			SendBufferRS485[4] = count/256;
-			SendBufferRS485[5] = count - (count/256)*256;
+			SendBufferRS485[2] = 0;
+			SendBufferRS485[3] = reg;
+			SendBufferRS485[4] = 0;
+			SendBufferRS485[5] = count;
 			SendBufferRS485[6] = count*2;
-			for (int i = 0; i < count*2; i++) SendBufferRS485[7 + i] = 255;
+			for (int i = 0; i < count*2; i++) SendBufferRS485[7 + i] = 1;
 //			for (int i = 0; i < count*2; i++) SendBufferRS485[7 + i] = i;
 			crc_rs485 = 0xffff;
 			crc_rs485 = GetCRC16_B_byte(crc_rs485, SendBufferRS485, 7 + count*2);
