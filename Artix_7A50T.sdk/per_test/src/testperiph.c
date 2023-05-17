@@ -58,10 +58,10 @@ int main ()
 	int CountControlPanel = 0;
 	int CountTimeOutRS485 = 0;
 	int ModeRS485 = 15;
-	int NumberReg;
-	int CountReg;
-	int CountByteToSend;
-	int Group;
+	int NumberReg = 0;
+	int CountReg = 0;
+	int CountByteToSend = 0;
+	int Group = 0;
 
 
 
@@ -118,6 +118,12 @@ int main ()
 	   			   CountTimeOutRS485 = 0;
 	   			   ResetTotalRecvCountRS485();
 	   			   GetDataRS485(&axi_uartlite_1_UartLite, ModeRS485);
+//	   			   if (ModeRS485 == 4) ModeRS485 = 15;
+//	   			   else if (ModeRS485 == 15) {
+//	   				   if (Group == 3) ModeRS485 = 4;
+//	   			   }
+
+//	   			   if ((ModeRS485 == 15) && (Grope == 4)) ModeRS485 = 16; else if (ModeRS485 == 16) ModeRS485 = 16;
 	   			   switch (ModeRS485) {
 	   			   	   case (4):
 						   NumberReg = 1;
@@ -126,7 +132,7 @@ int main ()
 					   	   break;
 	   			   	   case (15):
 	   			   			   if (Group == 0) {
-	   			   				   NumberReg = 1;
+	   			   				   NumberReg = 10;
 	   			   				   CountReg = 256;
 	   			   				   CountByteToSend = 41;
 	   			   			   }
@@ -145,11 +151,12 @@ int main ()
 	   			   				   CountReg = 256;
 	   			   				   CountByteToSend = 41;
 	   			   	   	   	   }
-//	   			   	   	   	   if (Group == 4) {
-//	   			   				   NumberReg = 513;
-//	   			   				   CountReg = 16;
-//	   			   				   CountByteToSend = 2;
-//	   			   	   	   	   }
+	   			   	   	   	   if (Group == 4) {
+	   			   				   NumberReg = 513;
+	   			   				   CountReg = 16;
+	   			   				   CountByteToSend = 11;
+	   			   	   	   	   }
+	   			   	   	   	   if (Group < 4) Group++; else Group = 0;
 	   			   	       break;
 	   			   	   case (16):
 	   			   		   NumberReg = 1;
@@ -158,14 +165,6 @@ int main ()
 	   			   	       break;
 	   			   }
 	   			   SendDataRS485(&axi_uartlite_1_UartLite, PrepareDataToSendRS485(ModeRS485, NumberReg, CountReg), CountByteToSend);
-//	   			   if (ModeRS485 == 4) ModeRS485 = 15;
-//	   			   if (ModeRS485 == 15) {
-//	   				   if (Group < 3) Group++; else {
-//	   					   Group = 0;
-//	   					   ModeRS485 = 16;
-//	   				   }
-//	   			   }
-//	   			   if (ModeRS485 == 16) ModeRS485 = 4;
 		   	   }
 		   } else {
 			   CountTimeOutRS485 = 0;
@@ -224,6 +223,11 @@ int main ()
 //
 //	   	   }
 
+//	   	   if (TotalSentCountRS485Check() != 0) {
+//	   		ResetTotalSentCountRS485();
+//	   		Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000);
+//	   	   }
+
 	   		switch (ModeRS485) {
 	   			case 4:
 	   				if (TotalSentCountRS485Check() == 8) {
@@ -234,13 +238,16 @@ int main ()
 	   				break;
 
 	   			case 15:
-	   				if (TotalSentCountRS485Check() == 41) {
+	   				if ((TotalSentCountRS485Check() == 41) || (TotalSentCountRS485Check() == 11)) {
 	   					ResetTotalSentCountRS485();
 	   					Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000);
 
 	   				}
 	   			case 16:
-	   				if (TotalSentCountRS485Check() == 209) Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000);
+	   				if (TotalSentCountRS485Check() == 209) {
+	   					ResetTotalSentCountRS485();
+	   					Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000000);
+	   				}
 	   				break;
 	   		}
 //	   	}
