@@ -19,6 +19,8 @@ void GetSystemValues() {
 	GpioInputRead(&DataRead, 3);
 	SetArrayCurrentStatusInt(101, DataRead);
 	SetArrayCurrentStatusInt(103, GetBrightness());
+	SetArrayCurrentStatusInt(104, Xil_In32(XPAR_IP_AXI_PWM_0_S00_AXI_BASEADDR + 0));
+	SetArrayCurrentStatusInt(105, Xil_In32(XPAR_IP_AXI_PWM_0_S00_AXI_BASEADDR + 4));
 	u32 word = 0;
 	for (int i = 0; i < 8; i++) {
 		word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;

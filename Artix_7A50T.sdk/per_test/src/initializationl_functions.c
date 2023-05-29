@@ -26,9 +26,9 @@ void InitializationSystemDesignAndProject(int SystemDesign, int ProjectNumber){
 void InitializationInitialValues(){
 //	read_current_value_PSGPIO();								// прочитать свой адрес
 	SetSetpointValueAdcTable();								// записать уставки аналоговых сигналов в МАЗ
-//
-//	set_initial_values_control_transistor_keys();								// записать уставки аналоговых сигналов в МАЗ
-//
+
+	SetInitialValuesControlTransistorKeys();								// записать уставки аналоговых сигналов в МАЗ
+
 	GetCurrentValueAdcTable();								// получить значения АЦП
 //	get_current_value_digital_input_table();					// получить текущие значения входов
 	GetCurrentValueSpeedSensorTable();

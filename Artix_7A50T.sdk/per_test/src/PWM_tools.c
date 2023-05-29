@@ -1,4 +1,4 @@
-#define TESTAPP_GEN
+//#define TESTAPP_GEN
 
 /******************************************************************************
 *
@@ -59,16 +59,11 @@
 /***************************** Include Files *********************************/
 
 #include "xparameters.h"
-#include "xuartlite.h"
-#include "xil_exception.h"
-
-#ifdef XPAR_INTC_0_DEVICE_ID
+#include "xstatus.h"
 #include "xintc.h"
-#include <stdio.h>
-#else
-#include "xscugic.h"
+#include "xil_exception.h"
+#include "xil_exception.h"
 #include "xil_printf.h"
-#endif
 
 /************************** Constant Definitions *****************************/
 
@@ -77,47 +72,24 @@
  * xparameters.h file. They are defined here such that a user can easily
  * change all the needed parameters in one place.
  */
-#ifndef TESTAPP_GEN
-#define IP_AXI_PWM_DEVICE_ID	  XPAR_IP_AXI_PWM_0_DEVICE_ID
-#define IP_AXI_PWM_IRPT_INTR	  XPAR_INTC_0_IP_AXI_PWM_0_VEC_ID
-
-#ifdef XPAR_INTC_0_DEVICE_ID
-#define INTC_DEVICE_ID		XPAR_INTC_0_DEVICE_ID
-#else
-#define INTC_DEVICE_ID		XPAR_SCUGIC_SINGLE_DEVICE_ID
-#endif /* XPAR_INTC_0_DEVICE_ID */
-#endif /* TESTAPP_GEN */
+#define INTC_DEVICE_ID				XPAR_INTC_0_DEVICE_ID
+#define INTC_DEVICE_INT_ID	  		XPAR_INTC_0_IP_AXI_PWM_0_VEC_ID
 
 /*
  * The following constant controls the length of the buffers to be sent
  * and received with the UartLite device.
  */
-#define TEST_BUFFER_SIZE		16
-
-#define ADDRESS_DEVICE			10
-#define INIT_ARTIX				100
-#define READ					56
-#define WRITE					57
-#define INIT_LOAD				58
-#define LOAD					51
 
 /**************************** Type Definitions *******************************/
 
-#ifdef XPAR_INTC_0_DEVICE_ID
-#define INTC		XIntc
-#define INTC_HANDLER	XIntc_InterruptHandler
-#else
-#define INTC		XScuGic
-#define INTC_HANDLER	XScuGic_InterruptHandler
-#endif /* XPAR_INTC_0_DEVICE_ID */
 
 /***************** Macros (Inline Functions) Definitions *********************/
 
 
 /************************** Function Prototypes ******************************/
 
-int PWMIntr(INTC *IntcInstancePtr);
-void PWMInterrupt(void);
+int PWMIntr(XIntc *IntcInstancePtr);
+void PWMInterruptHandler(void *CallbackRef);
 u32 GetBrightness();
 
 //static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData);
@@ -134,7 +106,7 @@ u32 GetBrightness();
 //int* PrepareDataToSendTest();
 //void GetUARTValue();
 
-static int PWMSetupIntrSystem(INTC *IntcInstancePtr);
+static int PWMSetupIntrSystem(XIntc *IntcInstancePtr);
 
 /************************** Variable Definitions *****************************/
 
@@ -142,10 +114,10 @@ static int PWMSetupIntrSystem(INTC *IntcInstancePtr);
  * The instances to support the device drivers are global such that they
  * are initialized to zero each time the program runs.
  */
-#ifndef TESTAPP_GEN
-static INTC IntcInstance;	/* The instance of the Interrupt Controller */
-static XUartLite UartLiteInst;  /* The instance of the UartLite Device */
-#endif
+//#ifndef TESTAPP_GEN
+//static INTC IntcInstance;	/* The instance of the Interrupt Controller */
+//static XUartLite UartLiteInst;  /* The instance of the UartLite Device */
+//#endif
 
 /*
  * The following variables are shared between non-interrupt processing and
@@ -161,7 +133,7 @@ static XUartLite UartLiteInst;  /* The instance of the UartLite Device */
  * been sent.
  */
 
-volatile u32 brightness = 101;
+volatile static u32 brightness = 101;
 
 /****************************************************************************/
 /**
@@ -193,7 +165,7 @@ volatile u32 brightness = 101;
 * working it may never return.
 *
 ****************************************************************************/
-int PWMIntr(INTC *IntcInstancePtr)
+int PWMIntr(XIntc *IntcInstancePtr)
 
 {
 	int Status;
@@ -234,7 +206,7 @@ int PWMIntr(INTC *IntcInstancePtr)
 * @note		None.
 *
 ****************************************************************************/
-void PWMInterrupt(void)
+void PWMInterruptHandler(void *CallbackRef)
 {
 	brightness++;
 }
@@ -264,7 +236,7 @@ u32 GetBrightness(){
 * @note		None.
 *
 ****************************************************************************/
-int PWMSetupIntrSystem(INTC *IntcInstancePtr)
+int PWMSetupIntrSystem(XIntc *IntcInstancePtr)
 {
 	int Status;
 
@@ -286,9 +258,9 @@ int PWMSetupIntrSystem(INTC *IntcInstancePtr)
 	 * for the device occurs, the device driver handler performs the specific
 	 * interrupt processing for the device.
 	 */
-	Status = XIntc_Connect(IntcInstancePtr, XPAR_INTC_0_IP_AXI_PWM_0_VEC_ID,
-			(XInterruptHandler)PWMInterrupt,
-			0);
+	Status = XIntc_Connect(IntcInstancePtr, INTC_DEVICE_INT_ID,
+			(XInterruptHandler)PWMInterruptHandler,
+			(void *)0);
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
@@ -308,7 +280,7 @@ int PWMSetupIntrSystem(INTC *IntcInstancePtr)
 	/*
 	 * Enable the interrupt for the UartLite.
 	 */
-	XIntc_Enable(IntcInstancePtr, XPAR_IP_AXI_PWM_0_DEVICE_ID);
+	XIntc_Enable(IntcInstancePtr, INTC_DEVICE_INT_ID);
 //#else
 
 //#ifndef TESTAPP_GEN
