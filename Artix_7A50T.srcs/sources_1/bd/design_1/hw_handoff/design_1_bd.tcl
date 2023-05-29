@@ -267,8 +267,8 @@ proc write_mig_file_design_1_mig_7series_0_0 { str_mig_prj_filepath } {
    puts $mig_prj_file {      <C0_C_RD_WR_ARB_ALGORITHM>RD_PRI_REG</C0_C_RD_WR_ARB_ALGORITHM>}
    puts $mig_prj_file {      <C0_S_AXI_ADDR_WIDTH>28</C0_S_AXI_ADDR_WIDTH>}
    puts $mig_prj_file {      <C0_S_AXI_DATA_WIDTH>32</C0_S_AXI_DATA_WIDTH>}
-   puts $mig_prj_file {      <C0_S_AXI_ID_WIDTH>4</C0_S_AXI_ID_WIDTH>}
-   puts $mig_prj_file {      <C0_S_AXI_SUPPORTS_NARROW_BURST>0</C0_S_AXI_SUPPORTS_NARROW_BURST>}
+   puts $mig_prj_file {      <C0_S_AXI_ID_WIDTH>2</C0_S_AXI_ID_WIDTH>}
+   puts $mig_prj_file {      <C0_S_AXI_SUPPORTS_NARROW_BURST>1</C0_S_AXI_SUPPORTS_NARROW_BURST>}
    puts $mig_prj_file {    </AXIParameters>}
    puts $mig_prj_file {  </Controller>}
    puts $mig_prj_file {</Project>}
@@ -349,7 +349,12 @@ proc create_hier_cell_microblaze_0_local_memory { parentCell nameHier } {
   # Create instance: lmb_bram, and set properties
   set lmb_bram [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 lmb_bram ]
   set_property -dict [ list \
+   CONFIG.Enable_B {Use_ENB_Pin} \
    CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Port_B_Clock {100} \
+   CONFIG.Port_B_Enable_Rate {100} \
+   CONFIG.Port_B_Write_Rate {50} \
+   CONFIG.Use_RSTB_Pin {true} \
    CONFIG.use_bram_block {BRAM_Controller} \
  ] $lmb_bram
 
@@ -530,6 +535,7 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_BAUDRATE {115200} \
    CONFIG.C_ODD_PARITY {0} \
+   CONFIG.C_S_AXI_ACLK_FREQ_HZ {50000000} \
    CONFIG.C_USE_PARITY {0} \
    CONFIG.PARITY {No_Parity} \
  ] $axi_uartlite_0
@@ -538,6 +544,7 @@ proc create_root_design { parentCell } {
   set axi_uartlite_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_1 ]
   set_property -dict [ list \
    CONFIG.C_BAUDRATE {57600} \
+   CONFIG.C_S_AXI_ACLK_FREQ_HZ {50000000} \
  ] $axi_uartlite_1
 
   # Create instance: clk_wiz_1, and set properties
@@ -587,14 +594,14 @@ proc create_root_design { parentCell } {
   set microblaze_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0 ]
   set_property -dict [ list \
    CONFIG.C_ADDR_TAG_BITS {0} \
-   CONFIG.C_CACHE_BYTE_SIZE {65536} \
+   CONFIG.C_CACHE_BYTE_SIZE {8192} \
    CONFIG.C_DCACHE_ADDR_TAG {0} \
-   CONFIG.C_DCACHE_BYTE_SIZE {65536} \
-   CONFIG.C_DCACHE_LINE_LEN {16} \
+   CONFIG.C_DCACHE_BYTE_SIZE {8192} \
+   CONFIG.C_DCACHE_LINE_LEN {4} \
    CONFIG.C_DEBUG_ENABLED {1} \
    CONFIG.C_D_AXI {1} \
    CONFIG.C_D_LMB {1} \
-   CONFIG.C_ICACHE_LINE_LEN {16} \
+   CONFIG.C_ICACHE_LINE_LEN {4} \
    CONFIG.C_I_LMB {1} \
    CONFIG.C_USE_DCACHE {0} \
    CONFIG.C_USE_ICACHE {0} \
@@ -622,7 +629,6 @@ proc create_root_design { parentCell } {
 
   set_property -dict [ list \
    CONFIG.BOARD_MIG_PARAM {Custom} \
-   CONFIG.MIG_DONT_TOUCH_PARAM {Custom} \
    CONFIG.RESET_BOARD_INTERFACE {Custom} \
    CONFIG.XML_INPUT_FILE {mig_a.prj} \
  ] $mig_7series_0

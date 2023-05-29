@@ -91,7 +91,7 @@ int main ()
                                      XPAR_AXI_UARTLITE_1_DEVICE_ID, \
                                      XPAR_AXI_INTC_0_AXI_UARTLITE_1_INTERRUPT_INTR);
 
-//   PWMIntr(&intc);
+   PWMIntr(&intc);
 
 
 //   SendDataRS485(&axi_uartlite_1_UartLite, GetDataRS485(&axi_uartlite_1_UartLite));
@@ -99,9 +99,10 @@ int main ()
    Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
 
    while (1) {
+//	   controlIntr = GetBrightness();
 	   GetSystemValues();
 
-		   if (CountTimeOutRS485 < 10000) {
+		   if (CountTimeOutRS485 < 1000) {
 //		   		   if (TestCheckTotalRecvCountRS485() == 0) {
 //		   			   CountTimeOutRS485++;
 //		   		   } else {

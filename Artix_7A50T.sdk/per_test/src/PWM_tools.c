@@ -161,7 +161,7 @@ static XUartLite UartLiteInst;  /* The instance of the UartLite Device */
  * been sent.
  */
 
-volatile u32 brightness = 11;
+volatile u32 brightness = 101;
 
 /****************************************************************************/
 /**
@@ -268,110 +268,110 @@ int PWMSetupIntrSystem(INTC *IntcInstancePtr)
 {
 	int Status;
 
-#ifdef XPAR_INTC_0_DEVICE_ID
+//#ifdef XPAR_INTC_0_DEVICE_ID
 
-#ifndef TESTAPP_GEN
-	/*
-	 * Initialize the interrupt controller driver so that it is ready
-	 * to use.
-	 */
-	Status = XIntc_Initialize(IntcInstancePtr, INTC_DEVICE_ID);
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-#endif
+//#ifndef TESTAPP_GEN
+//	/*
+//	 * Initialize the interrupt controller driver so that it is ready
+//	 * to use.
+//	 */
+//	Status = XIntc_Initialize(IntcInstancePtr, INTC_DEVICE_ID);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//#endif
 
 	/*
 	 * Connect a device driver handler that will be called when an interrupt
 	 * for the device occurs, the device driver handler performs the specific
 	 * interrupt processing for the device.
 	 */
-	Status = XIntc_Connect(IntcInstancePtr, XPAR_IP_AXI_PWM_0_DEVICE_ID,
+	Status = XIntc_Connect(IntcInstancePtr, XPAR_INTC_0_IP_AXI_PWM_0_VEC_ID,
 			(XInterruptHandler)PWMInterrupt,
 			0);
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 
-#ifndef TESTAPP_GEN
-	/*
-	 * Start the interrupt controller such that interrupts are enabled for
-	 * all devices that cause interrupts, specific real mode so that
-	 * the UART can cause interrupts thru the interrupt controller.
-	 */
-	Status = XIntc_Start(IntcInstancePtr, XIN_REAL_MODE);
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-#endif
+//#ifndef TESTAPP_GEN
+//	/*
+//	 * Start the interrupt controller such that interrupts are enabled for
+//	 * all devices that cause interrupts, specific real mode so that
+//	 * the UART can cause interrupts thru the interrupt controller.
+//	 */
+//	Status = XIntc_Start(IntcInstancePtr, XIN_REAL_MODE);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//#endif
 
 	/*
 	 * Enable the interrupt for the UartLite.
 	 */
 	XIntc_Enable(IntcInstancePtr, XPAR_IP_AXI_PWM_0_DEVICE_ID);
-#else
+//#else
 
-#ifndef TESTAPP_GEN
-	XScuGic_Config *IntcConfig;
+//#ifndef TESTAPP_GEN
+//	XScuGic_Config *IntcConfig;
+//
+//	/*
+//	 * Initialize the interrupt controller driver so that it is ready to
+//	 * use.
+//	 */
+//	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+//	if (NULL == IntcConfig) {
+//		return XST_FAILURE;
+//	}
+//
+//	Status = XScuGic_CfgInitialize(IntcInstancePtr, IntcConfig,
+//					IntcConfig->CpuBaseAddress);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//#endif /* TESTAPP_GEN */
+//
+//	XScuGic_SetPriorityTriggerType(IntcInstancePtr, UartLiteIntrId,
+//					0xA0, 0x3);
+//
+//	/*
+//	 * Connect the interrupt handler that will be called when an
+//	 * interrupt occurs for the device.
+//	 */
+//	Status = XScuGic_Connect(IntcInstancePtr, UartLiteIntrId,
+//				 (Xil_ExceptionHandler)XUartLite_InterruptHandler,
+//				 UartLiteInstPtr);
+//	if (Status != XST_SUCCESS) {
+//		return Status;
+//	}
+//
+//	/*
+//	 * Enable the interrupt for the Timer device.
+//	 */
+//	XScuGic_Enable(IntcInstancePtr, UartLiteIntrId);
+//#endif /* XPAR_INTC_0_DEVICE_ID */
 
-	/*
-	 * Initialize the interrupt controller driver so that it is ready to
-	 * use.
-	 */
-	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
-	if (NULL == IntcConfig) {
-		return XST_FAILURE;
-	}
-
-	Status = XScuGic_CfgInitialize(IntcInstancePtr, IntcConfig,
-					IntcConfig->CpuBaseAddress);
-	if (Status != XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-#endif /* TESTAPP_GEN */
-
-	XScuGic_SetPriorityTriggerType(IntcInstancePtr, UartLiteIntrId,
-					0xA0, 0x3);
-
-	/*
-	 * Connect the interrupt handler that will be called when an
-	 * interrupt occurs for the device.
-	 */
-	Status = XScuGic_Connect(IntcInstancePtr, UartLiteIntrId,
-				 (Xil_ExceptionHandler)XUartLite_InterruptHandler,
-				 UartLiteInstPtr);
-	if (Status != XST_SUCCESS) {
-		return Status;
-	}
-
-	/*
-	 * Enable the interrupt for the Timer device.
-	 */
-	XScuGic_Enable(IntcInstancePtr, UartLiteIntrId);
-#endif /* XPAR_INTC_0_DEVICE_ID */
 
 
-
-#ifndef TESTAPP_GEN
-
-	/*
-	 * Initialize the exception table.
-	 */
-	Xil_ExceptionInit();
-
-	/*
-	 * Register the interrupt controller handler with the exception table.
-	 */
-	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-			(Xil_ExceptionHandler)INTC_HANDLER,
-			IntcInstancePtr);
-
-	/*
-	 * Enable exceptions.
-	 */
-	Xil_ExceptionEnable();
-
-#endif /* TESTAPP_GEN */
+//#ifndef TESTAPP_GEN
+//
+//	/*
+//	 * Initialize the exception table.
+//	 */
+//	Xil_ExceptionInit();
+//
+//	/*
+//	 * Register the interrupt controller handler with the exception table.
+//	 */
+//	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+//			(Xil_ExceptionHandler)INTC_HANDLER,
+//			IntcInstancePtr);
+//
+//	/*
+//	 * Enable exceptions.
+//	 */
+//	Xil_ExceptionEnable();
+//
+//#endif /* TESTAPP_GEN */
 
 	return XST_SUCCESS;
 }

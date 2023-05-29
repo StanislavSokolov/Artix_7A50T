@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 // Date        : Wed Mar  8 18:23:33 2023
 // Host        : Stas running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_mdm_1_0/design_1_mdm_1_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_mdm_1_0 -prefix
+//               design_1_mdm_1_0_ design_1_mdm_1_0_stub.v
 // Design      : design_1_mdm_1_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a50tftg256-3
