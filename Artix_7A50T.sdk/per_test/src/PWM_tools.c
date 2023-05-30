@@ -133,7 +133,7 @@ static int PWMSetupIntrSystem(XIntc *IntcInstancePtr);
  * been sent.
  */
 
-volatile static u32 brightness = 101;
+volatile static u32 brightness = 0;
 
 /****************************************************************************/
 /**

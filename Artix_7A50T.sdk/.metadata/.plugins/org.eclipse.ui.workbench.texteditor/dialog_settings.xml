@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="XPAR_INTC_0_DEVICE_ID" key="selection"/>
+		<item value="VEC" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="VEC"/>
 			<item value="XPAR_INTC_0_DEVICE_ID"/>
 			<item value="XPAR_AXI_INTC_0_DEVICE_ID"/>
 			<item value="CountSentByte"/>
@@ -15,7 +16,6 @@
 			<item value="TotalSentCountRS485"/>
 			<item value="PrepareDataToSendRS485"/>
 			<item value="TEST_BUFFER_SIZE_RS485"/>
-			<item value="XPAR_UARTLITE_0_DEVICE_ID"/>
 		</list>
 		<list key="replacehistory">
 		</list>

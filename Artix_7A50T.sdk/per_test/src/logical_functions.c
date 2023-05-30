@@ -13,9 +13,22 @@ u32 DataRead = 0;
 u32 LatchStartControlPanel = 0;
 
 void GetSystemValues() {
+
+	GetValueMinTimeErrorGroupTable();						// получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+	GetValueAcknowledgeErrorGroupTable();
+	GetValueCurrentErrorGroupTable();
+
+	GetCurrentValueAdcTable();								// получить значения АЦП (записываем массив adc_channel[] в adc.c)
+	GetValueErrorsNegativePositiveAdcTable();				// получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+
+	GetCurrentValueSpeedSensorTable();						// получить текущие значения с датчика положения (заполняем поля в encoder.c)
+
 	GpioInputRead(&DataRead, 1);
-//	GpioOutputWrite(DataRead);
 	SetArrayCurrentStatusInt(100, DataRead);
+	u32 Data = DataRead;
+	for (int i = 0; i < 8; i++) {
+		SetArrayCurrentStatusInt(i, ((Data >> i) & 1));
+	}
 	GpioInputRead(&DataRead, 3);
 	SetArrayCurrentStatusInt(101, DataRead);
 	SetArrayCurrentStatusInt(103, GetBrightness());
@@ -29,26 +42,17 @@ void GetSystemValues() {
 	GpioOutputWrite(word, 2);
 //	GpioOutputWrite(DataRead);
 
-
-
-	GetCurrentValueAdcTable();								// получить значения АЦП (записываем массив adc_channel[] в adc.c)
-	GetValueErrorsNegativePositiveAdcTable();				// получить значения ошибок АЦП (заполняем поля в adc.c)
 	SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
-	//
-	//		get_value_min_time_error_group_table();						// получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
-	//		get_value_acknowledge_error_group_table();
-	//		get_value_current_error_group_table();
-	//
-	GetCurrentValueSpeedSensorTable();
+
 }
 
-void SetValuesInAddressSpace() {
-	for (int i = 0; i < 13; i++) {
-		SetArrayCurrentStatusInt(i, i+100);
-	}
-
-	SetArrayCurrentStatusInt(48, DataRead);
-}
+//void SetValuesInAddressSpace() {
+//	for (int i = 0; i < 13; i++) {
+//		SetArrayCurrentStatusInt(i, i+100);
+//	}
+//
+//	SetArrayCurrentStatusInt(48, DataRead);
+//}
 
 
 // функция загрузки поста управления

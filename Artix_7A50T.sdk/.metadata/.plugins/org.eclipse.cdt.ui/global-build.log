@@ -1,33 +1,90 @@
-18:26:05 **** Incremental Build of configuration Debug for project per_test ****
+15:43:35 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-18:26:12 **** Incremental Build of configuration Debug for project per_test ****
+15:43:39 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-18:27:41 **** Auto Build of configuration Debug for project per_test ****
+15:59:13 **** Auto Build of configuration Debug for project per_test ****
 make all 
-'Building file: ../src/PWM_tools.c'
+'Building file: ../src/logical_functions.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PWM_tools.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/PWM_tools.d" -MT"src/PWM_tools.o" -o "src/PWM_tools.o" "../src/PWM_tools.c"
-../src/PWM_tools.c:118:8: error: unknown type name 'INTC'
- static INTC IntcInstance; /* The instance of the Interrupt Controller */
-        ^~~~
-../src/PWM_tools.c:119:8: error: unknown type name 'XUartLite'
- static XUartLite UartLiteInst;  /* The instance of the UartLite Device */
-        ^~~~~~~~~
-../src/PWM_tools.c:119:18: warning: 'UartLiteInst' defined but not used [-Wunused-variable]
- static XUartLite UartLiteInst;  /* The instance of the UartLite Device */
-                  ^~~~~~~~~~~~
-../src/PWM_tools.c:118:13: warning: 'IntcInstance' defined but not used [-Wunused-variable]
- static INTC IntcInstance; /* The instance of the Interrupt Controller */
-             ^~~~~~~~~~~~
-make: *** [src/subdir.mk:68: src/PWM_tools.o] Error 1
-18:28:03 **** Auto Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/PWM_tools.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:30:29: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   SetArrayCurrentStatusInt((GetArrayCurrentStatusInt(100) >> i) & 1, i);
+                             ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:41:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:45:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:28:6: warning: unused variable 'Data' [-Wunused-variable]
+  u32 Data = DataRead;
+      ^~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building file: ../src/xuartlite_intr_tapp_example.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PWM_tools.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/PWM_tools.d" -MT"src/PWM_tools.o" -o "src/PWM_tools.o" "../src/PWM_tools.c"
-'Finished building: ../src/PWM_tools.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSend':
+../src/xuartlite_intr_tapp_example.c:360:20: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+    SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:411:8: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
+  crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
+        ^~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:416:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSendTest':
+../src/xuartlite_intr_tapp_example.c:420:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetData':
+../src/xuartlite_intr_tapp_example.c:480:5: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+     SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:490:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetRecvBuffer':
+../src/xuartlite_intr_tapp_example.c:504:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &RecvBuffer;
+         ^~~~~~~~~~~
+At top level:
+../src/xuartlite_intr_tapp_example.c:665:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+ static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/xuartlite_intr_tapp_example.c'
 ' '
 'Building target: per_test.elf'
 'Invoking: MicroBlaze gcc linker'
@@ -37,30 +94,56 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -
 'Invoking: MicroBlaze Print Size'
 mb-size per_test.elf  |tee "per_test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  24064	   1116	   6980	  32160	   7da0	per_test.elf
+  24796	   1112	   7020	  32928	   80a0	per_test.elf
 'Finished building: per_test.elf.size'
 ' '
-18:28:13 **** Incremental Build of configuration Debug for project per_test ****
+15:59:15 **** Incremental Build of configuration Debug for project per_test ****
 make all 
 make: Nothing to be done for 'all'.
-18:29:37 **** Incremental Build of configuration Debug for project per_test ****
+16:00:56 **** Auto Build of configuration Debug for project per_test ****
 make all 
-make: Nothing to be done for 'all'.
-18:30:03 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-18:30:38 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-18:31:41 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-make: Nothing to be done for 'all'.
-18:32:23 **** Incremental Build of configuration Debug for project per_test ****
-make all 
-'Building file: ../src/PWM_tools.c'
+'Building file: ../src/logical_functions.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PWM_tools.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/PWM_tools.d" -MT"src/PWM_tools.o" -o "src/PWM_tools.o" "../src/PWM_tools.c"
-'Finished building: ../src/PWM_tools.c'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:39:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:41:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:45:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
 ' '
 'Building target: per_test.elf'
 'Invoking: MicroBlaze gcc linker'
@@ -70,6 +153,1201 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -
 'Invoking: MicroBlaze Print Size'
 mb-size per_test.elf  |tee "per_test.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  24024	   1116	   6980	  32120	   7d78	per_test.elf
+  24780	   1112	   7020	  32912	   8090	per_test.elf
 'Finished building: per_test.elf.size'
 ' '
+16:00:58 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:05:17 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:39:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:41:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:45:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24748	   1112	   7020	  32880	   8070	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:05:22 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:08:38 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:39:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:41:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:45:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24740	   1112	   7020	  32872	   8068	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:08:39 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:16:59 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/xuartlite_intr_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSend':
+../src/xuartlite_intr_tapp_example.c:377:20: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+    SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:412:8: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
+  crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
+        ^~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:417:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSendTest':
+../src/xuartlite_intr_tapp_example.c:421:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetData':
+../src/xuartlite_intr_tapp_example.c:481:5: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+     SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:491:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetRecvBuffer':
+../src/xuartlite_intr_tapp_example.c:505:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &RecvBuffer;
+         ^~~~~~~~~~~
+At top level:
+../src/xuartlite_intr_tapp_example.c:666:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+ static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/xuartlite_intr_tapp_example.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24724	   1112	   7020	  32856	   8058	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:17:00 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:18:46 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/xuartlite_intr_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSend':
+../src/xuartlite_intr_tapp_example.c:377:20: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+    SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:412:8: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
+  crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
+        ^~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:417:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSendTest':
+../src/xuartlite_intr_tapp_example.c:421:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetData':
+../src/xuartlite_intr_tapp_example.c:481:5: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+     SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:491:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetRecvBuffer':
+../src/xuartlite_intr_tapp_example.c:505:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &RecvBuffer;
+         ^~~~~~~~~~~
+At top level:
+../src/xuartlite_intr_tapp_example.c:666:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+ static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/xuartlite_intr_tapp_example.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24720	   1112	   7016	  32848	   8050	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:18:47 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:20:25 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/xuartlite_intr_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSend':
+../src/xuartlite_intr_tapp_example.c:360:18: error: expected expression before '=' token
+    if (reg == 0) = SendBuffer[5] = 1; else SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+                  ^
+../src/xuartlite_intr_tapp_example.c:360:60: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+    if (reg == 0) = SendBuffer[5] = 1; else SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+                                                            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:411:8: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
+  crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
+        ^~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:416:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSendTest':
+../src/xuartlite_intr_tapp_example.c:420:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetData':
+../src/xuartlite_intr_tapp_example.c:480:5: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+     SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:490:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetRecvBuffer':
+../src/xuartlite_intr_tapp_example.c:504:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &RecvBuffer;
+         ^~~~~~~~~~~
+At top level:
+../src/xuartlite_intr_tapp_example.c:665:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+ static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:68: src/xuartlite_intr_tapp_example.o] Error 1
+16:20:27 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/xuartlite_intr_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSend':
+../src/xuartlite_intr_tapp_example.c:360:18: error: expected expression before '=' token
+    if (reg == 0) = SendBuffer[5] = 1; else SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+                  ^
+../src/xuartlite_intr_tapp_example.c:360:60: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+    if (reg == 0) = SendBuffer[5] = 1; else SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+                                                            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:411:8: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
+  crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
+        ^~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:416:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSendTest':
+../src/xuartlite_intr_tapp_example.c:420:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetData':
+../src/xuartlite_intr_tapp_example.c:480:5: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+     SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:490:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetRecvBuffer':
+../src/xuartlite_intr_tapp_example.c:504:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &RecvBuffer;
+         ^~~~~~~~~~~
+At top level:
+../src/xuartlite_intr_tapp_example.c:665:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+ static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:68: src/xuartlite_intr_tapp_example.o] Error 1
+16:20:56 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/xuartlite_intr_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSend':
+../src/xuartlite_intr_tapp_example.c:360:58: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+    if (reg == 0) SendBuffer[5] = 1; else SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:411:8: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
+  crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
+        ^~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:416:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSendTest':
+../src/xuartlite_intr_tapp_example.c:420:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetData':
+../src/xuartlite_intr_tapp_example.c:480:5: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+     SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:490:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetRecvBuffer':
+../src/xuartlite_intr_tapp_example.c:504:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &RecvBuffer;
+         ^~~~~~~~~~~
+At top level:
+../src/xuartlite_intr_tapp_example.c:665:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+ static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/xuartlite_intr_tapp_example.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24764	   1112	   7020	  32896	   8080	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:20:58 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:22:36 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/xuartlite_intr_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSend':
+../src/xuartlite_intr_tapp_example.c:360:58: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+    if (reg == 2) SendBuffer[5] = 1; else SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:411:8: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
+  crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
+        ^~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:416:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSendTest':
+../src/xuartlite_intr_tapp_example.c:420:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetData':
+../src/xuartlite_intr_tapp_example.c:480:5: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+     SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:490:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetRecvBuffer':
+../src/xuartlite_intr_tapp_example.c:504:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &RecvBuffer;
+         ^~~~~~~~~~~
+At top level:
+../src/xuartlite_intr_tapp_example.c:665:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+ static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/xuartlite_intr_tapp_example.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24768	   1112	   7016	  32896	   8080	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:22:37 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:23:30 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/xuartlite_intr_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSend':
+../src/xuartlite_intr_tapp_example.c:360:58: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+    if (reg == 5) SendBuffer[5] = 1; else SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+                                                          ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:411:8: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
+  crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
+        ^~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:416:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSendTest':
+../src/xuartlite_intr_tapp_example.c:420:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetData':
+../src/xuartlite_intr_tapp_example.c:480:5: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+     SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:490:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetRecvBuffer':
+../src/xuartlite_intr_tapp_example.c:504:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &RecvBuffer;
+         ^~~~~~~~~~~
+At top level:
+../src/xuartlite_intr_tapp_example.c:665:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+ static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/xuartlite_intr_tapp_example.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24768	   1112	   7016	  32896	   8080	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:23:32 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:24:40 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:39:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:41:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:45:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24700	   1112	   7020	  32832	   8040	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:24:41 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:26:36 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:29:26: warning: statement with no effect [-Wunused-value]
+  for (int i = 0; i < 8; i+2) {
+                         ~^~
+../src/logical_functions.c:35:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:40:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:42:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:46:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building file: ../src/xuartlite_intr_tapp_example.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartlite_intr_tapp_example.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/xuartlite_intr_tapp_example.d" -MT"src/xuartlite_intr_tapp_example.o" -o "src/xuartlite_intr_tapp_example.o" "../src/xuartlite_intr_tapp_example.c"
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSend':
+../src/xuartlite_intr_tapp_example.c:360:20: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+    SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+                    ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:411:8: warning: implicit declaration of function 'GetCRC16_B_byte' [-Wimplicit-function-declaration]
+  crc = GetCRC16_B_byte(crc, SendBuffer, count_byte);
+        ^~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:416:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'PrepareDataToSendTest':
+../src/xuartlite_intr_tapp_example.c:420:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetData':
+../src/xuartlite_intr_tapp_example.c:480:5: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+     SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5]);
+     ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c:490:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &SendBuffer;
+         ^~~~~~~~~~~
+../src/xuartlite_intr_tapp_example.c: In function 'GetRecvBuffer':
+../src/xuartlite_intr_tapp_example.c:504:9: warning: returning 'u8 (*)[16]' {aka 'unsigned char (*)[16]'} from a function with incompatible return type 'int *' [-Wincompatible-pointer-types]
+  return &RecvBuffer;
+         ^~~~~~~~~~~
+At top level:
+../src/xuartlite_intr_tapp_example.c:665:13: warning: 'UartLiteDisableIntrSystem' defined but not used [-Wunused-function]
+ static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+             ^~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/xuartlite_intr_tapp_example.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24716	   1112	   7020	  32848	   8050	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:26:38 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:27:04 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:28:08 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:35:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:40:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:42:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:46:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24728	   1112	   7016	  32856	   8058	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:28:10 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:29:35 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:35:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:40:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:42:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:46:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24728	   1112	   7016	  32856	   8058	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:29:52 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:30:55 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:35:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:40:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:42:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:46:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24728	   1112	   7016	  32856	   8058	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:30:57 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:32:12 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:35:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:40:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:42:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:46:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24728	   1112	   7016	  32856	   8058	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:32:14 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:33:02 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:39:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:41:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:45:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24748	   1112	   7020	  32880	   8070	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:33:04 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:34:08 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:39:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:41:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:45:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24740	   1112	   7020	  32872	   8068	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:34:09 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:35:20 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:39:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:41:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:45:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24748	   1112	   7020	  32880	   8070	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:35:22 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:36:15 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:39:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:41:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:45:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24748	   1112	   7020	  32880	   8070	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:36:25 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:38:33 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:39:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:41:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:45:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24780	   1112	   7020	  32912	   8090	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:38:36 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.
+16:39:34 **** Auto Build of configuration Debug for project per_test ****
+make all 
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:22:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:24:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:27:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(100, DataRead);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:32: warning: implicit declaration of function 'GetBrightness' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(103, GetBrightness());
+                                ^~~~~~~~~~~~~
+../src/logical_functions.c:39:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   word = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | word;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:41:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(word, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+../src/logical_functions.c:45:32: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
+                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24780	   1112	   7020	  32912	   8090	per_test.elf
+'Finished building: per_test.elf.size'
+' '
+16:39:43 **** Incremental Build of configuration Debug for project per_test ****
+make all 
+make: Nothing to be done for 'all'.

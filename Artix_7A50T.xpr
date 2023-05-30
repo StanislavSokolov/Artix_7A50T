@@ -77,7 +77,6 @@
       <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_mig_7series_0_0/mig_a.prj">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="ScopedToCell" Val="design_1_mig_7series_0_0"/>
         </FileInfo>
       </File>
       <Config>

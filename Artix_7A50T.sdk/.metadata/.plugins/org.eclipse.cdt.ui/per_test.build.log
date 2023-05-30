@@ -1,21 +1,6 @@
-18:32:23 **** Incremental Build of configuration Debug for project per_test ****
+16:39:43 **** Incremental Build of configuration Debug for project per_test ****
 make all 
-'Building file: ../src/PWM_tools.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/PWM_tools.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/PWM_tools.d" -MT"src/PWM_tools.o" -o "src/PWM_tools.o" "../src/PWM_tools.c"
-'Finished building: ../src/PWM_tools.c'
-' '
-'Building target: per_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
-'Finished building target: per_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size per_test.elf  |tee "per_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  24024	   1116	   6980	  32120	   7d78	per_test.elf
-'Finished building: per_test.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-18:32:24 Build Finished (took 780ms)
+16:39:43 Build Finished (took 210ms)
 
