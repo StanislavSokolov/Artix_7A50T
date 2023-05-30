@@ -139,7 +139,6 @@ int* PrepareDataToSendRS485(int mode, int reg, int count);
 void PrepareData(int mode, int reg, int count);
 int* PrepareDataToSendTestRS485();
 void GetUARTValueRS485();
-void InvertSignalToSendRS485();
 
 void ResetTotalSentCountRS485();
 int TotalSentCountRS485Check();
@@ -423,17 +422,6 @@ int* PrepareDataToSendRS485(int mode, int reg, int count) {
 			PrepareData(mode, reg, count);
 
 
-			u32 count_word = 0;
-			for (int j = 0; j < count; j++) {
-				u32 word = 0;
-					for (int i = 0; i < 8; i++) {
-						word = ((GetArrayCurrentStatusBool(reg+i+count_word*8) & 1) << i) | word;
-					}
-				SendBufferRS485[7+j] = word;
-				count_word++;
-			}
-
-
 			crc_rs485 = 0xffff;
 			crc_rs485 = GetCRC16_B_byte(crc_rs485, SendBufferRS485, 7 + count/8);
 			high_bits_crc_rs485 = crc_rs485/256;
@@ -448,7 +436,7 @@ int* PrepareDataToSendRS485(int mode, int reg, int count) {
 			SendBufferRS485[4] = count/256;
 			SendBufferRS485[5] = count - (count/256)*256;
 			SendBufferRS485[6] = count*2;
-			for (int i = 0; i < count*2; i = i + 2) SendBufferRS485[7 + i] = 1;
+			for (int i = 0; i < count*2; i++) SendBufferRS485[7 + i] = 255;
 //			for (int i = 0; i < count*2; i++) SendBufferRS485[7 + i] = i;
 			crc_rs485 = 0xffff;
 			crc_rs485 = GetCRC16_B_byte(crc_rs485, SendBufferRS485, 7 + count*2);
@@ -464,16 +452,6 @@ int* PrepareDataToSendRS485(int mode, int reg, int count) {
 //	}
 
 	return &SendBufferRS485;
-}
-
-void InvertSignalToSendRS485() {
-	if (SignalToInvert == 0) {
-		SetArrayCurrentStatusBool(515, 1);
-		SignalToInvert = 1;
-	} else {
-		SetArrayCurrentStatusBool(515, 0);
-		SignalToInvert = 0;
-	}
 }
 
 void PrepareData(int mode, int reg, int count) {
@@ -501,8 +479,13 @@ void PrepareData(int mode, int reg, int count) {
 					case 337:
 						break;
 					case 513:
-						SetArrayCurrentStatusBool(544, 1);
-						InvertSignalToSendRS485();
+						if (SignalToInvert == 0) {
+							SendBufferRS485[7 + 2] = 0;
+							SignalToInvert = 1;
+						} else {
+							SendBufferRS485[7 + 2] = 1;
+							SignalToInvert = 0;
+						}
 						break;
 				}
 				break;
