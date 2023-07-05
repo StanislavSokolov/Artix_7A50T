@@ -383,11 +383,21 @@ vlog -work axi_crossbar_v2_1_20 -64 "+incdir+../../../../Artix_7A50T.srcs/source
 vlog -work xil_defaultlib -64 "+incdir+../../../../Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/c923" "+incdir+../../../../Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
 
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_reset_sync.vhd" \
+"../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_src_HDL_DUT.vhd" \
+"../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_dut.vhd" \
+"../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_addr_decoder.vhd" \
+"../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_axi_lite_module.vhd" \
+"../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_axi_lite.vhd" \
+"../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip.vhd" \
+"../../../bd/design_1/ip/design_1_HDL_DUT_ip_0_0/sim/design_1_HDL_DUT_ip_0_0.vhd" \
+
 vlog -work axi_protocol_converter_v2_1_19 -64 "+incdir+../../../../Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/c923" "+incdir+../../../../Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" \
 "../../../../Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/c83a/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib -64 "+incdir+../../../../Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/c923" "+incdir+../../../../Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" \
-"../../../bd/design_1/ip/design_1_auto_pc_13/sim/design_1_auto_pc_13.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_14/sim/design_1_auto_pc_14.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_0/sim/design_1_auto_pc_0.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_1/sim/design_1_auto_pc_1.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_2/sim/design_1_auto_pc_2.v" \
@@ -407,6 +417,7 @@ vlog -work xil_defaultlib -64 "+incdir+../../../../Artix_7A50T.srcs/sources_1/bd
 "../../../bd/design_1/ip/design_1_auto_pc_10/sim/design_1_auto_pc_10.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_11/sim/design_1_auto_pc_11.v" \
 "../../../bd/design_1/ip/design_1_auto_pc_12/sim/design_1_auto_pc_12.v" \
+"../../../bd/design_1/ip/design_1_auto_pc_13/sim/design_1_auto_pc_13.v" \
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_1/sim/design_1.vhd" \

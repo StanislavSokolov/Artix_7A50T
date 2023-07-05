@@ -1,6 +1,27 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Wed Jul  5 15:47:28 2023
+| Host         : STAS-W10 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a50tftg256-3
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_HDL_DUT_ip_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_HDL_DUT_ip_0_0 (setcorp:user:HDL_DUT_ip:1.0) from (Rev. 1) to (Rev. 2)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
 | Date         : Fri May 26 11:33:08 2023
 | Host         : STAS-W10 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

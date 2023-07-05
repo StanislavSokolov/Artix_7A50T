@@ -606,6 +606,14 @@
 
 /******************************************************************/
 
+
+/* Definitions for peripheral HDL_DUT_IP_0 */
+#define XPAR_HDL_DUT_IP_0_BASEADDR 0x44A60000
+#define XPAR_HDL_DUT_IP_0_HIGHADDR 0x44A6FFFF
+
+
+/******************************************************************/
+
 /* Definitions for driver GPIO */
 #define XPAR_XGPIO_NUM_INSTANCES 4
 
