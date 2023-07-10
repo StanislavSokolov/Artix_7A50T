@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Wed Jul  5 15:48:01 2023
+--Date        : Mon Jul 10 17:46:13 2023
 --Host        : STAS-W10 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -49,7 +49,7 @@ entity design_1_wrapper is
     gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     gpio_rtl_1_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     gpio_rtl_2_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    gpio_rtl_3_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    gpio_rtl_3_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     not_cs_0 : out STD_LOGIC;
     reset_rtl_0 : in STD_LOGIC;
     sclk_0 : out STD_LOGIC;
@@ -108,14 +108,14 @@ architecture STRUCTURE of design_1_wrapper is
     spi_rtl_0_ss_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_0_ss_o : out STD_LOGIC_VECTOR ( 0 to 0 );
     spi_rtl_0_ss_t : out STD_LOGIC;
-    gpio_rtl_1_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     uart_rtl_0_rxd : in STD_LOGIC;
     uart_rtl_0_txd : out STD_LOGIC;
+    gpio_rtl_1_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     gpio_rtl_2_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    gpio_rtl_3_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
     uart_rtl_1_rxd : in STD_LOGIC;
     uart_rtl_1_txd : out STD_LOGIC;
+    gpio_rtl_3_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     DDR3_0_dq : inout STD_LOGIC_VECTOR ( 15 downto 0 );
     DDR3_0_dqs_p : inout STD_LOGIC_VECTOR ( 1 downto 0 );
     DDR3_0_dqs_n : inout STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -199,7 +199,7 @@ design_1_i: component design_1
       gpio_rtl_0_tri_o(7 downto 0) => gpio_rtl_0_tri_o(7 downto 0),
       gpio_rtl_1_tri_i(7 downto 0) => gpio_rtl_1_tri_i(7 downto 0),
       gpio_rtl_2_tri_o(7 downto 0) => gpio_rtl_2_tri_o(7 downto 0),
-      gpio_rtl_3_tri_i(1 downto 0) => gpio_rtl_3_tri_i(1 downto 0),
+      gpio_rtl_3_tri_i(7 downto 0) => gpio_rtl_3_tri_i(7 downto 0),
       not_cs_0 => not_cs_0,
       reset_rtl_0 => reset_rtl_0,
       sclk_0 => sclk_0,

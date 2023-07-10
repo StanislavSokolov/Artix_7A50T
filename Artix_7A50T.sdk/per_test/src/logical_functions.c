@@ -44,6 +44,8 @@ void GetSystemValues() {
 
 	SetArrayCurrentStatusInt(102, GetValueErrorsNegativePositiveAdc(2));
 
+
+
 }
 
 //void SetValuesInAddressSpace() {

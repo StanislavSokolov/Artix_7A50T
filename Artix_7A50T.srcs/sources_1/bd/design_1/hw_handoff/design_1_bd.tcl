@@ -506,7 +506,7 @@ proc create_root_design { parentCell } {
   set axi_gpio_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_3 ]
   set_property -dict [ list \
    CONFIG.C_ALL_INPUTS {1} \
-   CONFIG.C_GPIO_WIDTH {2} \
+   CONFIG.C_GPIO_WIDTH {8} \
  ] $axi_gpio_3
 
   # Create instance: axi_intc_0, and set properties
@@ -546,7 +546,7 @@ proc create_root_design { parentCell } {
   # Create instance: axi_uartlite_1, and set properties
   set axi_uartlite_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_1 ]
   set_property -dict [ list \
-   CONFIG.C_BAUDRATE {57600} \
+   CONFIG.C_BAUDRATE {115200} \
    CONFIG.C_S_AXI_ACLK_FREQ_HZ {50000000} \
  ] $axi_uartlite_1
 

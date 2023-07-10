@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_2" LaunchPart="xc7a50tftg256-3" LaunchTime="1688561425">
+<GenRun Id="impl_2" LaunchPart="xc7a50tftg256-3" LaunchTime="1689000390">
   <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>
@@ -128,5 +128,4 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_HDL_DUT_ip_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_13"/>
 </GenRun>

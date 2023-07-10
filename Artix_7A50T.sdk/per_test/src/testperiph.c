@@ -99,9 +99,16 @@ int main ()
    Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
    SetStartPWM();
 
+   Xil_Out32(XPAR_HDL_DUT_IP_0_BASEADDR, 1);
+   Xil_Out32(XPAR_HDL_DUT_IP_0_BASEADDR + 4, 1);
+
    while (1) {
 //	   controlIntr = GetBrightness();
 	   GetSystemValues();
+	   Xil_Out32(XPAR_HDL_DUT_IP_0_BASEADDR+100, 5);
+	   Xil_Out32(XPAR_HDL_DUT_IP_0_BASEADDR + 104, 5);
+	   SetArrayCurrentStatusInt(106, Xil_In32(XPAR_HDL_DUT_IP_0_BASEADDR + 108));
+//	   SetArrayCurrentStatusInt(106, 8);
 
 		   if (CountTimeOutRS485 < 1000) {
 //		   		   if (TestCheckTotalRecvCountRS485() == 0) {
@@ -169,6 +176,9 @@ int main ()
 	   			   SendDataRS485(&axi_uartlite_1_UartLite, PrepareDataToSendRS485(ModeRS485, NumberReg, CountReg), CountByteToSend);
 		   	   }
 		   } else {
+			   Xil_Out32(XPAR_HDL_DUT_IP_0_BASEADDR+100, 5);
+			   Xil_Out32(XPAR_HDL_DUT_IP_0_BASEADDR + 104, 5);
+			   SetArrayCurrentStatusInt(106, Xil_In32(XPAR_HDL_DUT_IP_0_BASEADDR + 108));
 			   CountTimeOutRS485 = 0;
 			   Xil_Out32(XPAR_IP_AXI_LEDS_0_S00_AXI_BASEADDR, 0x0000001);
 			   ModeRS485 = 15;

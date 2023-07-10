@@ -1,6 +1,6 @@
 {
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
 #  -string -flagsOSRD
 preplace port gpio_rtl_0 -pg 1 -lvl 8 -x 3330 -y 1290 -defaultsOSRD
 preplace port spi_rtl_0 -pg 1 -lvl 8 -x 3330 -y 2880 -defaultsOSRD
@@ -31,41 +31,41 @@ preplace port S2_0 -pg 1 -lvl 0 -x -20 -y 1110 -defaultsOSRD
 preplace port S2_inv_0 -pg 1 -lvl 0 -x -20 -y 1130 -defaultsOSRD
 preplace port LEDS_0 -pg 1 -lvl 8 -x 3330 -y 1570 -defaultsOSRD
 preplace port LEDS_1 -pg 1 -lvl 8 -x 3330 -y 1710 -defaultsOSRD
-preplace inst microblaze_0_local_memory -pg 1 -lvl 6 -x 2060 -y 2270 -defaultsOSRD
-preplace inst AckChecker_wrapper_0 -pg 1 -lvl 6 -x 2060 -y 570 -defaultsOSRD
-preplace inst IP_AXI_ADC_1 -pg 1 -lvl 7 -x 2850 -y 3120 -defaultsOSRD
-preplace inst IP_AXI_Encoder_0 -pg 1 -lvl 7 -x 2850 -y 1280 -defaultsOSRD
-preplace inst IP_AXI_INVERTER_0 -pg 1 -lvl 7 -x 2850 -y 370 -defaultsOSRD
-preplace inst IP_AXI_LEDS_0 -pg 1 -lvl 7 -x 2850 -y 1760 -defaultsOSRD
-preplace inst IP_AXI_PWM_0 -pg 1 -lvl 7 -x 2850 -y 2130 -defaultsOSRD
-preplace inst Inverter_3lvl_wrapper_0 -pg 1 -lvl 5 -x 1460 -y 830 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 7 -x 2850 -y 1480 -defaultsOSRD
-preplace inst axi_gpio_1 -pg 1 -lvl 7 -x 2850 -y 1620 -defaultsOSRD
-preplace inst axi_gpio_2 -pg 1 -lvl 7 -x 2850 -y 2580 -defaultsOSRD
-preplace inst axi_gpio_3 -pg 1 -lvl 7 -x 2850 -y 2720 -defaultsOSRD
-preplace inst axi_intc_0 -pg 1 -lvl 4 -x 1010 -y 2160 -defaultsOSRD
-preplace inst axi_quad_spi_0 -pg 1 -lvl 7 -x 2850 -y 2890 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 7 -x 2850 -y 2440 -defaultsOSRD
-preplace inst axi_uartlite_1 -pg 1 -lvl 7 -x 2850 -y 2280 -defaultsOSRD
-preplace inst clk_wiz_1 -pg 1 -lvl 2 -x 340 -y 2110 -defaultsOSRD
-preplace inst mdm_1 -pg 1 -lvl 4 -x 1010 -y 1990 -defaultsOSRD
-preplace inst microblaze_0 -pg 1 -lvl 5 -x 1460 -y 2170 -defaultsOSRD
-preplace inst microblaze_0_axi_periph -pg 1 -lvl 6 -x 2060 -y 1590 -defaultsOSRD
-preplace inst mig_7series_0 -pg 1 -lvl 7 -x 2850 -y 1920 -defaultsOSRD
-preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 3 -x 670 -y 2200 -defaultsOSRD
-preplace inst rst_mig_7series_0_166M -pg 1 -lvl 5 -x 1460 -y 1980 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 3 -x 670 -y 2400 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 6 -x 2080 -y 2270 -defaultsOSRD
+preplace inst AckChecker_wrapper_0 -pg 1 -lvl 6 -x 2080 -y 570 -defaultsOSRD
+preplace inst IP_AXI_ADC_1 -pg 1 -lvl 7 -x 2870 -y 3120 -defaultsOSRD
+preplace inst IP_AXI_Encoder_0 -pg 1 -lvl 7 -x 2870 -y 1280 -defaultsOSRD
+preplace inst IP_AXI_INVERTER_0 -pg 1 -lvl 7 -x 2870 -y 370 -defaultsOSRD
+preplace inst IP_AXI_LEDS_0 -pg 1 -lvl 7 -x 2870 -y 1760 -defaultsOSRD
+preplace inst IP_AXI_PWM_0 -pg 1 -lvl 7 -x 2870 -y 2130 -defaultsOSRD
+preplace inst Inverter_3lvl_wrapper_0 -pg 1 -lvl 5 -x 1480 -y 830 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 7 -x 2870 -y 1480 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 7 -x 2870 -y 1620 -defaultsOSRD
+preplace inst axi_gpio_2 -pg 1 -lvl 7 -x 2870 -y 2580 -defaultsOSRD
+preplace inst axi_gpio_3 -pg 1 -lvl 7 -x 2870 -y 2720 -defaultsOSRD
+preplace inst axi_intc_0 -pg 1 -lvl 4 -x 1030 -y 2160 -defaultsOSRD
+preplace inst axi_quad_spi_0 -pg 1 -lvl 7 -x 2870 -y 2890 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 7 -x 2870 -y 2440 -defaultsOSRD
+preplace inst axi_uartlite_1 -pg 1 -lvl 7 -x 2870 -y 2280 -defaultsOSRD
+preplace inst clk_wiz_1 -pg 1 -lvl 2 -x 350 -y 2110 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 4 -x 1030 -y 1990 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 5 -x 1480 -y 2170 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 6 -x 2080 -y 1590 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 7 -x 2870 -y 1920 -defaultsOSRD
+preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 3 -x 690 -y 2200 -defaultsOSRD
+preplace inst rst_mig_7series_0_166M -pg 1 -lvl 5 -x 1480 -y 1980 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 3 -x 690 -y 2400 -defaultsOSRD
 preplace inst HDL_DUT_ip_0 -pg 1 -lvl 1 -x 130 -y 1890 -defaultsOSRD
-preplace netloc microblaze_0_Clk 1 0 7 0 1770 N 1770 440 2300 860 2260 1150 1020 1740 800 2440
-preplace netloc clk_wiz_1_locked 1 2 1 430 2130n
-preplace netloc rst_clk_wiz_1_100M_mb_reset 1 3 2 870 2250 1210J
-preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 3 3 850J 2270 NJ 2270 1700
-preplace netloc mdm_1_debug_sys_rst 1 1 4 250 2030 470 2060 NJ 2060 1130
-preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 0 7 10 1780 240 1800 N 1800 840 1800 NJ 1800 1810 1080 2550
-preplace netloc reset_rtl_0_1 1 0 7 NJ 2190 N 2190 450 1860 N 1860 N 1860 1710 2110 2430
+preplace netloc microblaze_0_Clk 1 0 7 0 1770 N 1770 450 2300 880 2260 1170 1020 1760 800 2460
+preplace netloc clk_wiz_1_locked 1 2 1 440 2130n
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 3 2 890 2250 1230J
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 3 3 870J 2270 NJ 2270 1720
+preplace netloc mdm_1_debug_sys_rst 1 1 4 250 2030 480 2060 NJ 2060 1150
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 0 7 10 1780 240 1800 N 1800 860 1800 NJ 1800 1830 1080 2570
+preplace netloc reset_rtl_0_1 1 0 7 NJ 2190 N 2190 460 1860 N 1860 N 1860 1730 2110 2450
 preplace netloc clk_100MHz_1 1 0 2 NJ 2120 N
-preplace netloc mig_7series_0_ui_clk 1 4 4 1210 1610 1760 1120 N 1120 3100
-preplace netloc rst_mig_7series_0_166M_peripheral_aresetn 1 5 2 1800 2120 2590
+preplace netloc mig_7series_0_ui_clk 1 4 4 1230 1610 1780 1120 N 1120 3120
+preplace netloc rst_mig_7series_0_166M_peripheral_aresetn 1 5 2 1820 2120 2610
 preplace netloc IP_AXI_ADC_1_sclk 1 7 1 NJ 3090
 preplace netloc IP_AXI_ADC_1_a0 1 7 1 NJ 3110
 preplace netloc IP_AXI_ADC_1_not_cs 1 7 1 NJ 3130
@@ -77,76 +77,76 @@ preplace netloc data_in_a2_0_1 1 0 7 NJ 3120 N 3120 NJ 3120 NJ 3120 NJ 3120 NJ 3
 preplace netloc data_in_b2_0_1 1 0 7 NJ 3140 N 3140 NJ 3140 NJ 3140 NJ 3140 NJ 3140 NJ
 preplace netloc data_in_a3_0_1 1 0 7 NJ 3160 N 3160 NJ 3160 NJ 3160 NJ 3160 NJ 3160 NJ
 preplace netloc data_in_b3_0_1 1 0 7 NJ 3180 N 3180 NJ 3180 NJ 3180 NJ 3180 NJ 3180 NJ
-preplace netloc S0_0_1 1 0 7 0J 1080 250 1090 NJ 1090 NJ 1090 NJ 1090 NJ 1090 2540J
-preplace netloc S0_inv_0_1 1 0 7 NJ 1050 250 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 2600J
-preplace netloc S1_0_1 1 0 7 NJ 1070 N 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 2530J
-preplace netloc S1_inv_0_1 1 0 7 NJ 1090 240 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 2520J
-preplace netloc S2_0_1 1 0 7 NJ 1110 N 1110 NJ 1110 NJ 1110 NJ 1110 NJ 1110 2510J
-preplace netloc S2_inv_0_1 1 0 7 NJ 1130 N 1130 NJ 1130 NJ 1130 NJ 1130 NJ 1130 2490J
-preplace netloc xlconcat_0_dout 1 3 1 880 2190n
-preplace netloc axi_uartlite_0_interrupt 1 2 6 490 2490 890J 2360 NJ 2360 NJ 2360 NJ 2360 3100
-preplace netloc axi_uartlite_1_interrupt 1 2 6 450 2800 NJ 2800 NJ 2800 NJ 2800 NJ 2800 3110
-preplace netloc Inverter_3lvl_wrapper_0_MinTimeError 1 5 2 1700J 290 2440
-preplace netloc AckChecker_wrapper_0_AcknowledgeErrorGroup0 1 6 1 2460 340n
-preplace netloc AckChecker_wrapper_0_AcknowledgeErrorGroup1 1 6 1 2470 360n
-preplace netloc AckChecker_wrapper_0_CurrentErrorGroup0 1 6 1 2530 400n
-preplace netloc AckChecker_wrapper_0_CurrentErrorGroup1 1 6 1 2540 420n
-preplace netloc IP_AXI_INVERTER_0_BreakingEnable 1 4 4 1190 280 NJ 280 2320J 720 3180
-preplace netloc IP_AXI_INVERTER_0_MaskChGroup0 1 4 4 1210 320 NJ 320 2570J 770 3270
-preplace netloc IP_AXI_INVERTER_0_MaskChGroup1 1 4 4 1220 330 NJ 330 2580J 750 3210
-preplace netloc IP_AXI_INVERTER_0_MaskMinTimeErrorGroup0 1 4 4 1130 30 NJ 30 NJ 30 3140
-preplace netloc IP_AXI_PWM_0_PWM_interrupt 1 2 6 480 1840 NJ 1840 NJ 1840 1780J 2070 2580J 2040 3100
-preplace netloc IP_AXI_ADC_1_hwp_interrupt 1 2 6 500 2500 NJ 2500 NJ 2500 NJ 2500 2600 3280 3100
-preplace netloc IP_AXI_PWM_0_PWM_OUT 1 4 4 1170 1010 NJ 1010 NJ 1010 3120
-preplace netloc Inverter_3lvl_wrapper_0_ChGroup0 1 5 1 1720 660n
-preplace netloc IP_AXI_INVERTER_0_DeadTimeGroup0 1 4 4 1140 300 NJ 300 2600J 730 3140
-preplace netloc IP_AXI_INVERTER_0_Error 1 4 4 1150 310 NJ 310 2590J 740 3110
-preplace netloc IP_AXI_INVERTER_0_MinTimeEnable 1 4 4 1160 340 NJ 340 2450J 800 3130
-preplace netloc IP_AXI_INVERTER_0_MinTimeGroup0 1 4 4 1200 350 NJ 350 2560J 760 3170
-preplace netloc IP_AXI_INVERTER_0_Ready 1 4 4 1220 1000 1730 860 NJ 860 3160
-preplace netloc IP_AXI_INVERTER_0_Reset 1 4 4 1180 660 1710 790 NJ 790 3120
-preplace netloc IP_AXI_INVERTER_0_AcknowledgeTimeGroup0 1 5 3 1770 360 2400J 710 3100
-preplace netloc IP_AXI_INVERTER_0_MaskCurrentGroup1 1 5 3 1800 850 NJ 850 3220
-preplace netloc IP_AXI_INVERTER_0_MaskCurrentGroup0 1 5 3 1790 840 NJ 840 3230
-preplace netloc IP_AXI_INVERTER_0_MaskAcknowledgeGroup1 1 5 3 1780 830 NJ 830 3240
-preplace netloc IP_AXI_INVERTER_0_MaskAcknowledgeGroup0 1 5 3 1810 780 NJ 780 3150
-preplace netloc IP_AXI_INVERTER_0_CurrentProtectionEnableGroup1 1 5 3 1760 820 NJ 820 3250
-preplace netloc IP_AXI_INVERTER_0_CurrentProtectionEnableGroup0 1 5 3 1750 810 NJ 810 3260
-preplace netloc IP_AXI_INVERTER_0_AcknowledgeProtectionEnableGroup0 1 5 3 1710 10 NJ 10 3200
-preplace netloc IP_AXI_INVERTER_0_AcknowledgeProtectionEnableGroup1 1 5 3 1720 20 NJ 20 3190
-preplace netloc IP_AXI_LEDS_0_LEDS 1 7 1 3270J 1570n
-preplace netloc mig_7series_0_mmcm_locked 1 4 4 1200 1870 1720J 2090 2570J 2020 3100
-preplace netloc mig_7series_0_ui_clk_sync_rst 1 4 4 1220 1880 1700J 2100 2330J 2030 3110
-preplace netloc clk_wiz_1_clk_out2 1 2 5 460J 2070 NJ 2070 1130J 2080 NJ 2080 2420J
+preplace netloc S0_0_1 1 0 7 0J 1080 250 1090 NJ 1090 NJ 1090 NJ 1090 NJ 1090 2560J
+preplace netloc S0_inv_0_1 1 0 7 NJ 1050 250 1060 NJ 1060 NJ 1060 NJ 1060 NJ 1060 2620J
+preplace netloc S1_0_1 1 0 7 NJ 1070 N 1070 NJ 1070 NJ 1070 NJ 1070 NJ 1070 2550J
+preplace netloc S1_inv_0_1 1 0 7 NJ 1090 240 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 2540J
+preplace netloc S2_0_1 1 0 7 NJ 1110 N 1110 NJ 1110 NJ 1110 NJ 1110 NJ 1110 2530J
+preplace netloc S2_inv_0_1 1 0 7 NJ 1130 N 1130 NJ 1130 NJ 1130 NJ 1130 NJ 1130 2510J
+preplace netloc xlconcat_0_dout 1 3 1 900 2190n
+preplace netloc axi_uartlite_0_interrupt 1 2 6 500 2490 910J 2360 NJ 2360 NJ 2360 NJ 2360 3120
+preplace netloc axi_uartlite_1_interrupt 1 2 6 460 2800 NJ 2800 NJ 2800 NJ 2800 NJ 2800 3130
+preplace netloc Inverter_3lvl_wrapper_0_MinTimeError 1 5 2 1720J 290 2460
+preplace netloc AckChecker_wrapper_0_AcknowledgeErrorGroup0 1 6 1 2480 340n
+preplace netloc AckChecker_wrapper_0_AcknowledgeErrorGroup1 1 6 1 2490 360n
+preplace netloc AckChecker_wrapper_0_CurrentErrorGroup0 1 6 1 2550 400n
+preplace netloc AckChecker_wrapper_0_CurrentErrorGroup1 1 6 1 2560 420n
+preplace netloc IP_AXI_INVERTER_0_BreakingEnable 1 4 4 1210 280 NJ 280 2340J 720 3200
+preplace netloc IP_AXI_INVERTER_0_MaskChGroup0 1 4 4 1230 320 NJ 320 2590J 770 3290
+preplace netloc IP_AXI_INVERTER_0_MaskChGroup1 1 4 4 1240 330 NJ 330 2600J 750 3230
+preplace netloc IP_AXI_INVERTER_0_MaskMinTimeErrorGroup0 1 4 4 1150 30 NJ 30 NJ 30 3160
+preplace netloc IP_AXI_PWM_0_PWM_interrupt 1 2 6 490 1840 NJ 1840 NJ 1840 1800J 2070 2600J 2040 3120
+preplace netloc IP_AXI_ADC_1_hwp_interrupt 1 2 6 510 2500 NJ 2500 NJ 2500 NJ 2500 2620 3280 3120
+preplace netloc IP_AXI_PWM_0_PWM_OUT 1 4 4 1190 1010 NJ 1010 NJ 1010 3140
+preplace netloc Inverter_3lvl_wrapper_0_ChGroup0 1 5 1 1740 660n
+preplace netloc IP_AXI_INVERTER_0_DeadTimeGroup0 1 4 4 1160 300 NJ 300 2620J 730 3160
+preplace netloc IP_AXI_INVERTER_0_Error 1 4 4 1170 310 NJ 310 2610J 740 3130
+preplace netloc IP_AXI_INVERTER_0_MinTimeEnable 1 4 4 1180 340 NJ 340 2470J 800 3150
+preplace netloc IP_AXI_INVERTER_0_MinTimeGroup0 1 4 4 1220 350 NJ 350 2580J 760 3190
+preplace netloc IP_AXI_INVERTER_0_Ready 1 4 4 1240 1000 1750 860 NJ 860 3180
+preplace netloc IP_AXI_INVERTER_0_Reset 1 4 4 1200 660 1730 790 NJ 790 3140
+preplace netloc IP_AXI_INVERTER_0_AcknowledgeTimeGroup0 1 5 3 1790 360 2420J 710 3120
+preplace netloc IP_AXI_INVERTER_0_MaskCurrentGroup1 1 5 3 1820 850 NJ 850 3240
+preplace netloc IP_AXI_INVERTER_0_MaskCurrentGroup0 1 5 3 1810 840 NJ 840 3250
+preplace netloc IP_AXI_INVERTER_0_MaskAcknowledgeGroup1 1 5 3 1800 830 NJ 830 3260
+preplace netloc IP_AXI_INVERTER_0_MaskAcknowledgeGroup0 1 5 3 1830 780 NJ 780 3170
+preplace netloc IP_AXI_INVERTER_0_CurrentProtectionEnableGroup1 1 5 3 1780 820 NJ 820 3270
+preplace netloc IP_AXI_INVERTER_0_CurrentProtectionEnableGroup0 1 5 3 1770 810 NJ 810 3280
+preplace netloc IP_AXI_INVERTER_0_AcknowledgeProtectionEnableGroup0 1 5 3 1730 10 NJ 10 3220
+preplace netloc IP_AXI_INVERTER_0_AcknowledgeProtectionEnableGroup1 1 5 3 1740 20 NJ 20 3210
+preplace netloc IP_AXI_LEDS_0_LEDS 1 7 1 3290J 1570n
+preplace netloc mig_7series_0_mmcm_locked 1 4 4 1220 1870 1740J 2090 2590J 2020 3120
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 4 4 1240 1880 1720J 2100 2350J 2030 3130
+preplace netloc clk_wiz_1_clk_out2 1 2 5 470J 2070 NJ 2070 1150J 2080 NJ 2080 2440J
 preplace netloc axi_quad_spi_0_SPI_0 1 7 1 NJ 2880
-preplace netloc axi_gpio_1_GPIO 1 7 1 3220J 1430n
-preplace netloc microblaze_0_debug 1 4 1 1140 1980n
-preplace netloc microblaze_0_M_AXI_DP 1 5 1 1770 1190n
-preplace netloc microblaze_0_axi_periph_M05_AXI 1 6 1 2420 1550n
-preplace netloc axi_gpio_0_GPIO 1 7 1 3150J 1290n
-preplace netloc microblaze_0_axi_periph_M08_AXI 1 6 1 2380 1610n
-preplace netloc microblaze_0_axi_periph_M00_AXI 1 6 1 2490 1450n
-preplace netloc microblaze_0_axi_periph_M04_AXI 1 3 4 850 1850 NJ 1850 1730J 2060 2320
+preplace netloc microblaze_0_debug 1 4 1 1160 1980n
+preplace netloc microblaze_0_M_AXI_DP 1 5 1 1790 1190n
+preplace netloc microblaze_0_axi_periph_M05_AXI 1 6 1 2440 1550n
+preplace netloc axi_gpio_0_GPIO 1 7 1 3170J 1290n
+preplace netloc microblaze_0_axi_periph_M00_AXI 1 6 1 2510 1450n
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 3 4 870 1850 NJ 1850 1750J 2060 2340
 preplace netloc axi_uartlite_0_UART 1 7 1 NJ 2430
-preplace netloc microblaze_0_axi_periph_M10_AXI 1 6 1 2370 1650n
-preplace netloc axi_intc_0_interrupt 1 4 1 1130 2140n
-preplace netloc microblaze_0_axi_periph_M06_AXI 1 6 1 2350 1570n
-preplace netloc microblaze_0_axi_periph_M09_AXI 1 6 1 2340 1630n
+preplace netloc axi_gpio_1_GPIO 1 7 1 3240J 1430n
+preplace netloc microblaze_0_axi_periph_M10_AXI 1 6 1 2390 1650n
+preplace netloc axi_intc_0_interrupt 1 4 1 1150 2140n
+preplace netloc microblaze_0_axi_periph_M06_AXI 1 6 1 2370 1570n
+preplace netloc microblaze_0_axi_periph_M08_AXI 1 6 1 2400 1610n
+preplace netloc microblaze_0_axi_periph_M09_AXI 1 6 1 2360 1630n
 preplace netloc axi_gpio_2_GPIO 1 7 1 NJ 2580
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 6 1 2430 1490n
+preplace netloc microblaze_0_dlmb_1 1 5 1 1730 2150n
+preplace netloc microblaze_0_axi_periph_M12_AXI 1 6 1 2380 1690n
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 6 1 2420 1470n
+preplace netloc microblaze_0_axi_periph_M07_AXI 1 6 1 2520 1200n
+preplace netloc axi_uartlite_1_UART 1 7 1 3210J 2250n
 preplace netloc axi_gpio_3_GPIO 1 7 1 NJ 2720
-preplace netloc microblaze_0_dlmb_1 1 5 1 1710 2150n
-preplace netloc microblaze_0_axi_periph_M01_AXI 1 6 1 2400 1470n
-preplace netloc microblaze_0_ilmb_1 1 5 1 1700 2170n
-preplace netloc microblaze_0_axi_periph_M11_AXI 1 6 1 2480 260n
-preplace netloc microblaze_0_axi_periph_M07_AXI 1 6 1 2500 1200n
-preplace netloc microblaze_0_axi_periph_M13_AXI 1 6 1 2390 1710n
-preplace netloc microblaze_0_axi_periph_M03_AXI 1 6 1 2490 1510n
-preplace netloc axi_uartlite_1_UART 1 7 1 3190J 2250n
-preplace netloc microblaze_0_axi_periph_M12_AXI 1 6 1 2360 1690n
-preplace netloc mig_7series_0_DDR3 1 7 1 3230 1850n
-preplace netloc microblaze_0_axi_periph_M02_AXI 1 6 1 2410 1490n
-preplace netloc microblaze_0_axi_periph_M14_AXI 1 0 7 20 1790 NJ 1790 NJ 1790 NJ 1790 NJ 1790 1790J 2050 2310
-levelinfo -pg 1 -20 130 340 670 1010 1460 2060 2850 3330
+preplace netloc microblaze_0_axi_periph_M13_AXI 1 6 1 2410 1710n
+preplace netloc mig_7series_0_DDR3 1 7 1 3250 1850n
+preplace netloc microblaze_0_axi_periph_M11_AXI 1 6 1 2500 260n
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 6 1 2510 1510n
+preplace netloc microblaze_0_ilmb_1 1 5 1 1720 2170n
+preplace netloc microblaze_0_axi_periph_M14_AXI 1 0 7 20 1790 NJ 1790 NJ 1790 NJ 1790 NJ 1790 1810J 2050 2330
+levelinfo -pg 1 -20 130 350 690 1030 1480 2080 2870 3330
 pagesize -pg 1 -db -bbox -sgen -160 0 3450 3420
 "
 }

@@ -1,45 +1,45 @@
 # ----------------------------------------------------------------------------
 # Encoder - Bank ??
 # ----------------------------------------------------------------------------
-set_property PACKAGE_PIN H5 [get_ports S0_0]
+set_property PACKAGE_PIN K1 [get_ports S0_0]
 set_property IOSTANDARD LVCMOS33 [get_ports S0_0]
-set_property PACKAGE_PIN H4 [get_ports S0_inv_0]
+set_property PACKAGE_PIN J1 [get_ports S0_inv_0]
 set_property IOSTANDARD LVCMOS33 [get_ports S0_inv_0]
-set_property PACKAGE_PIN J5 [get_ports S1_0]
+set_property PACKAGE_PIN B7 [get_ports S1_0]
 set_property IOSTANDARD LVCMOS33 [get_ports S1_0]
-set_property PACKAGE_PIN J4 [get_ports S1_inv_0]
+set_property PACKAGE_PIN A7 [get_ports S1_inv_0]
 set_property IOSTANDARD LVCMOS33 [get_ports S1_inv_0]
-set_property PACKAGE_PIN H2 [get_ports S2_0]
+set_property PACKAGE_PIN B6 [get_ports S2_0]
 set_property IOSTANDARD LVCMOS33 [get_ports S2_0]
-set_property PACKAGE_PIN H1 [get_ports S2_inv_0]
+set_property PACKAGE_PIN B5 [get_ports S2_inv_0]
 set_property IOSTANDARD LVCMOS33 [get_ports S2_inv_0]
 
 # ----------------------------------------------------------------------------
 # ADC - Bank ??
 # ----------------------------------------------------------------------------
 
-set_property PACKAGE_PIN K1 [get_ports data_in_a0_0]
+set_property PACKAGE_PIN F4 [get_ports data_in_a0_0]
 set_property IOSTANDARD LVCMOS33 [get_ports data_in_a0_0]
-set_property PACKAGE_PIN J1 [get_ports data_in_b0_0]
+set_property PACKAGE_PIN F3 [get_ports data_in_b0_0]
 set_property IOSTANDARD LVCMOS33 [get_ports data_in_b0_0]
-set_property PACKAGE_PIN B7 [get_ports data_in_a1_0]
+set_property PACKAGE_PIN F2 [get_ports data_in_a1_0]
 set_property IOSTANDARD LVCMOS33 [get_ports data_in_a1_0]
-set_property PACKAGE_PIN A7 [get_ports data_in_b1_0]
+set_property PACKAGE_PIN E1 [get_ports data_in_b1_0]
 set_property IOSTANDARD LVCMOS33 [get_ports data_in_b1_0]
-set_property PACKAGE_PIN B6 [get_ports data_in_a2_0]
+set_property PACKAGE_PIN G5 [get_ports data_in_a2_0]
 set_property IOSTANDARD LVCMOS33 [get_ports data_in_a2_0]
-set_property PACKAGE_PIN B5 [get_ports data_in_b2_0]
+set_property PACKAGE_PIN G4 [get_ports data_in_b2_0]
 set_property IOSTANDARD LVCMOS33 [get_ports data_in_b2_0]
-set_property PACKAGE_PIN A5 [get_ports data_in_a3_0]
+set_property PACKAGE_PIN G2 [get_ports data_in_a3_0]
 set_property IOSTANDARD LVCMOS33 [get_ports data_in_a3_0]
-set_property PACKAGE_PIN A4 [get_ports data_in_b3_0]
+set_property PACKAGE_PIN G1 [get_ports data_in_b3_0]
 set_property IOSTANDARD LVCMOS33 [get_ports data_in_b3_0]
 
-set_property PACKAGE_PIN B4 [get_ports sclk_0]
+set_property PACKAGE_PIN F5 [get_ports sclk_0]
 set_property IOSTANDARD LVCMOS33 [get_ports sclk_0]
-set_property PACKAGE_PIN A3 [get_ports a0_0]
+set_property PACKAGE_PIN D4 [get_ports a0_0]
 set_property IOSTANDARD LVCMOS33 [get_ports a0_0]
-set_property PACKAGE_PIN C7 [get_ports not_cs_0]
+set_property PACKAGE_PIN C4 [get_ports not_cs_0]
 set_property IOSTANDARD LVCMOS33 [get_ports not_cs_0]
 
 # ----------------------------------------------------------------------------
@@ -76,10 +76,22 @@ set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_2_tri_o[7]}]
 # ?? - Bank ??
 # ----------------------------------------------------------------------------
 
-set_property PACKAGE_PIN J3 [get_ports {gpio_rtl_3_tri_i[0]}]
+set_property PACKAGE_PIN H5 [get_ports {gpio_rtl_3_tri_i[0]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_3_tri_i[0]}]
-set_property PACKAGE_PIN H3 [get_ports {gpio_rtl_3_tri_i[1]}]
+set_property PACKAGE_PIN H4 [get_ports {gpio_rtl_3_tri_i[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_3_tri_i[1]}]
+set_property PACKAGE_PIN J5 [get_ports {gpio_rtl_3_tri_i[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_3_tri_i[2]}]
+set_property PACKAGE_PIN J4 [get_ports {gpio_rtl_3_tri_i[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_3_tri_i[3]}]
+set_property PACKAGE_PIN H2 [get_ports {gpio_rtl_3_tri_i[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_3_tri_i[4]}]
+set_property PACKAGE_PIN H1 [get_ports {gpio_rtl_3_tri_i[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_3_tri_i[5]}]
+set_property PACKAGE_PIN J3 [get_ports {gpio_rtl_3_tri_i[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_3_tri_i[6]}]
+set_property PACKAGE_PIN H3 [get_ports {gpio_rtl_3_tri_i[7]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {gpio_rtl_3_tri_i[7]}]
 
 # ----------------------------------------------------------------------------
 # UART-RS485(MODBUS) - Bank ??
