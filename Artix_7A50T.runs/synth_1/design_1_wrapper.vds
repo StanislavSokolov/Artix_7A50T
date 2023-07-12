@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Jul 12 12:25:21 2023
-# Process ID: 14644
+# Start of session at: Wed Jul 12 18:28:15 2023
+# Process ID: 12648
 # Current directory: D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/design_1_wrapper.vds
@@ -13,152 +13,152 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/GITEA/GitHub/ES/IP_cores'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2019.1/data/ip'.
-add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 425.133 ; gain = 42.465
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 424.070 ; gain = 41.730
 Command: synth_design -top design_1_wrapper -part xc7a50tftg256-3
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a50t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a50t'
 INFO: [Device 21-403] Loading part xc7a50tftg256-3
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8728 
+INFO: Helper process launched with PID 4100 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 860.641 ; gain = 177.469
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 859.859 ; gain = 177.305
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:69]
 INFO: [Synth 8-3491] module 'design_1' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:10355' bound to instance 'design_1_i' of component 'design_1' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:164]
 INFO: [Synth 8-638] synthesizing module 'design_1' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:10426]
-INFO: [Synth 8-3491] module 'design_1_AckChecker_wrapper_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_AckChecker_wrapper_0_0_stub.vhdl:5' bound to instance 'AckChecker_wrapper_0' of component 'design_1_AckChecker_wrapper_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11666]
-INFO: [Synth 8-638] synthesizing module 'design_1_AckChecker_wrapper_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_AckChecker_wrapper_0_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_HDL_DUT_ip_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_HDL_DUT_ip_0_0_stub.vhdl:5' bound to instance 'HDL_DUT_ip_0' of component 'design_1_HDL_DUT_ip_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11689]
-INFO: [Synth 8-638] synthesizing module 'design_1_HDL_DUT_ip_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_HDL_DUT_ip_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_IP_AXI_ADC_1_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_IP_AXI_ADC_1_0_stub.vhdl:5' bound to instance 'IP_AXI_ADC_1' of component 'design_1_IP_AXI_ADC_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11713]
-INFO: [Synth 8-638] synthesizing module 'design_1_IP_AXI_ADC_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_IP_AXI_ADC_1_0_stub.vhdl:44]
-INFO: [Synth 8-3491] module 'design_1_IP_AXI_Encoder_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_IP_AXI_Encoder_0_0_stub.vhdl:5' bound to instance 'IP_AXI_Encoder_0' of component 'design_1_IP_AXI_Encoder_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11749]
-INFO: [Synth 8-638] synthesizing module 'design_1_IP_AXI_Encoder_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_IP_AXI_Encoder_0_0_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'design_1_IP_AXI_INVERTER_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_IP_AXI_INVERTER_0_0_stub.vhdl:5' bound to instance 'IP_AXI_INVERTER_0' of component 'design_1_IP_AXI_INVERTER_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11779]
-INFO: [Synth 8-638] synthesizing module 'design_1_IP_AXI_INVERTER_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_IP_AXI_INVERTER_0_0_stub.vhdl:70]
-INFO: [Synth 8-3491] module 'design_1_IP_AXI_LEDS_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_IP_AXI_LEDS_0_0_stub.vhdl:5' bound to instance 'IP_AXI_LEDS_0' of component 'design_1_IP_AXI_LEDS_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11841]
-INFO: [Synth 8-638] synthesizing module 'design_1_IP_AXI_LEDS_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_IP_AXI_LEDS_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'design_1_IP_AXI_PWM_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_IP_AXI_PWM_0_0_stub.vhdl:5' bound to instance 'IP_AXI_PWM_0' of component 'design_1_IP_AXI_PWM_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11866]
-INFO: [Synth 8-638] synthesizing module 'design_1_IP_AXI_PWM_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_IP_AXI_PWM_0_0_stub.vhdl:35]
-INFO: [Synth 8-3491] module 'design_1_Inverter_3lvl_wrapper_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_Inverter_3lvl_wrapper_0_0_stub.vhdl:5' bound to instance 'Inverter_3lvl_wrapper_0' of component 'design_1_Inverter_3lvl_wrapper_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11893]
-INFO: [Synth 8-638] synthesizing module 'design_1_Inverter_3lvl_wrapper_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_Inverter_3lvl_wrapper_0_0_stub.vhdl:26]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11911]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_gpio_0_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_1_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_gpio_1_0_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11934]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_gpio_1_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_2_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_gpio_2_0_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'design_1_axi_gpio_2_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11957]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_2_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_gpio_2_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_3_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_gpio_3_0_stub.vhdl:5' bound to instance 'axi_gpio_3' of component 'design_1_axi_gpio_3_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11980]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_3_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_gpio_3_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_axi_intc_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_intc_0_0_stub.vhdl:5' bound to instance 'axi_intc_0' of component 'design_1_axi_intc_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12003]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_intc_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_intc_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_axi_quad_spi_0_2' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_quad_spi_0_2_stub.vhdl:5' bound to instance 'axi_quad_spi_0' of component 'design_1_axi_quad_spi_0_2' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12027]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_quad_spi_0_2' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_quad_spi_0_2_stub.vhdl:50]
-INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12069]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_uartlite_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'design_1_axi_uartlite_1_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_uartlite_1_0_stub.vhdl:5' bound to instance 'axi_uartlite_1' of component 'design_1_axi_uartlite_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12094]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_axi_uartlite_1_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_1_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'design_1_clk_wiz_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12119]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_clk_wiz_1_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'design_1_mdm_1_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12127]
-INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_mdm_1_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_microblaze_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12140]
-INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_microblaze_0_0_stub.vhdl:63]
+INFO: [Synth 8-3491] module 'design_1_AckChecker_wrapper_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_AckChecker_wrapper_0_0_stub.vhdl:5' bound to instance 'AckChecker_wrapper_0' of component 'design_1_AckChecker_wrapper_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11666]
+INFO: [Synth 8-638] synthesizing module 'design_1_AckChecker_wrapper_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_AckChecker_wrapper_0_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_HDL_DUT_ip_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_HDL_DUT_ip_0_0_stub.vhdl:5' bound to instance 'HDL_DUT_ip_0' of component 'design_1_HDL_DUT_ip_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11689]
+INFO: [Synth 8-638] synthesizing module 'design_1_HDL_DUT_ip_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_HDL_DUT_ip_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_IP_AXI_ADC_1_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_IP_AXI_ADC_1_0_stub.vhdl:5' bound to instance 'IP_AXI_ADC_1' of component 'design_1_IP_AXI_ADC_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11713]
+INFO: [Synth 8-638] synthesizing module 'design_1_IP_AXI_ADC_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_IP_AXI_ADC_1_0_stub.vhdl:44]
+INFO: [Synth 8-3491] module 'design_1_IP_AXI_Encoder_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_IP_AXI_Encoder_0_0_stub.vhdl:5' bound to instance 'IP_AXI_Encoder_0' of component 'design_1_IP_AXI_Encoder_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11749]
+INFO: [Synth 8-638] synthesizing module 'design_1_IP_AXI_Encoder_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_IP_AXI_Encoder_0_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'design_1_IP_AXI_INVERTER_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_IP_AXI_INVERTER_0_0_stub.vhdl:5' bound to instance 'IP_AXI_INVERTER_0' of component 'design_1_IP_AXI_INVERTER_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11779]
+INFO: [Synth 8-638] synthesizing module 'design_1_IP_AXI_INVERTER_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_IP_AXI_INVERTER_0_0_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'design_1_IP_AXI_LEDS_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_IP_AXI_LEDS_0_0_stub.vhdl:5' bound to instance 'IP_AXI_LEDS_0' of component 'design_1_IP_AXI_LEDS_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11841]
+INFO: [Synth 8-638] synthesizing module 'design_1_IP_AXI_LEDS_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_IP_AXI_LEDS_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_IP_AXI_PWM_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_IP_AXI_PWM_0_0_stub.vhdl:5' bound to instance 'IP_AXI_PWM_0' of component 'design_1_IP_AXI_PWM_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11866]
+INFO: [Synth 8-638] synthesizing module 'design_1_IP_AXI_PWM_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_IP_AXI_PWM_0_0_stub.vhdl:35]
+INFO: [Synth 8-3491] module 'design_1_Inverter_3lvl_wrapper_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_Inverter_3lvl_wrapper_0_0_stub.vhdl:5' bound to instance 'Inverter_3lvl_wrapper_0' of component 'design_1_Inverter_3lvl_wrapper_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11893]
+INFO: [Synth 8-638] synthesizing module 'design_1_Inverter_3lvl_wrapper_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_Inverter_3lvl_wrapper_0_0_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11911]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_gpio_0_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_1_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_gpio_1_0_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11934]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_gpio_1_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_2_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_gpio_2_0_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'design_1_axi_gpio_2_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11957]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_2_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_gpio_2_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_3_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_gpio_3_0_stub.vhdl:5' bound to instance 'axi_gpio_3' of component 'design_1_axi_gpio_3_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:11980]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_3_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_gpio_3_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_intc_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_intc_0_0_stub.vhdl:5' bound to instance 'axi_intc_0' of component 'design_1_axi_intc_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12003]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_intc_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_intc_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_axi_quad_spi_0_2' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_quad_spi_0_2_stub.vhdl:5' bound to instance 'axi_quad_spi_0' of component 'design_1_axi_quad_spi_0_2' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12027]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_quad_spi_0_2' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_quad_spi_0_2_stub.vhdl:50]
+INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12069]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_uartlite_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_axi_uartlite_1_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_uartlite_1_0_stub.vhdl:5' bound to instance 'axi_uartlite_1' of component 'design_1_axi_uartlite_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12094]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_axi_uartlite_1_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_1_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'design_1_clk_wiz_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12119]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_clk_wiz_1_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'design_1_mdm_1_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12127]
+INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_mdm_1_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12140]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_microblaze_0_0_stub.vhdl:63]
 INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_axi_periph_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:6575]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_8RVYHO' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:79]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:263]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_0_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_0_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_8RVYHO' (1#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:79]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1UTB3Y5' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:396]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_1' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_1' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:580]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_1' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_1_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_1' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_1' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:580]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_1' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_1_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1UTB3Y5' (2#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:396]
 INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_7ANRHB' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:713]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_2' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_2_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_2' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:897]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_2' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_2_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_2' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_2_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_2' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:897]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_2' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_2_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_7ANRHB' (3#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:713]
 INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_1W07O72' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1030]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_3' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_3_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_3' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1214]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_3' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_3_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_3' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_3_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_3' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1214]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_3' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_3_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_1W07O72' (4#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1030]
 INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_5LX7BU' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1347]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_4' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_4_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_4' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1531]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_4' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_4_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_4' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_4_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_4' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1531]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_4' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_4_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_5LX7BU' (5#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1347]
 INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_1XR4ZAZ' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1684]
-INFO: [Synth 8-3491] module 'design_1_auto_cc_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_cc_0_stub.vhdl:5' bound to instance 'auto_cc' of component 'design_1_auto_cc_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1934]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_cc_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_cc_0_stub.vhdl:93]
+INFO: [Synth 8-3491] module 'design_1_auto_cc_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_cc_0_stub.vhdl:5' bound to instance 'auto_cc' of component 'design_1_auto_cc_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1934]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_cc_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_cc_0_stub.vhdl:93]
 INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_1XR4ZAZ' (6#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:1684]
 INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_4YOIXL' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2091]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_5' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_5_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_5' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2277]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_5' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_5_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_5' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_5_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_5' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2277]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_5' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_5_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_4YOIXL' (7#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2091]
 INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_1YO2N20' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2412]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_6' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_6_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_6' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2598]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_6' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_6_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_6' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_6_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_6' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2598]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_6' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_6_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_1YO2N20' (8#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2412]
 INFO: [Synth 8-638] synthesizing module 'm08_couplers_imp_2FYR80' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2731]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_7' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_7_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_7' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2915]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_7' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_7_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_7' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_7_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_7' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2915]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_7' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_7_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_2FYR80' (9#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:2731]
 INFO: [Synth 8-638] synthesizing module 'm09_couplers_imp_1S9IENL' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3048]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_8' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_8_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_8' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3232]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_8' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_8_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_8' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_8_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_8' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3232]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_8' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_8_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm09_couplers_imp_1S9IENL' (10#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3048]
 INFO: [Synth 8-638] synthesizing module 'm10_couplers_imp_1JMMVIC' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3365]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_9' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_9_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_9' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3549]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_9' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_9_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_9' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_9_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_9' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3549]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_9' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_9_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm10_couplers_imp_1JMMVIC' (11#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3365]
 INFO: [Synth 8-638] synthesizing module 'm11_couplers_imp_AVFHLX' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3684]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_10' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_10_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_10' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3870]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_10' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_10_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_10' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_10_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_10' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3870]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_10' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_10_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm11_couplers_imp_AVFHLX' (12#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:3684]
 INFO: [Synth 8-638] synthesizing module 'm12_couplers_imp_1L2AF0N' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4005]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_11' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_11_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_11' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4191]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_11' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_11_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_11' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_11_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_11' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4191]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_11' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_11_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm12_couplers_imp_1L2AF0N' (13#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4005]
 INFO: [Synth 8-638] synthesizing module 'm13_couplers_imp_9PFI3Q' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4326]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_12' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_12_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_12' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4512]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_12' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_12_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_12' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_12_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_12' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4512]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_12' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_12_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm13_couplers_imp_9PFI3Q' (14#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4326]
 INFO: [Synth 8-638] synthesizing module 'm14_couplers_imp_1IC4S8Y' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4645]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_13' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_13_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_13' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4829]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_13' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_13_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_13' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_13_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_13' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4829]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_13' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_13_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm14_couplers_imp_1IC4S8Y' (15#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4645]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1RZP34U' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5516]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_14' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_14_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_14' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5688]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_14' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_auto_pc_14_stub.vhdl:67]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_14' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_14_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_14' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5688]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_14' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_auto_pc_14_stub.vhdl:67]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1RZP34U' (16#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5516]
 INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_2REGHR' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5835]
 INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_2REGHR' (17#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5835]
 INFO: [Synth 8-638] synthesizing module 's02_couplers_imp_1R40M8T' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:6036]
 INFO: [Synth 8-256] done synthesizing module 's02_couplers_imp_1R40M8T' (18#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:6036]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:9381]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_xbar_0_stub.vhdl:89]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:9381]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_xbar_0_stub.vhdl:89]
 INFO: [Synth 8-256] done synthesizing module 'design_1_microblaze_0_axi_periph_0' (19#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:6575]
 INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4923]
-INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5137]
-INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_dlmb_v10_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5191]
-INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_dlmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5219]
-INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_ilmb_v10_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5273]
-INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_ilmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_lmb_bram_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5301]
-INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_lmb_bram_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5137]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_dlmb_v10_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5191]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_dlmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5219]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_ilmb_v10_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5273]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_ilmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_lmb_bram_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:5301]
+INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_lmb_bram_0_stub.vhdl:27]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (20#1) [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:4923]
 WARNING: [Synth 8-5640] Port 'app_sr_active' is missing in component declaration [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:10950]
 WARNING: [Synth 8-5640] Port 'app_ref_ack' is missing in component declaration [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:10950]
 WARNING: [Synth 8-5640] Port 'app_zq_ack' is missing in component declaration [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:10950]
 WARNING: [Synth 8-5640] Port 'device_temp' is missing in component declaration [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:10950]
-INFO: [Synth 8-3491] module 'design_1_mig_7series_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_mig_7series_0_0_stub.vhdl:5' bound to instance 'mig_7series_0' of component 'design_1_mig_7series_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12638]
-INFO: [Synth 8-638] synthesizing module 'design_1_mig_7series_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_mig_7series_0_0_stub.vhdl:75]
-INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'design_1_rst_clk_wiz_1_100M_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12701]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_rst_mig_7series_0_166M_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_rst_mig_7series_0_166M_0_stub.vhdl:5' bound to instance 'rst_mig_7series_0_166M' of component 'design_1_rst_mig_7series_0_166M_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12714]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_mig_7series_0_166M_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-14644-STAS-W10/realtime/design_1_rst_mig_7series_0_166M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_mig_7series_0_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_mig_7series_0_0_stub.vhdl:5' bound to instance 'mig_7series_0' of component 'design_1_mig_7series_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12638]
+INFO: [Synth 8-638] synthesizing module 'design_1_mig_7series_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_mig_7series_0_0_stub.vhdl:75]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'design_1_rst_clk_wiz_1_100M_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12701]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_rst_mig_7series_0_166M_0' declared at 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_rst_mig_7series_0_166M_0_stub.vhdl:5' bound to instance 'rst_mig_7series_0_166M' of component 'design_1_rst_mig_7series_0_166M_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12714]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_mig_7series_0_166M_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/.Xil/Vivado-12648-STAS-W10/realtime/design_1_rst_mig_7series_0_166M_0_stub.vhdl:21]
 INFO: [Synth 8-3491] module 'design_1_xlconcat_0_0' declared at 'd:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58' bound to instance 'xlconcat_0' of component 'design_1_xlconcat_0_0' [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/synth/design_1.vhd:12727]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
@@ -314,7 +314,7 @@ WARNING: [Synth 8-3331] design m03_couplers_imp_1W07O72 has unconnected port M_A
 WARNING: [Synth 8-3331] design m03_couplers_imp_1W07O72 has unconnected port M_ARESETN
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 948.219 ; gain = 265.047
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 947.539 ; gain = 264.984
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -327,10 +327,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 948.219 ; gain = 265.047
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 947.539 ; gain = 264.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 948.219 ; gain = 265.047
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 947.539 ; gain = 264.984
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -464,21 +464,21 @@ Parsing XDC File [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/dont_t
 Finished Parsing XDC File [D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1063.309 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1063.902 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 6 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 6 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1063.309 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1063.902 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a50tftg256-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -627,10 +627,10 @@ Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/m1
 Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/m13_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_axi_periph/m14_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -666,7 +666,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -688,13 +688,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/mig_7series_0/
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/mig_7series_0/ui_clk' to pin 'design_1_i/mig_7series_0/bbstub_ui_clk/O'
 INFO: [Synth 8-5819] Moved 9 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -706,7 +706,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -730,7 +730,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -743,7 +743,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -755,25 +755,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -909,17 +909,17 @@ Report Instance Areas:
 |21    |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1K0VQXK |   496|
 +------+------------------------------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1063.902 ; gain = 381.348
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1063.309 ; gain = 265.047
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1063.309 ; gain = 380.137
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1063.902 ; gain = 264.984
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1063.902 ; gain = 381.348
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1069.918 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1063.902 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 6 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 6 instances
@@ -927,12 +927,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 174 Infos, 134 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1069.918 ; gain = 644.785
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1069.918 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1063.902 ; gain = 639.832
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1063.902 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 INFO: [runtcl-4] Executing : report_io -file synth_report_io_0.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1069.918 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Jul 12 12:26:08 2023...
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1063.902 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 12 18:29:03 2023...
