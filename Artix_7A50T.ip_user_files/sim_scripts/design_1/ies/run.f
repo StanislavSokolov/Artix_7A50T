@@ -323,13 +323,13 @@
   "../../../bd/design_1/ip/design_1_xbar_0/sim/design_1_xbar_0.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_reset_sync.vhd" \
-  "../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_src_HDL_DUT.vhd" \
-  "../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_dut.vhd" \
-  "../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_addr_decoder.vhd" \
-  "../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_axi_lite_module.vhd" \
-  "../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip_axi_lite.vhd" \
-  "../../../bd/design_1/ipshared/8095/hdl/vhdl/HDL_DUT_ip.vhd" \
+  "../../../bd/design_1/ipshared/45c4/hdl/vhdl/HDL_DUT_ip_reset_sync.vhd" \
+  "../../../bd/design_1/ipshared/45c4/hdl/vhdl/HDL_DUT_ip_src_HDL_DUT.vhd" \
+  "../../../bd/design_1/ipshared/45c4/hdl/vhdl/HDL_DUT_ip_dut.vhd" \
+  "../../../bd/design_1/ipshared/45c4/hdl/vhdl/HDL_DUT_ip_addr_decoder.vhd" \
+  "../../../bd/design_1/ipshared/45c4/hdl/vhdl/HDL_DUT_ip_axi_lite_module.vhd" \
+  "../../../bd/design_1/ipshared/45c4/hdl/vhdl/HDL_DUT_ip_axi_lite.vhd" \
+  "../../../bd/design_1/ipshared/45c4/hdl/vhdl/HDL_DUT_ip.vhd" \
   "../../../bd/design_1/ip/design_1_HDL_DUT_ip_0_0/sim/design_1_HDL_DUT_ip_0_0.vhd" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_19 \

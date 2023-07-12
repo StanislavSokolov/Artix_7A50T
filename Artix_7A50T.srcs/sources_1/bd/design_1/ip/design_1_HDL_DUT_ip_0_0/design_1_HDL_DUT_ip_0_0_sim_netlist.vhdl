@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed Jul  5 15:49:10 2023
+-- Date        : Wed Jul 12 10:08:13 2023
 -- Host        : STAS-W10 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_HDL_DUT_ip_0_0/design_1_HDL_DUT_ip_0_0_sim_netlist.vhdl
+--               D:/GITEA/GitHub/ES/Artix_7A50T/Artix_7A50T.srcs/sources_1/bd/design_1/ip/design_1_HDL_DUT_ip_0_0/design_1_HDL_DUT_ip_0_0_sim_netlist.vhdl
 -- Design      : design_1_HDL_DUT_ip_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

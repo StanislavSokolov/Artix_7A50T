@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Wed Jul  5 15:48:00 2023
+--Date        : Wed Jul 12 10:07:03 2023
 --Host        : STAS-W10 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -10390,7 +10390,7 @@ entity design_1 is
     gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
     gpio_rtl_1_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     gpio_rtl_2_tri_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    gpio_rtl_3_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    gpio_rtl_3_tri_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
     not_cs_0 : out STD_LOGIC;
     reset_rtl_0 : in STD_LOGIC;
     sclk_0 : out STD_LOGIC;
@@ -10745,7 +10745,7 @@ architecture STRUCTURE of design_1 is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 1 downto 0 )
+    gpio_io_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component design_1_axi_gpio_3_0;
   component design_1_axi_intc_0_0 is
@@ -11114,7 +11114,7 @@ architecture STRUCTURE of design_1 is
   signal axi_gpio_0_GPIO_TRI_O : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_gpio_1_GPIO_TRI_I : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_gpio_2_GPIO_TRI_O : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal axi_gpio_3_GPIO_TRI_I : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal axi_gpio_3_GPIO_TRI_I : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_intc_0_interrupt_INTERRUPT : STD_LOGIC;
   signal axi_quad_spi_0_SPI_0_IO0_I : STD_LOGIC;
   signal axi_quad_spi_0_SPI_0_IO0_O : STD_LOGIC;
@@ -11626,7 +11626,7 @@ begin
   S2_inv_0_1 <= S2_inv_0;
   a0_0 <= IP_AXI_ADC_1_a0;
   axi_gpio_1_GPIO_TRI_I(7 downto 0) <= gpio_rtl_1_tri_i(7 downto 0);
-  axi_gpio_3_GPIO_TRI_I(1 downto 0) <= gpio_rtl_3_tri_i(1 downto 0);
+  axi_gpio_3_GPIO_TRI_I(7 downto 0) <= gpio_rtl_3_tri_i(7 downto 0);
   axi_quad_spi_0_SPI_0_IO0_I <= spi_rtl_0_io0_i;
   axi_quad_spi_0_SPI_0_IO1_I <= spi_rtl_0_io1_i;
   axi_quad_spi_0_SPI_0_IO2_I <= spi_rtl_0_io2_i;
@@ -11979,7 +11979,7 @@ axi_gpio_2: component design_1_axi_gpio_2_0
     );
 axi_gpio_3: component design_1_axi_gpio_3_0
      port map (
-      gpio_io_i(1 downto 0) => axi_gpio_3_GPIO_TRI_I(1 downto 0),
+      gpio_io_i(7 downto 0) => axi_gpio_3_GPIO_TRI_I(7 downto 0),
       s_axi_aclk => microblaze_0_Clk,
       s_axi_araddr(8 downto 0) => microblaze_0_axi_periph_M09_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
