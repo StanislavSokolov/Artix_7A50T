@@ -356,8 +356,12 @@ int* PrepareDataToSend(int mode, int reg) {
 			SendBuffer[1] = READ;
 			SendBuffer[2] = 0;
 			SendBuffer[3] = reg;
-			SendBuffer[4] = 0;
-			SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+			u32 value = GetArrayCurrentStatusInt(reg);
+//			if ((value < 0) & (value/256 == 0)) SendBuffer[4] = 255; else SendBuffer[4] = value/256;
+			SendBuffer[4] = value/256;
+			SendBuffer[5] = value - SendBuffer[4] * 256;
+//			SendBuffer[4] = -3;
+//			SendBuffer[5] = 24;
 			SendBuffer[6] = 0;
 			SendBuffer[7] = 0;
 			SendBuffer[8] = 0;
@@ -372,8 +376,8 @@ int* PrepareDataToSend(int mode, int reg) {
 			SendBuffer[1] = WRITE;
 			SendBuffer[2] = 0;
 			SendBuffer[3] = reg;
-			SendBuffer[4] = 0;
-			SendBuffer[5] = GetArrayCurrentStatusInt(reg);
+			SendBuffer[4] = GetArrayCurrentStatusInt(reg)/256;;
+			SendBuffer[5] = GetArrayCurrentStatusInt(reg) - SendBuffer[4] * 256;
 			SendBuffer[6] = 0;
 			SendBuffer[7] = 0;
 			SendBuffer[8] = 0;
@@ -477,7 +481,7 @@ int* GetData(XUartLite *UartLiteInstPtr) {
 				PrepareDataToSend(READ, RecvBuffer[3]);
 				break;
 			case WRITE:
-				SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5]);
+				SetArrayCurrentStatusInt(RecvBuffer[2], RecvBuffer[5] + 256 * RecvBuffer[4]);
 				PrepareDataToSend(WRITE, RecvBuffer[2]);
 				break;
 			case INIT_ARTIX:

@@ -105,9 +105,9 @@ int main ()
    while (1) {
 //	   controlIntr = GetBrightness();
 	   GetSystemValues();
-	   Xil_Out32(XPAR_HDL_DUT_IP_0_BASEADDR+256, CountTimeOutRS485);
-	   Xil_Out32(XPAR_HDL_DUT_IP_0_BASEADDR + 260, 0);
-	   SetArrayCurrentStatusInt(106, Xil_In32(XPAR_HDL_DUT_IP_0_BASEADDR + 264));
+//	   Xil_Out32(XPAR_HDL_DUT_IP_0_BASEADDR+256, CountTimeOutRS485);
+//	   Xil_Out32(XPAR_HDL_DUT_IP_0_BASEADDR + 260, 0);
+//	   SetArrayCurrentStatusInt(106, Xil_In32(XPAR_HDL_DUT_IP_0_BASEADDR + 264));
 //	   SetArrayCurrentStatusInt(106, 8);
 
 		   if (CountTimeOutRS485 < 1000) {

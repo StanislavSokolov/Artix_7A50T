@@ -1,6 +1,56 @@
-18:36:33 **** Incremental Build of configuration Debug for project per_test ****
+14:08:06 **** Incremental Build of configuration Debug for project per_test ****
 make all 
-make: Nothing to be done for 'all'.
+'Building file: ../src/logical_functions.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/logical_functions.o" -I../../start_project_bsp/microblaze_0/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/logical_functions.d" -MT"src/logical_functions.o" -o "src/logical_functions.o" "../src/logical_functions.c"
+../src/logical_functions.c: In function 'GetSystemValues':
+../src/logical_functions.c:17:2: warning: implicit declaration of function 'GetValueMinTimeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueMinTimeErrorGroupTable();      // получить текущие значения ошибок работы ключей (заполняем поля в control_transistor_keys.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:18:2: warning: implicit declaration of function 'GetValueAcknowledgeErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueAcknowledgeErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:19:2: warning: implicit declaration of function 'GetValueCurrentErrorGroupTable' [-Wimplicit-function-declaration]
+  GetValueCurrentErrorGroupTable();
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:21:2: warning: implicit declaration of function 'GetCurrentValueAdcTable' [-Wimplicit-function-declaration]
+  GetCurrentValueAdcTable();        // получить значения АЦП (записываем массив adc_channel[] в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:25:2: warning: implicit declaration of function 'SetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+  SetArrayCurrentStatusInt(96, -530);
+  ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:26:2: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdcTable' [-Wimplicit-function-declaration]
+  GetValueErrorsNegativePositiveAdcTable();    // получить текущие значения ошибок АЦП (заполняем поля в adc.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:27:9: warning: implicit declaration of function 'GetValueErrorsNegativePositiveAdc' [-Wimplicit-function-declaration]
+  Data = GetValueErrorsNegativePositiveAdc(3);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:32:2: warning: implicit declaration of function 'GetCurrentValueSpeedSensorTable' [-Wimplicit-function-declaration]
+  GetCurrentValueSpeedSensorTable();      // получить текущие значения с датчика положения (заполняем поля в encoder.c)
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:34:2: warning: implicit declaration of function 'GpioInputRead' [-Wimplicit-function-declaration]
+  GpioInputRead(&DataRead, 1);
+  ^~~~~~~~~~~~~
+../src/logical_functions.c:53:12: warning: implicit declaration of function 'GetArrayCurrentStatusInt' [-Wimplicit-function-declaration]
+   Data = ((GetArrayCurrentStatusInt(48 + i) & 1) << i) | Data;
+            ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/logical_functions.c:55:2: warning: implicit declaration of function 'GpioOutputWrite'; did you mean 'XGpio_DiscreteWrite'? [-Wimplicit-function-declaration]
+  GpioOutputWrite(Data, 0);
+  ^~~~~~~~~~~~~~~
+  XGpio_DiscreteWrite
+'Finished building: ../src/logical_functions.c'
+' '
+'Building target: per_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../start_project_bsp/microblaze_0/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "per_test.elf"  ./src/CRC_Functions.o ./src/PWM_tools.o ./src/adc.o ./src/control_transistor_keys.o ./src/current_system_status.o ./src/encoder.o ./src/initializationl_functions.o ./src/logical_functions.o ./src/testperiph.o ./src/xgpio_tapp_example.o ./src/xintc_tapp_example.o ./src/xspi_selftest_example.o ./src/xuartlite_intr_tapp_example.o ./src/xuartlite_intr_tapp_example_rs485.o ./src/xuartlite_selftest_example.o ./src/xuartlite_selftest_example_rs485.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilisf,-lxil,-lgcc,-lc,--end-group
+'Finished building target: per_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size per_test.elf  |tee "per_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25636	   1176	   6964	  33776	   83f0	per_test.elf
+'Finished building: per_test.elf.size'
+' '
 
-18:36:33 Build Finished (took 160ms)
+14:08:07 Build Finished (took 815ms)
 

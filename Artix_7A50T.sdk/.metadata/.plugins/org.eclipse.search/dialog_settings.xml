@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<section name="SearchDialog.ScopePart">
+		<item value="0" key="scope"/>
+	</section>
 	<section name="Search">
 		<list key="Search.processedPageIds">
 			<item value="org.eclipse.rse.internal.files.ui.search.searchPage"/>
@@ -14,13 +17,16 @@
 			<item value="org.eclipse.egit.ui.commitSearchPage"/>
 		</list>
 	</section>
+	<section name="org.eclipse.cdt.ui.pdomSearchViewPage">
+		<item value="true" key="showEnclosingDefinitions"/>
+	</section>
 	<section name="SearchDialog">
-		<item value="org.eclipse.egit.ui.commitSearchPage" key="PREVIOUS_PAGE"/>
+		<item value="org.eclipse.cdt.ui.pdomSearchPage" key="PREVIOUS_PAGE"/>
 	</section>
 	<section name="DialogBounds_SearchDialog">
-		<item value="502" key="DIALOG_WIDTH"/>
+		<item value="527" key="DIALOG_WIDTH"/>
 		<item value="1|Tahoma|8.25|0|WINDOWS|1|-11|0|0|0|400|0|0|0|1|0|0|0|0|Tahoma" key="DIALOG_FONT_NAME"/>
-		<item value="396" key="DIALOG_HEIGHT"/>
+		<item value="417" key="DIALOG_HEIGHT"/>
 		<item value="717" key="DIALOG_X_ORIGIN"/>
 		<item value="264" key="DIALOG_Y_ORIGIN"/>
 	</section>
