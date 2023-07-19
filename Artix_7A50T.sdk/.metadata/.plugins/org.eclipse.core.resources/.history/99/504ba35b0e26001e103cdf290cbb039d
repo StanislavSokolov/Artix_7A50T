@@ -514,7 +514,7 @@ void PrepareData(int mode, int reg, int count) {
 				break;
 			case PRESET_MULTIPLE_REGISTERS:
 //				SetArrayCurrentStatusInt(205, GetArrayCurrentStatusInt(205) + 1);
-				SetArrayCurrentStatusInt(203, GetArrayCurrentStatusInt(203) + 1);
+				SetArrayCurrentStatusInt(204, GetArrayCurrentStatusInt(204) + 1);
 				break;
 		}
 }

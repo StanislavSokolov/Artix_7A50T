@@ -451,9 +451,9 @@ int* PrepareDataToSendRS485(int mode, int reg, int count) {
 			PrepareData(mode, reg, count);
 //			for (int i = 0; i < count*2; i = i + 2) SendBufferRS485[8 + i] = 2;
 			for (int i = 0; i < count; i++) {
-				int a = GetArrayCurrentStatusInt(200 + i)/256;
+				int a = GetArrayCurrentStatusInt(201 + i)/256;
 				SendBufferRS485[7 + i*2] = a;
-				SendBufferRS485[7 + 1 + i*2] = GetArrayCurrentStatusInt(200 + i) - a*256;
+				SendBufferRS485[7 + 1 + i*2] = GetArrayCurrentStatusInt(201 + i) - a*256;
 			}
 //			for (int i = 0; i < count*2; i++) SendBufferRS485[7 + i] = i;
 			crc_rs485 = 0xffff;
@@ -513,8 +513,7 @@ void PrepareData(int mode, int reg, int count) {
 				}
 				break;
 			case PRESET_MULTIPLE_REGISTERS:
-//				SetArrayCurrentStatusInt(205, GetArrayCurrentStatusInt(205) + 1);
-				SetArrayCurrentStatusInt(203, GetArrayCurrentStatusInt(203) + 1);
+				SetArrayCurrentStatusInt(204, GetArrayCurrentStatusInt(204) + 1);
 				break;
 		}
 }
